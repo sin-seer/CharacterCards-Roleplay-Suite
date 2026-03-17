@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
+    --bb-accent: #ff7a1a;              /* saturated orange */
+    --bb-accent-2: #7a2cff;           /* deep purple */
+     --bb-text: #f5f0ff;  
+                                   /* transparency system */
+    --bb-panel-bg: rgba(20, 10, 35, 0.25);
+    --bb-panel-border: rgba(255, 122, 26, 0.25);
+    --bb-glow: rgba(255, 122, 26, 0.35);
     --bb-bg: var(--background, #7a2cff);
     --bb-font-mono: 'Space Mono', monospace;
     --bb-font-display: 'Philosopher', serif;
@@ -649,7 +656,7 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 }
 
 body {
-    background-color: #0f1119 !important;
+    background-color: #7a2cff !important;
     background-image: none !important;
     position: relative !important
 }
@@ -932,7 +939,7 @@ main.ant-layout-content {
 
 /* ===== STATIC HERO IMAGE LOGIC ===== */
 .bbx-hero-image {
-    width: 100% !important;
+    width: 70% !important;
     height: auto !important;
     max-height: 80vh !important;
     object-fit: contain !important;
@@ -1030,7 +1037,7 @@ main.ant-layout-content {
     padding-top: 1.5em;
     animation: fadeSlideUp 0.6s ease both, goldShimmer 4s ease-in-out infinite;
     will-change: transform, opacity;
-    color: #ece5d8;
+    color: var(--bb-text) !important;
     text-transform: uppercase;
     text-shadow:
         0 1px 2px rgba(0, 0, 0, 0.6),
@@ -1076,7 +1083,7 @@ main.ant-layout-content {
     font-size: 1.6em;
     font-weight: 400;
     font-style: normal;
-    opacity: 0.85;
+    opacity: 0.95;
     margin: 0 0 0.5em 0;
     animation: fadeSlideUp 0.6s ease 0.15s both;
     will-change: transform, opacity;
@@ -1132,7 +1139,7 @@ main.ant-layout-content {
 .bb-section {
     border: 1px solid rgba(211, 188, 142, 0.25);
     border-radius: var(--bb-radius, 8px);
-    background: linear-gradient(170deg, rgba(32, 37, 56, 0.92) 0%, rgba(22, 26, 40, 0.95) 100%);
+    background: rgba(20, 10, 35, 0.35);
     padding: 1.4em 1.6em;
     margin-bottom: 1em;
     flex: 1;
@@ -1183,7 +1190,7 @@ main.ant-layout-content {
     padding-bottom: 1em;
     border-bottom: none;
     color: #d3bc8e;
-    text-align: center;
+    text-align: center center;
     position: relative
 }
 
@@ -1216,12 +1223,12 @@ main.ant-layout-content {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.65;
-    color: #c8c4b8
+    color: var(--bb-text) !important;
 }
 
 .bb-section-body p {
     margin: 0 0 0.8em 0;
-    color: #c8c4b8
+    color: var(--bb-text) !important;
 }
 
 .bb-section-body p:last-child {
