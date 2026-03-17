@@ -489,6 +489,7 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 }
 
 .bb-container {
+     rgba(20, 10, 35, 0.15); 
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -501,12 +502,14 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 @media (min-width: 692px) and (max-width: 921px) {
     .bb-container {
         margin-top: 0px
+        background: rgba(20, 10, 35, 0.25); 
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .bb-container {
         margin-top: -150px
+        background: rgba(20, 10, 35, 0.25);
     }
 }
 
@@ -538,6 +541,7 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 .bb-col-12 {
     position: relative;
     width: 100%;
+    background: rgba(20, 10, 35, 0.25);
     padding-right: 15px;
     padding-left: 15px;
     display: flex;
@@ -655,7 +659,7 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 }
 
 body {
-    background-color: #7a2cff !important;
+    background-color: rgba(20, 10, 35, 0.25) !important;
     background-image: none !important;
     position: relative !important
 }
@@ -1138,12 +1142,12 @@ main.ant-layout-content {
 .bb-section {
     border: 1px solid rgba(211, 188, 142, 0.25);
     border-radius: var(--bb-radius, 8px);
-    background: rgba(20, 10, 35, 0.35);
+    background: rgba(20, 10, 35, 0.15);
     padding: 1.4em 1.6em;
     margin-bottom: 1em;
     flex: 1;
     contain: content;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(12px);
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3)
@@ -1286,8 +1290,7 @@ main.ant-layout-content {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(18, 21, 31, 0.9) 0%, rgba(45, 50, 75, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
-    z-index: 1;
+    background: rgba(20, 10, 35, 0.25);
     transition: background 0.2s ease
 }
 
@@ -1297,7 +1300,7 @@ main.ant-layout-content {
 }
 
 .bb-scenario-card:hover::before {
-    background: linear-gradient(to top, rgba(18, 21, 31, 0.95) 0%, rgba(45, 50, 75, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%)
+    background: background: rgba(20, 10, 35, 0.25);
 }
 
 .bb-scenario-card>* {
@@ -1361,8 +1364,8 @@ main.ant-layout-content {
     position: relative;
     border: 1px solid rgba(217, 196, 170, 0.3);
     border-radius: 8px;
-    background: linear-gradient(to bottom, rgba(32, 37, 56, 0.9), rgba(20, 23, 34, 0.95));
-    backdrop-filter: blur(12px);
+    background: rgba(20, 10, 35, 0.25);
+    backdrop-filter: blur(6px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
