@@ -3,9 +3,8 @@
 :root {
     --bb-accent: #ff7a1a;              /* saturated orange */
     --bb-accent-2: #7a2cff;           /* deep purple */
-     --bb-text: #f5f0ff;  
-                                   /* transparency system */
-    --bb-panel-bg: rgba(20, 10, 35, 0.25);
+    --bb-text: #f5f0ff;  
+    --bb-panel-bg: rgba(20, 10, 35, 0.25);  /* transparency system */
     --bb-panel-border: rgba(255, 122, 26, 0.25);
     --bb-glow: rgba(255, 122, 26, 0.35);
     --bb-bg: var(--background, #7a2cff);
@@ -39,8 +38,8 @@
     --bb-wine: rgba(30, 36, 50, 0.9);
     --bb-rose: rgba(210, 180, 140, 0.15);
     --bb-text: #f5f0ff;
-    --bb-btn-solid: #39425d;
-    --bb-btn-solid-hover: #4a5475
+    --bb-btn-solid: #7a2cff;;
+    --bb-btn-solid-hover: #7a2cff;
 }
 
 a {
