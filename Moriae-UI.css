@@ -22,10 +22,10 @@
     --bb-font-size: clamp(13px, 1.25vw, 15px);
     --bb-font-weight: 700;
     --bb-btn-bg: transparent;
-    --bb-btn-color: inherit;
+    --bb-btn-color: #7a2cff;
     --bb-btn-hover-bg: rgba(210, 180, 140, 0.15);
     --bb-btn-hover-color: #fff;
-    --bb-btn-active-bg: rgba(210, 180, 140, 0.25);
+    --bb-btn-active-bg: rgba(20, 10, 35, 0.25); 
     --bb-btn-transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
     --bb-btn-hover-shadow: inset 0 0 0 1px rgba(210, 180, 140, 0.4);
     --bb-fav-bg: var(--bb-btn-bg);
@@ -38,8 +38,8 @@
     --bb-wine: rgba(30, 36, 50, 0.9);
     --bb-rose: rgba(210, 180, 140, 0.15);
     --bb-text: #f5f0ff;
-    --bb-btn-solid: #7a2cff;;
-    --bb-btn-solid-hover: #7a2cff;
+    --bb-btn-solid: rgba(20, 10, 35, 0.25);
+    --bb-btn-solid-hover: rgba(20, 10, 35, 0.05);
 }
 
 a {
@@ -147,7 +147,7 @@ div.mt-4:has(svg.lucide-messages-square) button.ant-btn:hover {
     border-color: var(--bb-accent) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     transform: none !important;
-    color: #fff !important
+    color: #7a2cff !important;
 }
 
 div.mt-4:has(svg.lucide-messages-square) button.ant-btn:active {
@@ -161,7 +161,7 @@ div.mt-4:has(svg.lucide-messages-square)>button.ant-btn:has(svg.lucide-messages-
     width: auto !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 8px !important;
-    background: linear-gradient(135deg, var(--bb-accent), #b8860b) !important;
+    background:  rgba(20, 10, 35, 0.25) !important;
     border-color: var(--bb-accent) !important;
     color: #fff !important
 }
@@ -281,7 +281,7 @@ div.mt-4.text-right.justify-end button.ant-btn:has(.anticon-star svg path[d*="M6
     inset: -2px !important;
     border-radius: calc(var(--bb-radius) + 2px) !important;
     z-index: -2 !important;
-    background-image: linear-gradient(90deg, #4b69ff, #a355ff, #ffd700, #a355ff, #4b69ff) !important;
+    background-image: rgba(20, 10, 35, 0.25) !important;
     background-size: 200% 100% !important;
     background-position: 0% 50%;
     animation: bb-sweep 3s linear infinite !important;
@@ -651,7 +651,7 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
     --page-bg-pos: center;
     --page-bg-size: cover;
     --page-bg-attach: fixed;
-    --page-bg-overlay: linear-gradient(to bottom, rgba(18, 21, 31, 0.2) 0%, rgba(18, 21, 31, 0.75) 100%)
+    --page-bg-overlay: rgba(20, 10, 35, 0.25); 
 }
 
 body {
@@ -853,7 +853,7 @@ main.ant-layout-content {
     .bbx-hero-image {
         max-height: 40vh !important;
         object-fit: cover !important;
-        object-position: top center !important;
+        object-position: center center !important;
         border-radius: 0 !important;
         -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
         mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
