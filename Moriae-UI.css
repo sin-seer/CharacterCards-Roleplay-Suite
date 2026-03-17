@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --bb-bg: var(--background, #12151f);
+    --bb-bg: var(--background, #7a2cff);
     --bb-font-mono: 'Space Mono', monospace;
     --bb-font-display: 'Philosopher', serif;
     --bb-font-serif: 'Philosopher', serif;
@@ -26,12 +26,12 @@
     --bb-fav-color: var(--bb-btn-color);
     --bb-fav-border: var(--bb-divider);
     --bb-fav-width: clamp(100px, 14vw, 160px);
-    --bb-accent: #d2b48c;
-    --bb-accent-soft: #f0e6d2;
+    --bb-accent: #ff7a1a;  
+    --bb-accent-2: #7a2cff;
     --bb-gold: #ffd700;
     --bb-wine: rgba(30, 36, 50, 0.9);
     --bb-rose: rgba(210, 180, 140, 0.15);
-    --bb-text: #f5f5f5;
+    --bb-text: #f5f0ff;
     --bb-btn-solid: #39425d;
     --bb-btn-solid-hover: #4a5475
 }
