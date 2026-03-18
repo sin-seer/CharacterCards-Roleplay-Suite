@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --bb-accent: #ff7a1a;              /* saturated orange */
-    --bb-accent-2: #7a2cff;           /* deep purple */
-    --bb-text: #f5f0ff;  
-    --bb-panel-bg: rgba(20, 10, 35, 0.25);  /* transparency system */
-    --bb-panel-border: rgba(255, 122, 26, 0.25);
-    --bb-glow: rgba(255, 122, 26, 0.35);
-    --bb-bg: var(--background, #7a2cff);
+    --bb-bg: var(--background, #12151f);
     --bb-font-mono: 'Space Mono', monospace;
     --bb-font-display: 'Philosopher', serif;
     --bb-font-serif: 'Philosopher', serif;
@@ -22,24 +16,24 @@
     --bb-font-size: clamp(13px, 1.25vw, 15px);
     --bb-font-weight: 700;
     --bb-btn-bg: transparent;
-    --bb-btn-color: #7a2cff;
+    --bb-btn-color: inherit;
     --bb-btn-hover-bg: rgba(210, 180, 140, 0.15);
     --bb-btn-hover-color: #fff;
-    --bb-btn-active-bg: rgba(20, 10, 35, 0.25); 
+    --bb-btn-active-bg: rgba(210, 180, 140, 0.25);
     --bb-btn-transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
     --bb-btn-hover-shadow: inset 0 0 0 1px rgba(210, 180, 140, 0.4);
     --bb-fav-bg: var(--bb-btn-bg);
     --bb-fav-color: var(--bb-btn-color);
     --bb-fav-border: var(--bb-divider);
     --bb-fav-width: clamp(100px, 14vw, 160px);
-    --bb-accent: #ff7a1a;  
-    --bb-accent-2: #7a2cff;
+    --bb-accent: #ff7a1a;
+    --bb-accent-soft: #f0e6d2;
     --bb-gold: #ffd700;
-    --bb-wine: rgb(28 7 7 / 40%);
+    --bb-wine: rgba(28 6 6 / 9%);
     --bb-rose: rgba(210, 180, 140, 0.15);
-    --bb-text: #f5f0ff;
-    --bb-btn-solid: #151124;
-    --bb-btn-solid-hover: #342c5b;
+    --bb-text: #f5f5f5;
+    --bb-btn-solid: #1b172a;
+    --bb-btn-solid-hover: #3a1717a1
 }
 
 a {
@@ -147,7 +141,7 @@ div.mt-4:has(svg.lucide-messages-square) button.ant-btn:hover {
     border-color: var(--bb-accent) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     transform: none !important;
-    color: #7a2cff !important;
+    color: #fff !important
 }
 
 div.mt-4:has(svg.lucide-messages-square) button.ant-btn:active {
@@ -161,7 +155,7 @@ div.mt-4:has(svg.lucide-messages-square)>button.ant-btn:has(svg.lucide-messages-
     width: auto !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 8px !important;
-    background:  rgba(20, 10, 35, 0.25) !important;
+    background: linear-gradient(135deg, var(--bb-accent), #b8860b) !important;
     border-color: var(--bb-accent) !important;
     color: #fff !important
 }
@@ -281,7 +275,7 @@ div.mt-4.text-right.justify-end button.ant-btn:has(.anticon-star svg path[d*="M6
     inset: -2px !important;
     border-radius: calc(var(--bb-radius) + 2px) !important;
     z-index: -2 !important;
-    background-image: rgba(20, 10, 35, 0.25) !important;
+    background-image: linear-gradient(90deg, #4b69ff, #a355ff, #ffd700, #a355ff, #4b69ff) !important;
     background-size: 200% 100% !important;
     background-position: 0% 50%;
     animation: bb-sweep 3s linear infinite !important;
@@ -372,7 +366,7 @@ footer.ant-layout-footer {
 }
 
 .ant-menu-item:has(img[alt="logo"]) .ant-menu-title-content::after {
-    content: 'BUNNYUI5\A BY BLEACHBUNNY';
+    content: 'A Creation by sin.seer';
     white-space: pre;
     font-family: var(--bb-font-mono);
     font-size: 7px;
@@ -489,7 +483,6 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 }
 
 .bb-container {
-     rgba(20, 10, 35, 0.15); 
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -502,14 +495,12 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 @media (min-width: 692px) and (max-width: 921px) {
     .bb-container {
         margin-top: 0px
-        background: rgba(20, 10, 35, 0.25); 
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .bb-container {
         margin-top: -150px
-        background: rgba(20, 10, 35, 0.25);
     }
 }
 
@@ -541,7 +532,6 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
 .bb-col-12 {
     position: relative;
     width: 100%;
-    background: rgba(20, 10, 35, 0.25);
     padding-right: 15px;
     padding-left: 15px;
     display: flex;
@@ -655,11 +645,11 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
     --page-bg-pos: center;
     --page-bg-size: cover;
     --page-bg-attach: fixed;
-    --page-bg-overlay: rgba(20, 10, 35, 0.25); 
+    --page-bg-overlay: linear-gradient(to bottom, rgba(18, 21, 31, 0.2) 0%, rgba(18, 21, 31, 0.75) 100%)
 }
 
 body {
-    background-color: rgba(20, 10, 35, 0.25) !important;
+    background-color: #0f1119 !important;
     background-image: none !important;
     position: relative !important
 }
@@ -855,9 +845,9 @@ main.ant-layout-content {
 
     /* Static hero image: fadeout on mobile */
     .bbx-hero-image {
-        max-height: 70vh !important;
+        max-height: 60vh !important;
         object-fit: cover !important;
-        object-position: right top !important;
+        object-position: top center !important;
         border-radius: 0 !important;
         -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
         mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
@@ -942,13 +932,11 @@ main.ant-layout-content {
 
 /* ===== STATIC HERO IMAGE LOGIC ===== */
 .bbx-hero-image {
-    width: 70% !important;
+    width: 100% !important;
     height: auto !important;
     max-height: 80vh !important;
     object-fit: contain !important;
     object-position: center !important;
-    border-radius: var(--bb-radius) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
     animation: heroFadeIn 0.8s ease 0.1s both;
     will-change: transform, opacity;
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
@@ -1040,7 +1028,7 @@ main.ant-layout-content {
     padding-top: 1.5em;
     animation: fadeSlideUp 0.6s ease both, goldShimmer 4s ease-in-out infinite;
     will-change: transform, opacity;
-    color: var(--bb-text) !important;
+    color: #ece5d8;
     text-transform: uppercase;
     text-shadow:
         0 1px 2px rgba(0, 0, 0, 0.6),
@@ -1086,7 +1074,7 @@ main.ant-layout-content {
     font-size: 1.6em;
     font-weight: 400;
     font-style: normal;
-    opacity: 0.95;
+    opacity: 0.85;
     margin: 0 0 0.5em 0;
     animation: fadeSlideUp 0.6s ease 0.15s both;
     will-change: transform, opacity;
@@ -1142,13 +1130,13 @@ main.ant-layout-content {
 .bb-section {
     border: 1px solid rgba(211, 188, 142, 0.25);
     border-radius: var(--bb-radius, 8px);
-    background: rgba(20, 10, 35, 0.15);
+    background: linear-gradient(170deg, rgba(32, 37, 56, 0.92) 0%, rgba(22, 26, 40, 0.95) 100%);
     padding: 1.4em 1.6em;
     margin-bottom: 1em;
     flex: 1;
     contain: content;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3)
 }
@@ -1193,7 +1181,7 @@ main.ant-layout-content {
     padding-bottom: 1em;
     border-bottom: none;
     color: #d3bc8e;
-    text-align: center center;
+    text-align: center;
     position: relative
 }
 
@@ -1226,12 +1214,12 @@ main.ant-layout-content {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.65;
-    color: var(--bb-text) !important;
+    color: #c8c4b8
 }
 
 .bb-section-body p {
     margin: 0 0 0.8em 0;
-    color: var(--bb-text) !important;
+    color: #c8c4b8
 }
 
 .bb-section-body p:last-child {
@@ -1290,7 +1278,8 @@ main.ant-layout-content {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(20, 10, 35, 0.25);
+    background: linear-gradient(to top, rgba(18, 21, 31, 0.9) 0%, rgba(45, 50, 75, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
     transition: background 0.2s ease
 }
 
@@ -1300,7 +1289,7 @@ main.ant-layout-content {
 }
 
 .bb-scenario-card:hover::before {
-    background: background: rgba(20, 10, 35, 0.25);
+    background: linear-gradient(to top, rgba(18, 21, 31, 0.95) 0%, rgba(45, 50, 75, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%)
 }
 
 .bb-scenario-card>* {
@@ -1364,8 +1353,8 @@ main.ant-layout-content {
     position: relative;
     border: 1px solid rgba(217, 196, 170, 0.3);
     border-radius: 8px;
-    background: rgba(20, 10, 35, 0.25);
-    backdrop-filter: blur(6px);
+    background: linear-gradient(to bottom, rgba(32, 37, 56, 0.9), rgba(20, 23, 34, 0.95));
+    backdrop-filter: blur(12px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
