@@ -35,11 +35,11 @@
     --bb-accent: #ff7a1a;  
     --bb-accent-2: #7a2cff;
     --bb-gold: #ffd700;
-    --bb-wine: rgba(30, 36, 50, 0.9);
+    --bb-wine: rgb(28 7 7 / 40%);
     --bb-rose: rgba(210, 180, 140, 0.15);
     --bb-text: #f5f0ff;
-    --bb-btn-solid: rgba(20, 10, 35, 0.25);
-    --bb-btn-solid-hover: rgba(20, 10, 35, 0.05);
+    --bb-btn-solid: #151124;
+    --bb-btn-solid-hover: #342c5b;
 }
 
 a {
