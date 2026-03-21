@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 :root {
     --bb-bg: var(--background, #12151f);
-    --bb-font-mono: 'Space Mono', monospace;
-    --bb-font-display: 'Philosopher', serif;
-    --bb-font-serif: 'Philosopher', serif;
-    --bb-font-hand: 'Outfit', sans-serif;
+    --bb-font-mono: 'Caveat Brush', cursive;
+    --bb-font-display: 'Caveat Brush', cursive;
+    --bb-font-serif: 'Caveat Brush', cursive;
+    --bb-font-hand: 'Caveat Brush', cursive;
     --bb-height: clamp(42px, 5vw, 56px);
     --bb-inset: 16px;
     --bb-radius: 8px;
