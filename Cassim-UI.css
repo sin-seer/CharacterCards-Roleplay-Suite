@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
 :root {
     --ss-bg: var(--background, #12151f);
-    --ss-font-mono: 'Space Mono', monospace;
-    --ss-font-display: 'Philosopher', serif;
-    --ss-font-serif: 'Philosopher', serif;
-    --ss-font-hand: 'Outfit', sans-serif;
+    --ss-font-mono: 'cursive', cursive;
+    --ss-font-display: 'Caveat Brush', cursive;
+    --ss-font-serif: 'Caveat Brush', cursive;
+    --ss-font-hand: 'Caveat Brush', cursive;
     --ss-height: clamp(42px, 5vw, 56px);
     --ss-inset: 16px;
     --ss-radius: 8px;
@@ -366,7 +365,7 @@ footer.ant-layout-footer {
 }
 
 .ant-menu-item:has(img[alt="logo"]) .ant-menu-title-content::after {
-    content: 'A Creation by sin.seer';
+    content: 'sin.seer';
     white-space: pre;
     font-family: var(--ss-font-mono);
     font-size: 7px;
