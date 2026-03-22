@@ -1685,11 +1685,11 @@ main.ant-layout-content {
 
 /* ── Quest Cards ── */
 .bb-quest-card {
-    background: linear-gradient(180deg, rgba(70,20,105,.08), rgba(20,10,35,.05)) !important;
+    background: linear-gradient(180deg, rgba(70,20,105,.12), rgba(20,10,35,.15)) !important;
     border: 2px solid rgba(255,122,26,.16) !important;
     box-shadow: 0 8px 24px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.08) !important;
     backdrop-filter: blur(2px) saturate(145%) !important;
-    -webkit-backdrop-filter: blur(8px) saturate(145%) !important;
+    -webkit-backdrop-filter: blur(4px) saturate(145%) !important;
 }
 
 .bb-quest-img { filter: brightness(.92) saturate(1.05) !important; }
