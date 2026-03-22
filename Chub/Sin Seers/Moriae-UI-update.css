@@ -1130,13 +1130,13 @@ main.ant-layout-content {
 .bb-section {
     border: 1px solid rgba(211, 188, 142, 0.25);
     border-radius: var(--bb-radius, 8px);
-    background: linear-gradient(170deg, rgba(32, 37, 56, 0.92) 0%, rgba(22, 26, 40, 0.95) 100%);
+    background: linear-gradient(170deg, rgba(32, 37, 56, 0.8) 0%, rgba(22, 26, 40, 0.8) 100%);
     padding: 1.4em 1.6em;
     margin-bottom: 1em;
     flex: 1;
     contain: content;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3)
 }
@@ -1212,7 +1212,7 @@ main.ant-layout-content {
 .bb-section-body {
     font-family: var(--bb-font-hand);
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.65;
     color: #c8c4b8
 }
@@ -1600,7 +1600,7 @@ main.ant-layout-content {
     padding: 0.7em 2.5em;
     border: 1px solid rgba(211, 188, 142, 0.35);
     border-radius: 4px;
-    background: linear-gradient(to bottom, rgba(55, 62, 85, 0.9), rgba(35, 40, 58, 0.95));
+    background: rgba(217, 196, 170, 0.4);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     color: #d3bc8e;
     font-size: 0.85em;
