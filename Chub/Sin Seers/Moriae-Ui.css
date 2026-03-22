@@ -12,12 +12,12 @@
     --bb-fav-gap: 10px;
     --bb-border-top: 1px solid rgba(255, 255, 255, .1);
     --bb-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
-    --bb-divider: 1px solid rgba(255, 145, 100, 0.3);
+    --bb-divider: 1px solid rgba(255, 145, 100, 0.4);
     --bb-font-size: clamp(13px, 1.25vw, 15px);
     --bb-font-weight: 700;
     --bb-btn-bg: transparent;
     --bb-btn-color: inherit;
-    --bb-btn-hover-bg: rgba(210, 180, 140, 0.15);
+    --bb-btn-hover-bg: rgba(210, 180, 140, 0.25);
     --bb-btn-hover-color: #fff;
     --bb-btn-active-bg: rgba(210, 180, 140, 0.25);
     --bb-btn-transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
@@ -30,7 +30,7 @@
     --bb-accent-soft: #f0e6d2;
     --bb-gold: #ffd700;
     --bb-wine: rgba(28 6 6 / 9%);
-    --bb-rose: rgba(210, 180, 140, 0.15);
+    --bb-rose: rgba(255, 145, 100, 0.3);
     --bb-text: #f5f5f5;
     --bb-btn-solid: #1b172a;
     --bb-btn-solid-hover: #3a1717a1
@@ -1279,12 +1279,12 @@ main.ant-layout-content {
 }
 
 .bb-scenario-card:hover {
-    border-color: var(--bb-accent);
+    border-color: rgba(255, 145, 100, 0.9);
     transform: translateY(-2px)
 }
 
 .bb-scenario-card:hover::before {
-    background: linear-gradient(to top, rgba(18, 21, 31, 0.95) 0%, rgba(45, 50, 75, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%)
+    background: linear-gradient(to top, rgba(18, 21, 31, 0.6) 0%, rgba(45, 50, 75, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%)
 }
 
 .bb-scenario-card>* {
@@ -1346,7 +1346,7 @@ main.ant-layout-content {
 
 .bb-quest-card {
     position: relative;
-    border: 1px solid rgba(217, 196, 170, 0.3);
+    border: 1px solid rgba(217, 196, 170, 0.5);
     border-radius: 8px;
     background: linear-gradient(to bottom, rgba(32, 37, 56, 0.9), rgba(20, 23, 34, 0.95));
     backdrop-filter: blur(12px);
@@ -1358,14 +1358,8 @@ main.ant-layout-content {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
 }
 
-.bb-quest-card:active {
-    border: 2px solid rgba(255, 122, 26, 0.8) !important;
-    box-shadow: 0 8px 32px rgba(255, 122, 26, .45), inset 0 1px 0 rgba(255, 255, 255, .25) !important;
-    filter: brightness(1.2) !important;
-    transform: scale(0.98) !important;
-
 .bb-quest-card:hover {
-    transform: translateY(-6px) scale(1.01);
+    transform: translateY(-6px) scale(1.15);
     border-color: #ece5d8;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(106, 133, 222, 0.2);
     z-index: 10
@@ -1383,7 +1377,10 @@ main.ant-layout-content {
 }
 
 .bb-quest-card:hover .bb-quest-img {
-    filter: brightness(1.05) sepia(0%);
+    border: 2px solid rgba(255, 122, 26, 1) !important;
+    box-shadow: 0 8px 32px rgba(255, 122, 26, .45), inset 0 1px 0 rgba(255, 255, 255, .25) !important;
+    filter: brightness(1.2) !important;
+    transform: scale(1.15) !important;
     object-position: center 40%
 }
 
@@ -1394,10 +1391,10 @@ main.ant-layout-content {
     left: 12px;
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #4b526d, #292e42);
+    background: linear-gradient(135deg, #ff9164, #730073);
     border: 2px solid #ff9164;
     border-radius: 50%;
-    color: #ece5d8;
+    color: ##ece5d8;
     font-family: var(--bb-font-display);
     font-size: 1.2em;
     font-weight: 700;
@@ -1477,7 +1474,7 @@ main.ant-layout-content {
     font-size: 0.7em;
     color: #d9c4aa;
     background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 145, 100, 0.2);
+    border: 1px solid rgba(255, 145, 100, 0.5);
     padding: 3px 10px;
     border-radius: 12px;
     text-transform: uppercase;
@@ -1486,8 +1483,8 @@ main.ant-layout-content {
 }
 
 .bb-quest-card:hover .bb-quest-tag {
-    background: rgba(217, 196, 170, 0.1);
-    border-color: rgba(217, 196, 170, 0.4);
+    background: rgba(255, 145, 100, 0.2);
+    border-color: rgba(115, 0, 115, 0.3);
     color: #fff
 }
 
@@ -1565,7 +1562,7 @@ main.ant-layout-content {
     font-weight: 400;
     background: rgba(32, 37, 56, 0.95);
     color: #ff9164;
-    border: 1px solid rgba(211, 188, 142, 0.25);
+    border: 1px solid rgba(211, 188, 142, 0.4);
     border-radius: 6px;
     padding: 0.6em 1em;
     margin-left: 0.8em;
@@ -1599,7 +1596,7 @@ main.ant-layout-content {
 .bb-support-btn {
     display: inline-block;
     padding: 0.7em 2.5em;
-    border: 1px solid rgba(211, 188, 142, 0.35);
+    border: 1px solid rgba(255, 145, 100, 0.6);
     border-radius: 4px;
     background: rgba(217, 196, 170, 0.4);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -1617,7 +1614,7 @@ main.ant-layout-content {
 
 .bb-support-btn:hover {
     background: linear-gradient(to bottom, rgba(70, 78, 105, 0.95), rgba(45, 50, 70, 0.98));
-    border-color: #ff9164;
+    border-color: #730073;
     color: #ff9164;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 12px rgba(211, 188, 142, 0.15);
     opacity: 1
