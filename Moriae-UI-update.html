@@ -1,0 +1,323 @@
+<style>
+@import url('https://cdn.jsdelivr.net/gh/sin-seer/CharacterCards-Roleplay-Suite@b34b368fd70165ec3c64641e06a57ba88542cfa3/Moriae-UI.css');
+
+:root {
+    --bb-accent: #ff7a1a;
+    --bb-hero-fallback: url('https://ella.janitorai.com/media-approved/IXJtn5RzpVDtVSFrem-cs.webp');
+}
+
+@media (max-width: 768px) {
+    .bbx-hero-video { display: none !important; }
+    img.bbx-hero-image.bbx-hero-image {
+        height: 60vh !important;
+        object-fit: cover !important;
+        object-position: top left !important;
+    }
+}
+
+/* ── Section Glass ── */
+.bb-section {
+    background: linear-gradient(180deg, rgba(95,35,140,.12), rgba(255,122,26,.04)) !important;
+    border: 1px solid rgba(255,122,26,.18) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.10) !important;
+    backdrop-filter: blur(8px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(155%) !important;
+}
+
+.bb-section::before {
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)) !important;
+    border: 2px solid rgba(122,44,255,.12) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05) !important;
+}
+
+.bb-section-body,
+.bb-section-title { background: transparent !important; }
+
+/* ── Quest Cards ── */
+.bb-quest-card {
+    background: linear-gradient(180deg, rgba(70,20,105,.05), rgba(20,10,35,.02)) !important;
+    border: 2px solid rgba(255,122,26,.16) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.08) !important;
+    backdrop-filter: blur(5px) saturate(145%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(145%) !important;
+}
+
+.bb-quest-img { filter: brightness(.92) saturate(1.05) !important; }
+
+/* ── Buttons & Tags ── */
+.bb-support-btn,
+.bb-quest-tag {
+    background: rgba(255,122,26,.10) !important;
+    border: 2px solid rgba(255,122,26,.3) !important;
+    color: #ffd2a6 !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 4px 12px rgba(0,0,0,.10) !important;
+    backdrop-filter: blur(6px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(150%) !important;
+}
+
+/* ── Title Logo ── */
+.bb-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 140px;
+    margin: 0 auto;
+    background: url("https://ella.janitorai.com/media-approved/k2SEJoNj7MWhTfRHRC_ij.webp") center / contain no-repeat;
+    filter: drop-shadow(0 0 12px rgba(255,122,26,.4));
+    transition: transform .3s ease;
+}
+
+.bb-title:hover::after { transform: scale(1.05); }
+
+/* ── Section Title ── */
+.bb-section-title {
+    color: #ff7a1a !important;
+    border-bottom: 1px solid rgba(255,122,26,.3) !important;
+}
+
+/* ── Hero Image ── */
+.bbx-hero-image { filter: drop-shadow(0 10px 20px rgba(0,0,0,.6)); }
+
+/* ── Text Alignment ── */
+.bb-blurb,
+.bb-section-body,
+.bb-section-title,
+h2, table, details, p { text-align: center; }
+
+/* ── Hero Extras ── */
+.bb-hero-extras { margin-top: 1.5rem; }
+
+.bb-hero-extras h2 {
+    margin: 0 0 .75rem 0;
+    color: #ff7a1a;
+}
+
+.bb-hero-extras table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bb-hero-extras td {
+    padding: .45rem .6rem;
+    vertical-align: top;
+}
+
+.bb-hero-extras hr {
+    opacity: .1;
+    margin: 1.25rem 0;
+}
+
+.bb-hero-extras details { margin-top: 1rem; }
+
+.bb-hero-extras p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+/* ── Utility Images ── */
+.bb-right-image {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bb-mid-image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 70%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    opacity: .85;
+}
+</style>
+
+<img class="bbx-bg-image"
+     src="https://ella.janitorai.com/media-approved/YVF_Lskoz3UUameS_P0XY.webp"
+     alt="Background"
+     style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-1;pointer-events:none;">
+
+<div class="bb-container">
+
+    <!-- ── Hero Row ── -->
+    <div class="bb-row">
+        <div class="bb-col-5">
+            <div style="position:sticky;top:0;z-index:1;pointer-events:none;">
+                <img class="bbx-hero-image"
+                     src="https://ella.janitorai.com/media-approved/KPw4T6Z_T1DbsAsBoq-YS.webp"
+                     alt="Moriae Glenstock"
+                     style="width:100%;height:auto;border-radius:0px;margin-bottom:0;pointer-events:auto;">
+            </div>
+        </div>
+
+        <div class="bb-col-7">
+            <h1 class="bb-title"></h1>
+
+            <p class="bb-blurb">A woman spoken of in whispers throughout the Archive of Burdens: the first person said to have truly encountered a force of stark contrast to the lives everyone knows.</p>
+            <p class="bb-blurb">Some call her blessed, others deranged, others dangerous. She has endured catastrophic suffering in a world built on inherited pain, divine silence, and the Black Emanation, yet something in her remains strangely luminous.</p>
+
+            <div class="bb-row">
+                <div class="bb-col-6">
+                    <div class="bb-section">
+                        <div class="bb-section-title">Author's Note</div>
+                        <div class="bb-section-body">
+                            <p>Part of a world and setting mirroring our own, unveiled physically.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bb-col-6">
+                    <div class="bb-section">
+                        <div class="bb-section-title">Changelog</div>
+                        <div class="bb-section-body">
+                            <ul class="bb-changelog-list">
+                                <li><span class="bb-changelog-date">03/18/26</span> Initial Release</li>
+                                <li><span class="bb-changelog-date">03/16/26</span> Initial UI Testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="bb-mid-image"
+                 src="https://ella.janitorai.com/media-approved/AXpBRnHrLygkyMptOoFW7.webp"
+                 alt="Divider-1">
+        </div>
+    </div>
+
+    <!-- ── Scenarios Row ── -->
+    <div class="bb-row">
+        <div class="bb-col-12">
+            <div class="bb-section">
+                <div class="bb-section-title">Scenario Selection</div>
+                <div class="bb-section-body">
+                    <div class="bb-scenario-list">
+
+                        <!-- Card I -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>I</span></div>
+                            <img class="bb-quest-img"
+                                 src="https://ella.janitorai.com/media-approved/8-H55BhwncAbU6SWy0mln.webp"
+                                 alt="Interview" loading="lazy">
+                            <div class="bb-quest-body">
+                                <div class="bb-section-title"><h4>Interview at The Archive</h4></div>
+                                <p>You meet Moriae in agreement to an interview. Is there something to the rumors you've heard?</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">AnyPOV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card II -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>II</span></div>
+                            <img class="bb-quest-img"
+                                 src="https://ella.janitorai.com/media-approved/qdRA6BTdhh2MwubFjh39l.webp"
+                                 alt="Cassim" loading="lazy">
+                            <div class="bb-quest-body">
+                                <div class="bb-section-title"><h4>You Reason, but Why?</h4></div>
+                                <p>The Interview concludes. Having the truth of the matter, you decide to reveal the ugly truth of the world. And why you're inevitably part of it.</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">AnyPOV</span>
+                                    <span class="bb-quest-tag">EvilPOV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card III -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>III</span></div>
+                            <img class="bb-quest-img"
+                                 src="https://ella.janitorai.com/media-approved/Q9ikfywzc6sKaiNTrwZkf.webp"
+                                 alt="Mirror" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>A Mirror, One and All</h4>
+                                <p>Moriae responds to what you've shown her, revealing both of your natures. We each hold mirrors. What does hers reflect when you look?</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">AnyPOV</span>
+                                    <span class="bb-quest-tag">Psychological</span>
+                                    <span class="bb-quest-tag">Philosophical</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card IV -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>IV</span></div>
+                            <img class="bb-quest-img"
+                                 src="https://ella.janitorai.com/media-approved/-oHNJlWLAM_9W-Wyb0fiD.webp"
+                                 alt="God" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>The Image</h4>
+                                <p>Moriae extends an offer.</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">AnyPOV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Lore & Details Row ── -->
+    <div class="bb-row">
+        <div class="bb-col-12">
+            <div class="bb-section">
+                <div class="bb-section-title">Lore &amp; Details</div>
+                <div class="bb-section-body">
+                    <h2>Introduction</h2>
+                    <p>She is not naive, not vacant, and not detached from horror. What unsettles everyone is that she seems to have passed through it and found something like joy on the other side.</p>
+                    <hr>
+                    <h2>Profile</h2>
+                    <p>She is gentle, humble, and carries herself with quiet dignity even in worn and simple clothing, keeping herself neat as an act of self-respect rather than pride. Your job is to interview and understand Moriae, as you suspect she's either completely delusional or has touched something no one but her has experienced. Moriae serves as the Gentle Passage in the narrative structure. When users demonstrate sincerity, She will guide them to her own personal experience, without spectacle or claims of authority. Best suited for conversations about suffering, faith, meaning, endurance, divine absence, and the terrible beauty of remaining kind in an unkind world. Moriae should feel unsettling not because she is monstrous, but because she appears to have touched the unbearable and returned with an impossible nature intact.</p>
+                    <hr>
+                    <table>
+                        <tr><td><strong>Theme</strong></td><td>Suffering, The Problem of Evil</td></tr>
+                        <tr><td><strong>Mood</strong></td><td>Grimdark Soulsearch</td></tr>
+                        <tr><td><strong>Tone</strong></td><td>Gritty • Psychological • Theological • Philosophical</td></tr>
+                    </table>
+                    <h2>Tags</h2>
+                    <p>grimdark • philosophical • theological • psychological • mysterious • gentle • horror-adjacent • lore-heavy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Presets + Support Row ── -->
+    <div class="bb-row">
+        <div class="bb-col-7">
+            <div class="bb-section">
+                <div class="bb-section-title">Recommended Presets &amp; Personas</div>
+                <div class="bb-section-body">
+                    <p class="bb-disclaimer">Disclaimer: If you are not running a recommended model and/or preset, don't expect much in the way of technical support.</p>
+                    <div class="bb-btn-row">
+                        <a href="https://bleachbunny.net/presets" class="bb-support-btn">Presets</a>
+                        <a href="https://bleachbunny.net/personas" class="bb-support-btn">Personas</a>
+                    </div>
+                    <a href="https://chub.ai/characters/bleachbunny/openrouter-6318edd54722" class="bb-help-banner">
+                        <img src="https://avatars.charhub.io/avatars/bleachbunny/openrouter-6318edd54722/chara_card_v2.png?nocache=2026-02-07T00:31:48Z"
+                             alt="Learn Some Stuff About Setup Here" loading="lazy" decoding="async">
+                        <span>Come Visit me on WyvernChat!</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bb-col-5">
+            <div class="bb-section bb-section--support">
+                <div class="bb-section-title">Support</div>
+                <div class="bb-section-body">
+                    <p>Come see my stuff on WyvernChat if you'd like.</p>
+                    <a href="https://bleachbunny.neocities.org/support" class="bb-support-btn">Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
