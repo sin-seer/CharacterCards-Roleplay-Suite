@@ -12,7 +12,7 @@
     --bb-fav-gap: 10px;
     --bb-border-top: 1px solid rgba(255, 255, 255, .1);
     --bb-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
-    --bb-divider: 1px solid rgba(210, 180, 140, 0.2);
+    --bb-divider: 1px solid rgba(255, 145, 100, 0.3);
     --bb-font-size: clamp(13px, 1.25vw, 15px);
     --bb-font-weight: 700;
     --bb-btn-bg: transparent;
@@ -1115,7 +1115,7 @@ main.ant-layout-content {
 .bb-blurb {
     font-family: var(--bb-font-hand);
     font-size: 1.15em;
-    font-weight: 400;
+    font-weight: 600;
     color: #c8c4b8;
     line-height: 1.7;
     margin: 0 0 2.5em 0
@@ -1123,7 +1123,7 @@ main.ant-layout-content {
 
 /* ===== SECTION BASE ===== */
 .bb-section {
-    border: 1px solid rgba(211, 188, 142, 0.25);
+    border: 1px solid rgba(255, 145, 100, 0.3);
     border-radius: var(--bb-radius, 8px);
     background: linear-gradient(170deg, rgba(32, 37, 56, 0.8) 0%, rgba(22, 26, 40, 0.8) 100%);
     padding: 1.4em 1.6em;
@@ -1131,7 +1131,7 @@ main.ant-layout-content {
     flex: 1;
     contain: content;
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(4px);
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3)
 }
@@ -1141,7 +1141,7 @@ main.ant-layout-content {
     content: '';
     position: absolute;
     inset: 4px;
-    border: 1px solid rgba(211, 188, 142, 0.1);
+    border: 1px solid rgba(255, 145, 100, 0.2);
     border-radius: calc(var(--bb-radius, 8px) - 2px);
     pointer-events: none;
     z-index: 0
@@ -1169,7 +1169,7 @@ main.ant-layout-content {
 .bb-section-title {
     font-family: var(--bb-font-display);
     font-size: 0.85em;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin: 0 0 1.2em 0;
@@ -1254,7 +1254,7 @@ main.ant-layout-content {
 
 .bb-scenario-card {
     position: relative;
-    border: 1px solid rgba(210, 180, 140, 0.15);
+    border: 1px solid rgba(255, 145, 100, 0.3);
     border-radius: var(--bb-radius, 12px);
     overflow: hidden;
     min-height: 220px;
@@ -1328,7 +1328,7 @@ main.ant-layout-content {
     padding: 0.1em 0.55em 0.05em;
     border-radius: 4px;
     background: var(--bb-rose);
-    border: 1px solid rgba(210, 180, 140, 0.2);
+    border: 1px solid rgba(255, 145, 100, 0.3);
     font-family: var(--bb-font-hand);
     font-weight: 600;
     text-transform: uppercase;
@@ -1597,7 +1597,7 @@ main.ant-layout-content {
     border-radius: 4px;
     background: rgba(217, 196, 170, 0.4);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    color: #d3bc8e;
+    color: #ff9164;
     font-size: 0.85em;
     font-family: var(--bb-font-display);
     font-weight: 400;
@@ -1611,8 +1611,8 @@ main.ant-layout-content {
 
 .bb-support-btn:hover {
     background: linear-gradient(to bottom, rgba(70, 78, 105, 0.95), rgba(45, 50, 70, 0.98));
-    border-color: #d3bc8e;
-    color: #ece5d8;
+    border-color: #ff9164;
+    color: #ff9164;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 12px rgba(211, 188, 142, 0.15);
     opacity: 1
 }
@@ -1668,15 +1668,15 @@ main.ant-layout-content {
 /* ── Section Glass ── */
 .bb-section {
     background: linear-gradient(180deg, rgba(95,35,140,.12), rgba(255,122,26,.04)) !important;
-    border: 1px solid rgba(255,122,26,.18) !important;
+    border: 1px solid rgba(255,122,26,.3) !important;
     box-shadow: 0 10px 30px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.10) !important;
-    backdrop-filter: blur(8px) saturate(155%) !important;
-    -webkit-backdrop-filter: blur(10px) saturate(155%) !important;
+    backdrop-filter: blur(4px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(4px) saturate(155%) !important;
 }
 
 .bb-section::before {
     background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)) !important;
-    border: 2px solid rgba(122,44,255,.12) !important;
+    border: 1px solid rgba(122,44,255,.12) !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.05) !important;
 }
 
@@ -1685,10 +1685,10 @@ main.ant-layout-content {
 
 /* ── Quest Cards ── */
 .bb-quest-card {
-    background: linear-gradient(180deg, rgba(70,20,105,.05), rgba(20,10,35,.02)) !important;
+    background: linear-gradient(180deg, rgba(70,20,105,.08), rgba(20,10,35,.05)) !important;
     border: 2px solid rgba(255,122,26,.16) !important;
     box-shadow: 0 8px 24px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.08) !important;
-    backdrop-filter: blur(5px) saturate(145%) !important;
+    backdrop-filter: blur(2px) saturate(145%) !important;
     -webkit-backdrop-filter: blur(8px) saturate(145%) !important;
 }
 
@@ -1697,12 +1697,12 @@ main.ant-layout-content {
 /* ── Buttons & Tags ── */
 .bb-support-btn,
 .bb-quest-tag {
-    background: rgba(255,122,26,.10) !important;
-    border: 2px solid rgba(255,122,26,.3) !important;
-    color: #ffd2a6 !important;
+    background: rgba(255, 145, 100,.10) !important;
+    border: 2px solid rgba(255, 145, 100,.3) !important;
+    color: ff9164 !important;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 4px 12px rgba(0,0,0,.10) !important;
-    backdrop-filter: blur(6px) saturate(150%) !important;
-    -webkit-backdrop-filter: blur(8px) saturate(150%) !important;
+    backdrop-filter: blur(4px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(4px) saturate(150%) !important;
 }
 
 /* ── Title Logo ── */
@@ -1739,7 +1739,7 @@ h2, table, details, p { text-align: center; }
 
 .bb-hero-extras h2 {
     margin: 0 0 .75rem 0;
-    color: #ff7a1a;
+    color: #ff9164;
 }
 
 .bb-hero-extras table {
@@ -1787,4 +1787,4 @@ h2, table, details, p { text-align: center; }
 
 /* ── Section body accent ── */
 .bb-section-body h2,
-.bb-section-body td:first-child strong { color: #ff7a1a !important; }
+.bb-section-body td:first-child strong { color: #ff9164 !important; }
