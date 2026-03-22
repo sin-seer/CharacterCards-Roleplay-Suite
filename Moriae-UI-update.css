@@ -369,7 +369,7 @@ footer.ant-layout-footer {
     content: 'sin.seer';
     white-space: pre;
     font-family: var(--bb-font-mono);
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 700;
     text-transform: lowercase;
     letter-spacing: 0.08em;
