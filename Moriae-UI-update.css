@@ -2,10 +2,10 @@
 
 :root {
     --bb-bg: var(--background, #12151f);
-    --bb-font-mono: 'Caveat Brush', cursive;
-    --bb-font-display: 'Caveat Brush', cursive;
-    --bb-font-serif: 'Caveat Brush', cursive;
-    --bb-font-hand: 'Caveat Brush', cursive;
+    --bb-font-mono: 'Ysabeau Infant', normal;
+    --bb-font-display: 'Ysabeau Infant', normal;
+    --bb-font-serif: 'Ysabeau Infant', normal;
+    --bb-font-hand: 'Ysabeau Infant', normal;
     --bb-height: clamp(42px, 5vw, 56px);
     --bb-inset: 16px;
     --bb-radius: 8px;
