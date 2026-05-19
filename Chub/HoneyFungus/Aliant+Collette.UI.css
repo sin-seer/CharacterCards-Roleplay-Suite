@@ -59,7 +59,7 @@ body:has(.srv-wrapper)::before{
 
 body:has(.srv-wrapper) header.ant-layout-header,
 body:has(.srv-wrapper) .ant-layout-header{position:relative !important;z-index:99999 !important}
-body:has(.srv-wrapper) spacer,
+body:has(.srv-wrapper) .spacer,
 body:has(.srv-wrapper) .galaxy-bg,
 body:has(.srv-wrapper) .ant-ribbon-text{display:none !important}
 
