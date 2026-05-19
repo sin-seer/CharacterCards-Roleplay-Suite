@@ -1,21 +1,3 @@
-<meta charset="UTF-8">
-<style>
-/* ========================================================================
-   HONEYFUNGUS // GLOBAL CUSTOM CSS
-   File 1 of 3 — hosted on GitHub and inlined into the Chub paste build.
-
-   GitHub path example: <USER>/<REPO>/honeyfungus_global.css
-   jsDelivr URL:        https://cdn.jsdelivr.net/gh/<USER>/<REPO>@main/honeyfungus_global.css
-
-   IMPORTANT: core card styling is scoped to `.srv-wrapper`. Chub page-level overrides are optional progressive enhancement and must not be required for the card to render.
-
-   Per-character image URLs are CSS variables on :root. The defaults
-   below are Aliant's URLs. To override for another character, create a
-   tiny per-character CSS file that re-declares these vars on :root and
-   load it AFTER this file in the creator_notes <link> stack.
-======================================================================== */
-
-/* ---- PER-CARD IMAGE URLS (Aliant defaults) ---- */
 :root{
   --hf-page-bg:url('https://ella.janitorai.com/media-approved/nejQsGrBGvL3r4IpNsI9D.webp');
   --hf-hero-banner:url('https://ella.janitorai.com/media-approved/ojU4cljENm4jTPO3hFgwY.webp');
@@ -246,7 +228,6 @@
   .srv-acts{grid-template-columns:1fr}
   .srv-wrapper{min-height:100vh}
 }
-</style>
 
 <div class="srv-wrapper" style="
   --theme-hex:#CAA86A;
