@@ -12,6 +12,9 @@
   --bg-color: #0C0B0A;
   --card-bg: rgba(18,15,12,.75);
   --page-max: 820px;
+  --hero-max: 820px;
+  --hero-height: clamp(190px, 22vw, 260px);
+  --hero-mobile-height: 190px;
 }
 
 body {
@@ -71,19 +74,20 @@ div.text-sm:has(.font-size-message) {
 }
 
 .ant-row.ant-row-center > .ant-col-lg-6:first-child {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto 30px auto !important;
+  flex: 0 0 min(100%, var(--hero-max)) !important;
+  width: min(100%, var(--hero-max)) !important;
+  max-width: var(--hero-max) !important;
+  margin: 0 auto 24px auto !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-end !important;
-  height: 25vh !important;
-  min-height: 220px !important;
+  height: var(--hero-height) !important;
+  min-height: 0 !important;
   background: url('https://ella.janitorai.com/media-approved/ojU4cljENm4jTPO3hFgwY.webp') center top / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
   border-bottom: 2px solid var(--theme-hex) !important;
   position: relative !important;
-  padding: 30px 20px !important;
+  padding: 24px 20px !important;
   box-shadow: 0 15px 40px rgba(0,0,0,.8) !important;
   z-index: 50;
 }
@@ -198,7 +202,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   font-family: Georgia, 'Times New Roman', serif;
   color: var(--text-main);
   overflow-x: hidden;
-  padding: 20px 0 60px;
+  padding: 12px 0 60px;
   background: var(--bg-color) url('https://ella.janitorai.com/media-approved/nejQsGrBGvL3r4IpNsI9D.webp') center / cover fixed no-repeat;
   box-sizing: border-box;
 }
@@ -240,7 +244,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   z-index: 2;
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: 20px 20px 64px;
+  padding: 12px 20px 64px;
 }
 
 .srv-rule,
@@ -328,8 +332,8 @@ div.mt-4.text-right.justify-end button.ant-btn {
 }
 
 .srv-avatar {
-  width: 158px;
-  height: 158px;
+  width: 142px;
+  height: 142px;
   border-radius: 50%;
   border: 1px solid rgba(var(--theme-rgb),.6);
   overflow: hidden;
@@ -352,8 +356,8 @@ div.mt-4.text-right.justify-end button.ant-btn {
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 174px;
-  height: 174px;
+  width: 158px;
+  height: 158px;
   border-radius: 50%;
   border: 1px solid rgba(var(--theme-rgb),.4);
   pointer-events: none;
@@ -613,8 +617,8 @@ div.mt-4.text-right.justify-end button.ant-btn {
 }
 
 .srv-gal-item {
-  flex: 0 0 290px;
-  min-width: 290px;
+  flex: 0 0 260px;
+  min-width: 260px;
   scroll-snap-align: center;
   position: relative;
   border: 1px solid transparent;
@@ -757,12 +761,58 @@ div.mt-4.text-right.justify-end button.ant-btn {
   }
 
   .ant-row.ant-row-center > .ant-col-lg-6:first-child {
-    height: 36vh !important;
-    min-height: 280px !important;
+    flex-basis: calc(100% - 8px) !important;
+    width: calc(100% - 8px) !important;
+    max-width: calc(100% - 8px) !important;
+    height: var(--hero-mobile-height) !important;
+    min-height: 0 !important;
+    margin-bottom: 18px !important;
+    padding: 18px 12px !important;
   }
 
   .srv-container {
-    padding: 10px 15px 40px;
+    padding: 8px 10px 40px;
+  }
+
+  .srv-rule {
+    margin: 20px 0;
+  }
+
+  .srv-avatar {
+    width: 118px;
+    height: 118px;
+  }
+
+  .srv-avatar-ring {
+    width: 132px;
+    height: 132px;
+  }
+
+  .srv-id-name {
+    font-size: 24px;
+    letter-spacing: 8px;
+  }
+
+  .srv-id-surname {
+    font-size: 10px;
+    letter-spacing: 6px;
+  }
+
+  .srv-tagline {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+
+  .srv-tags {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .srv-tag {
+    padding: 4px 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
   }
 
   .srv-path,
@@ -771,7 +821,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   }
 
   .srv-gal-item {
-    flex-basis: 82%;
+    flex-basis: 78%;
   }
 
   .srv-acts {
