@@ -1,14 +1,20 @@
 <!--
 ====================================================================
-  HONEYFUNGUS // ALIANT — CREATOR_NOTES (HTML CONTENT ONLY)
-  Paste this into the creator_notes / "lore" field on the chub card.
+  HONEYFUNGUS // ALIANT — HTML CONTENT
+  File 2 of 3 — hosted on GitHub for reference / source-of-truth.
 
-  IMPORTANT: This file contains NO <style> tags. All styling lives in
-  your global custom CSS (honeyfungus_global_custom_css.css).
+  GitHub path example: <USER>/<REPO>/characters/aliant.html
+  jsDelivr URL:        https://cdn.jsdelivr.net/gh/<USER>/<REPO>@main/characters/aliant.html
 
-  Per-card theming is set INLINE on the .srv-wrapper div below.
-  See bottom of this file for theme presets to swap for other
-  characters.
+  This is the canonical version of Aliant's creator_notes HTML.
+  The chub paste file (File 3) is identical except that it has the
+  <link> tag at the top to load the global CSS via jsDelivr.
+
+  Per-character image URLs (avatar + gallery scenes) are inline below.
+  Per-character page-bg and hero-banner URLs live in the global CSS
+  on :root (Aliant defaults). To use different images for a different
+  character, override --hf-page-bg / --hf-hero-banner in a per-character
+  CSS file loaded after the global one.
 ====================================================================
 -->
 
@@ -21,7 +27,7 @@
   --secondary-rgb:110,180,231;
 ">
 
-  <!-- atmospheric drifting spores (decorative) -->
+  <!-- atmospheric drifting spores -->
   <div class="srv-bg-data">
     <span style="left:8%;top:0;animation-delay:0s">·</span>
     <span style="left:22%;top:0;animation-delay:3s">∴</span>
@@ -184,44 +190,36 @@
     <div class="srv-gallery-wrap">
       <div class="srv-gallery">
 
+        <!-- SCENE 1 -->
         <div class="srv-gal-item">
-          <div class="srv-gal-placeholder">
-            <span class="srv-gal-glyph">⌂</span>
-            Eleo Farm
-          </div>
+          <img src="https://ella.janitorai.com/media-approved/EHear8n9GVycSyF_LBGan.webp" alt="Eleo Farm">
           <div class="srv-gal-body">
             <div class="srv-gal-title">Before Departure</div>
             <div class="srv-gal-desc">Meet Aliant among the terrace fields and irrigation blooms.</div>
           </div>
         </div>
 
+        <!-- SCENE 2 -->
         <div class="srv-gal-item">
-          <div class="srv-gal-placeholder">
-            <span class="srv-gal-glyph">⌗</span>
-            Minello Sky-Tavern
-          </div>
+          <img src="PLACEURLHERE" alt="Minello Sky-Tavern">
           <div class="srv-gal-body">
             <div class="srv-gal-title">Later Into the Route</div>
             <div class="srv-gal-desc">Paint still drying on his jaw after a half-finished mural upstairs.</div>
           </div>
         </div>
 
+        <!-- SCENE 3 -->
         <div class="srv-gal-item collette">
-          <div class="srv-gal-placeholder">
-            <span class="srv-gal-glyph">⌬</span>
-            Mid-Flight Interception
-          </div>
+          <img src="PLACEURLHERE" alt="Mid-Flight Interception">
           <div class="srv-gal-body">
             <div class="srv-gal-title">The Branch</div>
             <div class="srv-gal-desc">Begin at the choice itself, as Collette boards the airship and offers her alternative.</div>
           </div>
         </div>
 
+        <!-- SCENE 4 -->
         <div class="srv-gal-item collette">
-          <div class="srv-gal-placeholder">
-            <span class="srv-gal-glyph">⌖</span>
-            Brinfatal Skiff
-          </div>
+          <img src="PLACEURLHERE" alt="Brinfatal Skiff">
           <div class="srv-gal-body">
             <div class="srv-gal-title">Post-Choice</div>
             <div class="srv-gal-desc">Aboard Collette's skiff en route to the drowned Hyperjunctions below Brinfatal.</div>
@@ -293,58 +291,9 @@
     <div class="srv-ornament" style="margin-top:36px"><div></div><span>✦</span><div></div></div>
 
     <div class="srv-creator">
-      <p>Card by <strong>sin.seer</strong> · HoneyFungus Project Codex</p>
+      <p>Card by <strong>Wes</strong> · HoneyFungus Project Codex · v.main-branched</p>
       <p>"We did not master the weather. We merely learned to whisper to the mind beneath it."</p>
     </div>
 
   </div>
 </div>
-
-<!--
-====================================================================
-  PER-CHARACTER THEME OVERRIDES
-  (swap the inline style on the .srv-wrapper div above)
-====================================================================
-
-  ALIANT (default — sky / honey):
-    --theme-hex:#CAA86A; --theme-rgb:202,168,106;
-    --theme-light:#E6CC80; --theme-dark:#3A2D18;
-    --secondary-hex:#6EB4E7; --secondary-rgb:110,180,231;
-
-  COLLETTE-AS-LEAD (moss / aurora):
-    --theme-hex:#A9C481; --theme-rgb:169,196,129;
-    --theme-light:#C2DB9E; --theme-dark:#2D3D1E;
-    --secondary-hex:#9B7AB0; --secondary-rgb:155,122,176;
-
-  MELLY (gold / dusk):
-    --theme-hex:#E6CC80; --theme-rgb:230,204,128;
-    --theme-light:#F3DD9F; --theme-dark:#3D341B;
-    --secondary-hex:#7C6FA8; --secondary-rgb:124,111,168;
-
-  RONI (storm / brass):
-    --theme-hex:#8DA0B6; --theme-rgb:141,160,182;
-    --theme-light:#A8BACA; --theme-dark:#1F2832;
-    --secondary-hex:#D8C16E; --secondary-rgb:216,193,110;
-
-  VEKHOTE (ozone / violet):
-    --theme-hex:#B89BD4; --theme-rgb:184,155,212;
-    --theme-light:#CFB7E3; --theme-dark:#2A1F38;
-    --secondary-hex:#C97A5A; --secondary-rgb:201,122,90;
-
-  SOFFRANZA (astrea pale / aurora):
-    --theme-hex:#A8D8E2; --theme-rgb:168,216,226;
-    --theme-light:#C2E5EC; --theme-dark:#1E323A;
-    --secondary-hex:#D4C188; --secondary-rgb:212,193,136;
-
-  DISENIO (cryo / ice):
-    --theme-hex:#A8C5D8; --theme-rgb:168,197,216;
-    --theme-light:#C2D7E4; --theme-dark:#1F2D38;
-    --secondary-hex:#D8A8B5; --secondary-rgb:216,168,181;
-
-  THERMOSPHERE CULTS (martyr fire):
-    --theme-hex:#D87C5A; --theme-rgb:216,124,90;
-    --theme-light:#E89B7C; --theme-dark:#3A1B12;
-    --secondary-hex:#8A2828; --secondary-rgb:138,40,40;
-
-====================================================================
--->
