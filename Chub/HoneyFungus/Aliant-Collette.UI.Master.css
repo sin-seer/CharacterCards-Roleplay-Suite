@@ -14,13 +14,14 @@
    ============================================================================= */
 
 :root {
-  /* theme — overridable inline on .srv-wrapper for per-card recoloring */
-  --theme-hex: #CAA86A;
-  --theme-rgb: 202,168,106;
-  --theme-light: #E6CC80;
+  /* theme — overridable inline on .srv-wrapper for per-card recoloring
+     Aliant: purple primary  ·  Collette: green secondary */
+  --theme-hex: #6A6ACA;
+  --theme-rgb: 106,106,202;
+  --theme-light: #6A6ACA;
   --theme-dark: #3A2D18;
-  --secondary-hex: #6EB4E7;
-  --secondary-rgb: 110,180,231;
+  --secondary-hex: #79EE7E;
+  --secondary-rgb: 121,238,126;
 
   /* type colors */
   --name-gold: #F1E0B8;
@@ -632,7 +633,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-path {
   flex: 1 1 300px !important;
   min-width: 300px !important;
-  border: 1px solid rgba(var(--theme-rgb),.30) !important;
+  border: 1px solid rgba(var(--theme-rgb),.45) !important;
   padding: 24px !important;
   background: rgba(18,15,12,.58) !important;
   box-shadow: 0 0 0 1px rgba(255,255,255,.035),
@@ -643,7 +644,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 .srv-path.collette,
 .msg-mkdn-container .srv-path.collette {
-  border-color: rgba(var(--secondary-rgb),.50) !important;
+  border-color: rgba(var(--secondary-rgb),.55) !important;
 }
 
 .srv-path-tag {
@@ -662,7 +663,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   margin-bottom: 14px !important;
   padding-bottom: 14px !important;
   border-bottom: 1px solid rgba(var(--theme-rgb),.20) !important;
-  text-shadow: 0 2px 2px #000, 0 0 12px rgba(202,168,106,.38) !important;
+  text-shadow: 0 2px 2px #000, 0 0 12px rgba(var(--theme-rgb),.38) !important;
 }
 
 .srv-path-tagline {
@@ -1037,7 +1038,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-wrapper.srv-wrapper .srv-tag,
 .msg-mkdn-container .srv-tag {
   color: #fff0b8 !important;
-  border-color: rgba(255,230,170,.62) !important;
+  border-color: rgba(var(--theme-rgb),.62) !important;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.2),
               0 1px 5px rgba(0,0,0,.45) !important;
 }
