@@ -746,28 +746,39 @@ div.mt-4.text-right.justify-end button.ant-btn {
   gap: 14px !important;
 }
 
+/* shared frame — matches path-card surface so the section reads as part of the same family */
 .srv-choice-main,
 .srv-choice-side {
-  border: 1px solid rgba(255,230,170,.42) !important;
-  background: rgba(18,15,12,.42) !important;
-  box-shadow: 0 10px 28px rgba(0,0,0,.34),
-              inset 0 0 0 1px rgba(255,255,255,.035) !important;
+  border: 1px solid rgba(var(--theme-rgb),.45) !important;
+  background: rgba(18,15,12,.58) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.035),
+              0 12px 34px rgba(0,0,0,.42) !important;
 }
 
 .srv-choice-main {
-  flex: 1 1 420px !important;
+  flex: 1 1 460px !important;
   padding: 24px 22px !important;
 }
 
 .srv-choice-side {
-  flex: 0 1 180px !important;
-  min-width: 140px !important;
+  flex: 0 0 160px !important;
+  min-width: 130px !important;
+  max-width: 180px !important;
   position: relative !important;
   overflow: hidden !important;
   display: flex !important;
   align-items: flex-end !important;
-  justify-content: center !important;
-  min-height: 245px !important;
+  min-height: 260px !important;
+}
+
+/* per-character border tinting + name anchored to outer edge */
+.srv-choice-side.aliant {
+  border-color: rgba(var(--theme-rgb),.55) !important;
+  justify-content: flex-start !important;
+}
+.srv-choice-side.collette {
+  border-color: rgba(var(--secondary-rgb),.55) !important;
+  justify-content: flex-end !important;
 }
 
 .srv-choice-side img {
@@ -788,20 +799,23 @@ div.mt-4.text-right.justify-end button.ant-btn {
                               rgba(8,7,6,.82),
                               rgba(8,7,6,.12) 55%,
                               rgba(8,7,6,.34)) !important;
+  pointer-events: none;
 }
 
 .srv-choice-side span {
   position: relative !important;
   z-index: 1 !important;
-  color: #fff3d2 !important;
   font-family: Arial, sans-serif !important;
   text-transform: uppercase !important;
   letter-spacing: 4px !important;
   font-size: 11px !important;
-  padding: 0 8px 16px !important;
+  padding: 0 12px 16px !important;
+  text-shadow: 0 1px 2px #000, 0 0 10px rgba(0,0,0,.85) !important;
 }
+.srv-choice-side.aliant span   { color: var(--name-color) !important; }
+.srv-choice-side.collette span { color: var(--name-alt)   !important; }
 
-/* Legacy fallback: when .srv-choice has no inner .srv-choice-grid */
+/* Legacy fallback (no inner .srv-choice-grid) — kept, updated to match surface */
 .srv-choice:not(:has(.srv-choice-grid)) {
   display: grid !important;
   grid-template-columns: minmax(130px, 180px) minmax(0, 1fr) minmax(130px, 180px) !important;
@@ -813,8 +827,8 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-choice:not(:has(.srv-choice-grid))::before,
 .srv-choice:not(:has(.srv-choice-grid))::after {
   content: "" !important;
-  min-height: 245px !important;
-  border: 1px solid rgba(255,230,170,.42) !important;
+  min-height: 260px !important;
+  border: 1px solid rgba(var(--theme-rgb),.55) !important;
   background-size: cover !important;
   background-position: center top !important;
   box-shadow: 0 10px 28px rgba(0,0,0,.34),
@@ -829,6 +843,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-choice:not(:has(.srv-choice-grid))::after {
   background-image: linear-gradient(to top, rgba(8,7,6,.35), rgba(8,7,6,.04)),
                     url('https://ella.janitorai.com/media-approved/0gAQfpMxk9s-8p_4_EFHV.webp') !important;
+  border-color: rgba(var(--secondary-rgb),.55) !important;
 }
 
 .srv-choice:not(:has(.srv-choice-grid)) > * {
@@ -856,7 +871,6 @@ div.mt-4.text-right.justify-end button.ant-btn {
   padding-top: 14px;
   border-top: 1px dashed rgba(var(--theme-rgb),.25);
 }
-
 
 /* =============================================================================
    14. GALLERY
