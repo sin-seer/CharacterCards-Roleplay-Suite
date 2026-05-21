@@ -1383,46 +1383,54 @@ div.mt-4.text-right.justify-end button.ant-btn {
   .srv-path,
   .msg-mkdn-container .srv-path { min-width: 0 !important; }
 
-  /* choice — keep horizontal 3-column layout on mobile, sides narrower, names anchored to outer edges */
+ /* choice — stacked on mobile: Aliant top, text middle, Collette bottom, all equal width */
   .srv-choice-grid {
     display: flex !important;
-    flex-direction: row !important;
-    gap: 8px !important;
+    flex-direction: column !important;
+    gap: 12px !important;
     align-items: stretch !important;
   }
   .srv-choice-main {
-    padding: 18px 12px !important;
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
+    padding: 20px 16px !important;
+    order: 2 !important;
   }
   .srv-choice-side {
-    flex: 0 0 88px !important;
-    min-width: 72px !important;
-    max-width: 100px !important;
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
     min-height: 0 !important;
+    height: 170px !important;
   }
+  .srv-choice-side.aliant   { order: 1 !important; }
+  .srv-choice-side.collette { order: 3 !important; }
   .srv-choice-side img {
     object-position: center 28% !important;
   }
-  /* names stay horizontal, anchored to outer bottom corner of each side */
+  /* labels go horizontal again on stacked mobile bands */
   .srv-choice-side span {
     writing-mode: horizontal-tb !important;
     transform: none !important;
-    letter-spacing: 2.5px !important;
-    font-size: 9px !important;
-    padding: 0 6px 12px !important;
+    letter-spacing: 4px !important;
+    font-size: 11px !important;
+    padding: 0 10px 14px !important;
   }
-  /* legacy fallback (no inner .srv-choice-grid): keep 3-column grid on mobile too */
+  /* legacy fallback: flatten too, in case :has() doesn't evaluate */
   .srv-choice:not(:has(.srv-choice-grid)) {
-    display: grid !important;
-    grid-template-columns: 88px minmax(0,1fr) 88px !important;
-    gap: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 12px !important;
   }
   .srv-choice:not(:has(.srv-choice-grid))::before,
   .srv-choice:not(:has(.srv-choice-grid))::after {
-    min-height: 240px !important;
+    min-height: 170px !important;
+    height: 170px !important;
     width: 100% !important;
   }
+  .srv-choice:not(:has(.srv-choice-grid))::before { order: 1 !important; }
+  .srv-choice:not(:has(.srv-choice-grid)) > *     { order: 2 !important; }
+  .srv-choice:not(:has(.srv-choice-grid))::after  { order: 3 !important; }
 
   /* replace lateral slide-in with vertical slide-in to match stacked layout */
   @keyframes slide-from-top {
