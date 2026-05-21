@@ -1125,14 +1125,6 @@ div.mt-4.text-right.justify-end button.ant-btn {
   will-change: text-shadow;
 }
 
-/* — Choice portraits slide toward center on page load — */
-.srv-choice-side.aliant img {
-  animation: slide-from-left  1.4s cubic-bezier(.22,.9,.3,1) .4s both;
-}
-.srv-choice-side.collette img {
-  animation: slide-from-right 1.4s cubic-bezier(.22,.9,.3,1) .4s both;
-}
-
 /* — Ambient flutter on decorative symbols — */
 .srv-rule.top span,
 .srv-ornament span {
@@ -1198,13 +1190,17 @@ div.mt-4.text-right.justify-end button.ant-btn {
   transition: border-color .35s ease, box-shadow .35s ease !important;
 }
 .srv-choice-side img {
-  transition: transform .8s cubic-bezier(.22,.9,.3,1),
-              opacity .4s ease;
+  transition: transform 3.5s cubic-bezier(.22,.9,.3,1),
+              opacity .5s ease;
   will-change: transform, opacity;
 }
-.srv-choice-side:hover img {
-  transform: scale(1.06);
-  opacity: .88;
+.srv-choice-side.aliant:hover img {
+  transform: translateX(-7%) scale(1.06);
+  opacity: .9;
+}
+.srv-choice-side.collette:hover img {
+  transform: translateX(7%) scale(1.06);
+  opacity: .9;
 }
 .srv-choice-side.aliant:hover {
   border-color: rgba(var(--theme-rgb),.65) !important;
@@ -1431,22 +1427,6 @@ div.mt-4.text-right.justify-end button.ant-btn {
   .srv-choice:not(:has(.srv-choice-grid))::before { order: 1 !important; }
   .srv-choice:not(:has(.srv-choice-grid)) > *     { order: 2 !important; }
   .srv-choice:not(:has(.srv-choice-grid))::after  { order: 3 !important; }
-
-  /* replace lateral slide-in with vertical slide-in to match stacked layout */
-  @keyframes slide-from-top {
-    from { transform: translateY(-40%); opacity: 0; }
-    to   { transform: translateY(0);    opacity: .72; }
-  }
-  @keyframes slide-from-bottom {
-    from { transform: translateY(40%);  opacity: 0; }
-    to   { transform: translateY(0);    opacity: .72; }
-  }
-  .srv-choice-side.aliant img {
-    animation: slide-from-top    1.2s cubic-bezier(.22,.9,.3,1) .3s both !important;
-  }
-  .srv-choice-side.collette img {
-    animation: slide-from-bottom 1.2s cubic-bezier(.22,.9,.3,1) .5s both !important;
-  }
 
   .srv-quote,
   .srv-choice,
