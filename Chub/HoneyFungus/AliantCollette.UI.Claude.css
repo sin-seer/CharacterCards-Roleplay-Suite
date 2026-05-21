@@ -1458,3 +1458,99 @@ div.mt-4.text-right.justify-end button.ant-btn {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* =============================================================================
+   19. AMBER ACCENT LAYER  (Phase 2 — character-neutral warm honey)
+   Tertiary structural color applied to:
+   - top + bottom decorative rules, ornaments, flanking line backgrounds
+   - all section headers (and their flanking divs)
+   - acts header
+   - life-intro emphasis ("Despite the collapse, life continues.")
+   - quote box border + faint tint
+   - world section border + tint + coda
+   - hero CTA button (Chat with Aliant || Collette)
+   Appended at the end so it wins the cascade against §16 / §5 base purple.
+   ============================================================================= */
+
+:root {
+  --tertiary-hex: #DDB04A;
+  --tertiary-rgb: 221,176,74;
+}
+
+/* — Top rule + ornaments — */
+.srv-wrapper.srv-wrapper .srv-rule.top span,
+.msg-mkdn-container .srv-rule.top span,
+.srv-wrapper.srv-wrapper .srv-ornament span,
+.msg-mkdn-container .srv-ornament span {
+  color: var(--tertiary-hex) !important;
+  text-shadow: 0 1px 2px #000, 0 0 14px rgba(var(--tertiary-rgb),.5) !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-rule.top div:first-of-type,
+.msg-mkdn-container .srv-rule.top div:first-of-type {
+  background: linear-gradient(to right, transparent, rgba(var(--tertiary-rgb),.6)) !important;
+}
+.srv-wrapper.srv-wrapper .srv-rule.top div:last-of-type,
+.msg-mkdn-container .srv-rule.top div:last-of-type {
+  background: linear-gradient(to right, rgba(var(--tertiary-rgb),.6), transparent) !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-ornament div,
+.msg-mkdn-container .srv-ornament div {
+  background: rgba(var(--tertiary-rgb),.28) !important;
+}
+
+/* — Section headers + their flanking lines — */
+.srv-wrapper.srv-wrapper .srv-section-hdr span,
+.msg-mkdn-container .srv-section-hdr span,
+.srv-wrapper.srv-wrapper .srv-acts-hdr,
+.msg-mkdn-container .srv-acts-hdr {
+  color: var(--tertiary-hex) !important;
+  text-shadow: 0 1px 2px #000, 0 0 12px rgba(var(--tertiary-rgb),.55) !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-section-hdr div,
+.msg-mkdn-container .srv-section-hdr div {
+  background: rgba(var(--tertiary-rgb),.28) !important;
+}
+
+/* — Life-intro emphasis ("Despite the collapse, life continues.") — */
+.srv-wrapper.srv-wrapper .srv-life-intro em,
+.msg-mkdn-container .srv-life-intro em {
+  color: var(--tertiary-hex) !important;
+  text-shadow: 0 1px 2px #000, 0 0 14px rgba(var(--tertiary-rgb),.55) !important;
+}
+
+/* — Quote box — */
+.srv-wrapper.srv-wrapper .srv-quote,
+.msg-mkdn-container .srv-quote {
+  border-color: rgba(var(--tertiary-rgb),.42) !important;
+  border-left-color: rgba(var(--tertiary-rgb),.6) !important;
+  border-right-color: rgba(var(--tertiary-rgb),.6) !important;
+  background: rgba(var(--tertiary-rgb),.05) !important;
+}
+
+/* — World section: border, faint tint, and the closing coda line — */
+.srv-wrapper.srv-wrapper .srv-world,
+.msg-mkdn-container .srv-world {
+  border-color: rgba(var(--tertiary-rgb),.5) !important;
+  background: rgba(var(--tertiary-rgb),.03) !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-world .coda,
+.msg-mkdn-container .srv-world .coda {
+  color: var(--tertiary-hex) !important;
+  text-shadow: 0 1px 2px #000, 0 0 12px rgba(var(--tertiary-rgb),.5) !important;
+}
+
+/* — Hero CTA button (lives outside .srv-wrapper, so unscoped selector) — */
+div.mt-4:has(svg.lucide-messages-square) button.ant-btn:has(svg.lucide-messages-square) {
+  border-color: var(--tertiary-hex) !important;
+  color: var(--tertiary-hex) !important;
+  box-shadow: 0 0 20px rgba(var(--tertiary-rgb),.5) !important;
+}
+div.mt-4:has(svg.lucide-messages-square) button.ant-btn:has(svg.lucide-messages-square):hover {
+  background: var(--tertiary-hex) !important;
+  color: #111 !important;
+  box-shadow: 0 0 30px rgba(var(--tertiary-rgb),.7) !important;
+}
