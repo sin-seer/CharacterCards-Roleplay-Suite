@@ -24,8 +24,9 @@
   --secondary-rgb: 121,238,126;
 
   /* type colors — body text stays cream-neutral for readability */
-  --name-gold: #C8C8FF;        /* (legacy var name) character names — now lavender */
-  --name-alt:  #C8FFCB;        /* Collette-context names — lavender's green twin */
+  --name-gold: #F1E0B8;        /* warm gold — used by <strong> body emphasis (NOT character names) */
+  --name-color: #C8C8FF;       /* lavender — actual character name elements (Aliant context) */
+  --name-alt:   #C8FFCB;       /* mint — character name elements in Collette context */
   --accent-soft: #C8C8FF;      /* path tags, section hdrs, tagline, acts hdr */
   --accent-soft-alt: #C8FFCB;  /* same for .collette context */
   --accent-chip: #D8D8F8;      /* tag / theme-chip text */
@@ -265,7 +266,7 @@ div.mt-4:has(svg.lucide-messages-square) button.ant-btn:hover {
 
 div.mt-4:has(svg.lucide-messages-square) button.ant-btn:has(svg.lucide-messages-square) {
   background: rgba(var(--theme-rgb),.1) !important;
-  color: var(--name-gold) !important;
+  color: var(--name-color) !important;
   border: 1px solid var(--theme-hex) !important;
   box-shadow: 0 0 20px rgba(var(--theme-rgb),.5) !important;
   height: 40px !important;
@@ -516,7 +517,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-id-name {
   font-size: 30px !important;
   letter-spacing: 10px !important;
-  color: var(--name-gold) !important;
+  color: var(--name-color) !important;
   text-transform: uppercase !important;
   margin-bottom: 5px !important;
   text-shadow: 0 0 24px rgba(var(--theme-rgb),.25) !important;
@@ -526,7 +527,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-id-surname {
   font-size: 12px !important;
   letter-spacing: 8px !important;
-  color: var(--name-gold) !important;
+  color: var(--name-color) !important;
   text-transform: uppercase !important;
   margin-bottom: 11px !important;
   opacity: .85;
@@ -927,7 +928,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-gal-title {
   font-size: 10px !important;
   letter-spacing: 3px !important;
-  color: var(--name-gold);
+  color: var(--name-color);
 }
 
 .srv-gal-desc {
@@ -1073,8 +1074,6 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-path.collette .srv-path-tag,
 .srv-wrapper.srv-wrapper .srv-path.collette .srv-path-title,
 .msg-mkdn-container .srv-path.collette .srv-path-title,
-.srv-wrapper.srv-wrapper .srv-path.collette strong,
-.msg-mkdn-container .srv-path.collette strong,
 .srv-wrapper.srv-wrapper .srv-path.collette .srv-theme-label,
 .msg-mkdn-container .srv-path.collette .srv-theme-label,
 .srv-wrapper.srv-wrapper .srv-gal-item.collette .srv-gal-title,
@@ -1370,33 +1369,70 @@ div.mt-4.text-right.justify-end button.ant-btn {
   .srv-path,
   .msg-mkdn-container .srv-path { min-width: 0 !important; }
 
-  /* choice */
+  /* choice — stacked layout on mobile: Aliant band on top, text middle, Collette band on bottom */
   .srv-choice-grid {
-    display: grid !important;
-    grid-template-columns: 58px minmax(0, 1fr) 58px !important;
-    gap: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
     align-items: stretch !important;
   }
-  .srv-choice-main { padding: 18px 12px !important; }
+  .srv-choice-main {
+    padding: 20px 16px !important;
+    order: 2 !important;
+  }
   .srv-choice-side {
+    width: 100% !important;
+    flex: 0 0 auto !important;
     min-width: 0 !important;
-    min-height: 260px !important;
+    min-height: 0 !important;
+    height: 170px !important;
   }
+  .srv-choice-side.aliant   { order: 1 !important; }
+  .srv-choice-side.collette { order: 3 !important; }
+  .srv-choice-side img {
+    object-position: center 28% !important;
+  }
+  /* labels go horizontal again (vertical rl was for narrow desktop columns) */
   .srv-choice-side span {
-    writing-mode: vertical-rl !important;
-    transform: rotate(180deg) !important;
-    letter-spacing: 3px !important;
-    font-size: 9px !important;
-    padding: 10px 0 !important;
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    letter-spacing: 4px !important;
+    font-size: 11px !important;
+    padding: 0 10px 14px !important;
   }
+  /* legacy fallback: flatten too, in case :has() doesn't evaluate */
   .srv-choice:not(:has(.srv-choice-grid)) {
-    grid-template-columns: 58px minmax(0, 1fr) 58px !important;
-    gap: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 12px !important;
   }
   .srv-choice:not(:has(.srv-choice-grid))::before,
   .srv-choice:not(:has(.srv-choice-grid))::after {
-    min-height: 260px !important;
+    min-height: 170px !important;
+    height: 170px !important;
+    width: 100% !important;
   }
+  .srv-choice:not(:has(.srv-choice-grid))::before { order: 1 !important; }
+  .srv-choice:not(:has(.srv-choice-grid)) > *     { order: 2 !important; }
+  .srv-choice:not(:has(.srv-choice-grid))::after  { order: 3 !important; }
+
+  /* replace lateral slide-in with vertical slide-in to match stacked layout */
+  @keyframes slide-from-top {
+    from { transform: translateY(-40%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: .72; }
+  }
+  @keyframes slide-from-bottom {
+    from { transform: translateY(40%);  opacity: 0; }
+    to   { transform: translateY(0);    opacity: .72; }
+  }
+  .srv-choice-side.aliant img {
+    animation: slide-from-top    1.2s cubic-bezier(.22,.9,.3,1) .3s both !important;
+  }
+  .srv-choice-side.collette img {
+    animation: slide-from-bottom 1.2s cubic-bezier(.22,.9,.3,1) .5s both !important;
+  }
+
   .srv-quote,
   .srv-choice,
   .srv-world {
