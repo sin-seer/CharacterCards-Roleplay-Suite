@@ -1554,3 +1554,143 @@ div.mt-4:has(svg.lucide-messages-square) button.ant-btn:has(svg.lucide-messages-
   color: #111 !important;
   box-shadow: 0 0 30px rgba(var(--tertiary-rgb),.7) !important;
 }
+
+
+/* =============================================================================
+   20. ACTS LIST SPLIT  (Phase 3)
+   "Current Possibilities // Future Greetings" is conceptually two halves:
+   - first 6 acts (1–6)  → Aliant / sanctioned ATF lifestyle → purple
+   - last 5 acts (7–11)  → Collette / Old Ways lifestyle     → green
+   The wrapper border becomes a vertical purple→green gradient so the visual
+   division reads even on mobile (where the 2-col grid collapses to one column).
+   ============================================================================= */
+
+/* — Wrapper border: vertical purple → green via dual-background trick — */
+.srv-wrapper.srv-wrapper .srv-acts-wrap,
+.msg-mkdn-container .srv-acts-wrap {
+  border: 1px solid transparent !important;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(to bottom,
+                    rgba(var(--theme-rgb),.58)     0%,
+                    rgba(var(--theme-rgb),.58)    42%,
+                    rgba(var(--secondary-rgb),.58) 58%,
+                    rgba(var(--secondary-rgb),.58)100%) border-box !important;
+}
+
+/* — First 6 acts: Aliant purple glyph + soft lavender text — */
+.srv-wrapper.srv-wrapper .srv-act:nth-child(-n+6) i,
+.msg-mkdn-container .srv-act:nth-child(-n+6) i {
+  color: var(--theme-hex) !important;
+  text-shadow: 0 0 10px rgba(var(--theme-rgb),.5) !important;
+}
+.srv-wrapper.srv-wrapper .srv-act:nth-child(-n+6) span,
+.msg-mkdn-container .srv-act:nth-child(-n+6) span {
+  color: var(--name-color) !important;
+  text-shadow: 0 1px 2px #000,
+               0 0 8px rgba(0,0,0,.82),
+               0 0 14px rgba(var(--theme-rgb),.28) !important;
+}
+
+/* — Last 5 acts: Collette green glyph + soft mint text — */
+.srv-wrapper.srv-wrapper .srv-act:nth-child(n+7) i,
+.msg-mkdn-container .srv-act:nth-child(n+7) i {
+  color: var(--secondary-hex) !important;
+  text-shadow: 0 0 10px rgba(var(--secondary-rgb),.5) !important;
+}
+.srv-wrapper.srv-wrapper .srv-act:nth-child(n+7) span,
+.msg-mkdn-container .srv-act:nth-child(n+7) span {
+  color: var(--name-alt) !important;
+  text-shadow: 0 1px 2px #000,
+               0 0 8px rgba(0,0,0,.82),
+               0 0 14px rgba(var(--secondary-rgb),.28) !important;
+}
+
+
+/* =============================================================================
+   21. NAME + CREDIT + FOOTER ORNAMENT  (Phase 4)
+   - Character name + surname: shifted from light lavender to a deeper, richer
+     purple while leaving the §9 base text-shadow + §17 accent-pulse animation
+     intact (those keep providing the breathing aura).
+   - "Card by ⟬⳽ⳕⲛ⬩⳽ⲉⲉⲅ⟭" credit: from warm gold (§11) to lavender purple.
+   - The three decorative <h2> flourishes under the credit
+     ("╔✿══════༺۝༻══════✿╗", "༄ ҉ Project۝HoneyFungus", "╚✿════════ꈼ༓...❀╝"):
+     from muted brown inherited from .srv-creator to mint green.
+   ============================================================================= */
+
+.srv-wrapper.srv-wrapper .srv-id-name,
+.msg-mkdn-container .srv-id-name,
+.srv-wrapper.srv-wrapper .srv-id-surname,
+.msg-mkdn-container .srv-id-surname {
+  color: #9A9AE0 !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-creator strong,
+.msg-mkdn-container .srv-creator strong {
+  color: var(--name-color) !important;
+  text-shadow: 0 1px 2px #000, 0 0 12px rgba(var(--theme-rgb),.45) !important;
+}
+
+.srv-wrapper.srv-wrapper .srv-creator h2,
+.msg-mkdn-container .srv-creator h2 {
+  color: var(--name-alt) !important;
+  text-shadow: 0 1px 2px #000, 0 0 12px rgba(var(--secondary-rgb),.4) !important;
+}
+
+
+/* =============================================================================
+   22. SLOW IMAGE PANS ON HOVER  (Phase 5)
+   Ken-Burns-style slow pans on gallery thumbnails and the avatar portrait,
+   echoing the directional pans on the choice flanks from Phase 1. The card
+   lift / glow / ring-pulse hovers from §17 are preserved — these new rules
+   only target the inner <img> elements.
+   ============================================================================= */
+
+/* — Gallery item: clip the card so the inner zoom doesn't bleed past it — */
+.srv-wrapper.srv-wrapper .srv-gal-item,
+.msg-mkdn-container .srv-gal-item {
+  overflow: hidden !important;
+}
+
+/* — Gallery image: slow zoom + horizontal drift — */
+.srv-wrapper.srv-wrapper .srv-gal-item img,
+.msg-mkdn-container .srv-gal-item img {
+  transition: transform 3.5s cubic-bezier(.22,.9,.3,1) !important;
+  will-change: transform;
+}
+
+/* Aliant context (default thumbnails): drift left while zooming */
+.srv-wrapper.srv-wrapper .srv-gal-item:hover img,
+.msg-mkdn-container .srv-gal-item:hover img {
+  transform: translateX(-5%) scale(1.08);
+}
+
+/* Collette context: drift right while zooming */
+.srv-wrapper.srv-wrapper .srv-gal-item.collette:hover img,
+.msg-mkdn-container .srv-gal-item.collette:hover img {
+  transform: translateX(5%) scale(1.08);
+}
+
+/* — Avatar portrait: slow zoom on the inner image (clipped by the circle) — */
+.srv-wrapper.srv-wrapper .srv-avatar img,
+.msg-mkdn-container .srv-avatar img {
+  transition: transform 4s cubic-bezier(.22,.9,.3,1);
+  will-change: transform;
+}
+
+.srv-wrapper.srv-wrapper .srv-avatar-inner:hover .srv-avatar img,
+.msg-mkdn-container .srv-avatar-inner:hover .srv-avatar img {
+  transform: scale(1.12);
+}
+
+/* — Honor user motion preferences: freeze pans, glow/lift still subtle — */
+@media (prefers-reduced-motion: reduce) {
+  .srv-wrapper.srv-wrapper .srv-gal-item:hover img,
+  .srv-wrapper.srv-wrapper .srv-gal-item.collette:hover img,
+  .srv-wrapper.srv-wrapper .srv-avatar-inner:hover .srv-avatar img,
+  .msg-mkdn-container .srv-gal-item:hover img,
+  .msg-mkdn-container .srv-gal-item.collette:hover img,
+  .msg-mkdn-container .srv-avatar-inner:hover .srv-avatar img {
+    transform: none !important;
+  }
+}
