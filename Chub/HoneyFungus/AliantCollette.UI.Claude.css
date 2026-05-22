@@ -195,7 +195,7 @@ div.text-sm:has(.font-size-message) {
   flex-direction: column !important;
   justify-content: flex-end !important;
   padding: 22px 18px !important;
-  background: url('https://ella.janitorai.com/media-approved/ojU4cljENm4jTPO3hFgwY.webp') center 38% / cover no-repeat !important;
+  background: url('https://ella.janitorai.com/media-approved/HZIZSXk79RlphPjH9cGNl.webp') center 38% / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
   border-bottom: 2px solid var(--theme-hex) !important;
   position: relative !important;
@@ -837,12 +837,12 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 .srv-choice:not(:has(.srv-choice-grid))::before {
   background-image: linear-gradient(to top, rgba(8,7,6,.35), rgba(8,7,6,.04)),
-                    url('https://ella.janitorai.com/media-approved/Vo1QnhoESyqztKDxwzjug.webp') !important;
+                    url('https://ella.janitorai.com/media-approved/Hrd7YMVH-q7Yn3ugKBbVW.webp') !important;
 }
 
 .srv-choice:not(:has(.srv-choice-grid))::after {
   background-image: linear-gradient(to top, rgba(8,7,6,.35), rgba(8,7,6,.04)),
-                    url('https://ella.janitorai.com/media-approved/0gAQfpMxk9s-8p_4_EFHV.webp') !important;
+                    url('https://ella.janitorai.com/media-approved/Nr0wxzOXZFJ_wet0m_NqS.webp') !important;
   border-color: rgba(var(--secondary-rgb),.55) !important;
 }
 
