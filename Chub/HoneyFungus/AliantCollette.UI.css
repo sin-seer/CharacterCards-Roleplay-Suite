@@ -197,7 +197,7 @@ div.text-sm:has(.font-size-message) {
   padding: 22px 18px !important;
   background: url('https://ella.janitorai.com/media-approved/r2GOeQJhVhYnHmqVMxPtT.webp') center 38% / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
-  border-bottom: 4px solid var !important;
+  border-bottom: 4px solid var(--theme-hex) !important;
   position: relative !important;
   box-shadow: 0 15px 40px rgba(0,0,0,.8) !important;
   z-index: 50;
