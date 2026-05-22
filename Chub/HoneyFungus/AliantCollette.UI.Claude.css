@@ -17,7 +17,7 @@
   /* theme — overridable inline on .srv-wrapper for per-card recoloring
      Aliant: purple primary  ·  Collette: green secondary */
   --theme-hex: #6A6ACA;
-  --theme-rgb: 106,106,202;
+  --theme-rgb: 106, 106, 202;
   --theme-light: #6A6ACA;
   --theme-dark: #3A2D18;
   --secondary-hex: #79EE7E;
@@ -32,8 +32,8 @@
   --accent-chip: #D8D8F8;      /* tag / theme-chip text */
   --accent-chip-alt: #DCFADF;  /* same for .collette context */
   --text-main: #D9C9A4;
-  --text-muted: #8A7654;
-  --text-meta: #6B5A40;
+  --text-muted: #d9bb86;
+  --text-meta: #ffe9a6;
 
   /* surfaces */
   --bg-color: #0C0B0A;
@@ -337,7 +337,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   position: absolute;
   font-family: monospace;
   opacity: 0;
-  color: rgba(var(--theme-rgb),.5);
+  color: rgba(var(--theme-rgb);
   animation: data-rise 15s linear infinite;
 }
 
@@ -392,7 +392,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-section-hdr div {
   flex: 1 !important;
   height: 1px !important;
-  background: rgba(var(--theme-rgb),.22) !important;
+  background: rgba(var(--theme-rgb) !important;
 }
 
 .srv-rule.top div:first-of-type {
@@ -406,7 +406,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-ornament span {
   color: var(--theme-hex);
   font-size: 14px;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
 }
 
 .srv-ornament span,
@@ -421,14 +421,13 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-gal-title,
 .srv-world .coda {
   font-family: Arial, sans-serif;
-  text-transform: uppercase;
 }
 
-.srv-ornament span         { font-size: 11px; letter-spacing: 5px; }
+.srv-ornament span         { font-size: 16px; letter-spacing: 3px; }
 .srv-section-hdr span,
 .msg-mkdn-container .srv-section-hdr span {
-  font-size: 11px !important;
-  letter-spacing: 5px !important;
+  font-size: 16px !important;
+  letter-spacing: 3px !important;
   color: var(--theme-hex) !important;
 }
 
@@ -515,10 +514,9 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 .srv-id-name,
 .msg-mkdn-container .srv-id-name {
-  font-size: 30px !important;
+  font-size: 24px !important;
   letter-spacing: 10px !important;
   color: var(--name-color) !important;
-  text-transform: uppercase !important;
   margin-bottom: 5px !important;
   text-shadow: 0 0 24px rgba(var(--theme-rgb),.25) !important;
 }
@@ -526,7 +524,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-id-surname,
 .msg-mkdn-container .srv-id-surname {
   font-size: 12px !important;
-  letter-spacing: 8px !important;
+  letter-spacing: 5px !important;
   color: var(--name-color) !important;
   text-transform: uppercase !important;
   margin-bottom: 11px !important;
@@ -607,7 +605,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   padding: 18px 32px;
   margin: 0 auto 30px;
   max-width: 620px;
-  background: rgba(var(--theme-rgb),.04);
+  background: rgba(var(--theme-rgb);
 }
 
 .srv-quote p,
@@ -965,12 +963,12 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 .srv-life-intro em {
   font-style: normal;
-  color: var(--theme-hex);
+  color: var(--text-main);
   margin: 0 12px;
 }
 
 .srv-acts-wrap {
-  border: 1px solid rgba(var(--theme-rgb),.22);
+  border: 1px solid rgba var(--theme-rgb);
   padding: 24px 22px;
   background: var(--card-bg);
   box-shadow: 0 10px 30px rgba(0,0,0,.4);
@@ -1099,7 +1097,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-wrapper.srv-wrapper .srv-path.collette .srv-theme-chip,
 .msg-mkdn-container .srv-path.collette .srv-theme-chip {
   color: var(--accent-chip-alt) !important;
-  border-color: rgba(var(--secondary-rgb),.62) !important;
+  border-color: rgba(var(--secondary-rgb) !important;
 }
 
 .srv-wrapper.srv-wrapper .srv-theme-chip,
@@ -1107,7 +1105,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .srv-wrapper.srv-wrapper .srv-tag,
 .msg-mkdn-container .srv-tag {
   color: var(--accent-chip) !important;
-  border-color: rgba(var(--theme-rgb),.62) !important;
+  border-color: rgba var(--theme-rgb),.62) !important;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.2),
               0 1px 5px rgba(0,0,0,.45) !important;
 }
@@ -1473,8 +1471,8 @@ div.mt-4.text-right.justify-end button.ant-btn {
    ============================================================================= */
 
 :root {
-  --tertiary-hex: #DDB04A;
-  --tertiary-rgb: 221,176,74;
+  --tertiary-hex: #baf6ff;
+  --tertiary-rgb: 191, 228, 255;
 }
 
 /* — Top rule + ornaments — */
