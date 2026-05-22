@@ -195,9 +195,9 @@ div.text-sm:has(.font-size-message) {
   flex-direction: column !important;
   justify-content: flex-end !important;
   padding: 22px 18px !important;
-  background: url('https://ella.janitorai.com/media-approved/HZIZSXk79RlphPjH9cGNl.webp') center 38% / cover no-repeat !important;
+  background: url('https://ella.janitorai.com/media-approved/qCgbNhg_5KZhbSWZpLQQT.webp') center 38% / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
-  border-bottom: 2px solid var(--theme-hex) !important;
+  border-bottom: 2px solid var(--text-main) !important;
   position: relative !important;
   box-shadow: 0 15px 40px rgba(0,0,0,.8) !important;
   z-index: 50;
@@ -337,7 +337,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   position: absolute;
   font-family: monospace;
   opacity: 0;
-  color: rgba(var(--theme-rgb);
+  color: var(--theme-rgb);
   animation: data-rise 15s linear infinite;
 }
 
@@ -392,7 +392,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 .msg-mkdn-container .srv-section-hdr div {
   flex: 1 !important;
   height: 1px !important;
-  background: rgba(var(--theme-rgb) !important;
+  background: rgba var(--theme-rgb) !important;
 }
 
 .srv-rule.top div:first-of-type {
@@ -605,7 +605,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   padding: 18px 32px;
   margin: 0 auto 30px;
   max-width: 620px;
-  background: rgba(var(--theme-rgb);
+  background: var(--theme-rgb);
 }
 
 .srv-quote p,
@@ -747,7 +747,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 /* shared frame — matches path-card surface so the section reads as part of the same family */
 .srv-choice-main,
 .srv-choice-side {
-  border: 1px solid rgba(var(--theme-rgb),.45) !important;
+  border: 1px solid var(--theme-rgb) !important;
   background: rgba(18,15,12,.58) !important;
   box-shadow: 0 0 0 1px rgba(255,255,255,.035),
               0 12px 34px rgba(0,0,0,.42) !important;
