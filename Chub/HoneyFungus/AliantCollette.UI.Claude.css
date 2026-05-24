@@ -773,11 +773,11 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 /* per-character border tinting + name anchored to outer edge */
 .srv-choice-side.aliant {
-  border-color: rgba(var(--theme-rgb),.55) !important;
+  border-color: rgba(var(--theme-rgb),.75) !important;
   justify-content: flex-start !important;
 }
 .srv-choice-side.collette {
-  border-color: rgba(var(--secondary-rgb),.55) !important;
+  border-color: rgba(var(--secondary-rgb),.75) !important;
   justify-content: flex-end !important;
 }
 
@@ -837,7 +837,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
 
 .srv-choice:not(:has(.srv-choice-grid))::before {
   background-image: linear-gradient(to top, rgba(8,7,6,.35), rgba(8,7,6,.04)),
-                    url('https://ella.janitorai.com/media-approved/3cWgQQYN8ljPXrj3PviRN.webp') !important;
+                    url('https://ella.janitorai.com/media-approved/txS1l9VaHHrSCKUFeEhdR.webp') !important;
 }
 
 .srv-choice:not(:has(.srv-choice-grid))::after {
