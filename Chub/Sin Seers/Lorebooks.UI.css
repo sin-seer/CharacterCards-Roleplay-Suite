@@ -536,105 +536,39 @@ div[length][color]:has(.msg-mkdn-container)+div:has(> spacer) {
     flex-direction: column
 }
 
-.bb-col-1 {
-    flex: 0 0 8.333333%;
-    max-width: 8.333333%
-}
+.bb-col-1  { flex: 0 0 8.333333%;  max-width: 8.333333%  }
+.bb-col-2  { flex: 0 0 16.666667%; max-width: 16.666667% }
+.bb-col-3  { flex: 0 0 25%;        max-width: 25%        }
+.bb-col-4  { flex: 0 0 33.333333%; max-width: 33.333333% }
+.bb-col-5  { flex: 0 0 41.666667%; max-width: 41.666667% }
+.bb-col-6  { flex: 0 0 50%;        max-width: 50%        }
+.bb-col-7  { flex: 0 0 58.333333%; max-width: 58.333333% }
+.bb-col-8  { flex: 0 0 66.666667%; max-width: 66.666667% }
+.bb-col-9  { flex: 0 0 75%;        max-width: 75%        }
+.bb-col-10 { flex: 0 0 83.333333%; max-width: 83.333333% }
+.bb-col-11 { flex: 0 0 91.666667%; max-width: 91.666667% }
+.bb-col-12 { flex: 0 0 100%;       max-width: 100%       }
 
-.bb-col-2 {
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%
-}
-
-.bb-col-3 {
-    flex: 0 0 25%;
-    max-width: 25%
-}
-
-.bb-col-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%
-}
-
-.bb-col-5 {
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%
-}
-
-.bb-col-6 {
-    flex: 0 0 50%;
-    max-width: 50%
-}
-
-.bb-col-7 {
-    flex: 0 0 58.333333%;
-    max-width: 58.333333%
-}
-
-.bb-col-8 {
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%
-}
-
-.bb-col-9 {
-    flex: 0 0 75%;
-    max-width: 75%
-}
-
-.bb-col-10 {
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%
-}
-
-.bb-col-11 {
-    flex: 0 0 91.666667%;
-    max-width: 91.666667%
-}
-
-.bb-col-12 {
-    flex: 0 0 100%;
-    max-width: 100%
-}
-
-@media (min-width:576px) {
-    .bb-container {
-        max-width: 540px
-    }
-}
-
-@media (min-width:768px) {
-    .bb-container {
-        max-width: 90%
-    }
-}
-
-@media (min-width:992px) {
-    .bb-container {
-        max-width: 960px
-    }
-}
-
-@media (min-width:1200px) {
-    .bb-container {
-        max-width: 1400px !important
-    }
-}
+@media (min-width:576px)  { .bb-container { max-width: 540px   } }
+@media (min-width:768px)  { .bb-container { max-width: 90%     } }
+@media (min-width:992px)  { .bb-container { max-width: 960px   } }
+@media (min-width:1200px) { .bb-container { max-width: 1400px !important } }
 
 @keyframes bb-sweep {
-    to {
-        background-position: 200% center
-    }
+    to { background-position: 200% center }
 }
 
 @keyframes bb-particles {
     0% {
         opacity: 1;
-        box-shadow: 0 0 0 0 #ffd700, 0 0 0 0 #ff69b4, 0 0 0 0 #00bfff, 0 0 0 0 #7cfc00, 0 0 0 0 #ff4500, 0 0 0 0 #da70d6, 0 0 0 0 #ffa500, 0 0 0 0 #00ffcc
+        box-shadow: 0 0 0 0 #ffd700, 0 0 0 0 #ff69b4, 0 0 0 0 #00bfff, 0 0 0 0 #7cfc00,
+                    0 0 0 0 #ff4500, 0 0 0 0 #da70d6, 0 0 0 0 #ffa500, 0 0 0 0 #00ffcc
     }
-
     100% {
         opacity: 0;
-        box-shadow: -45px -55px 0 0 #ffd700, 48px -46px 0 0 #ff69b4, 55px 38px 0 0 #00bfff, -48px 45px 0 0 #7cfc00, 25px -65px 0 0 #ff4500, -60px -15px 0 0 #da70d6, 35px 52px 0 0 #ffa500, -28px 58px 0 0 #00ffcc
+        box-shadow: -45px -55px 0 0 #ffd700, 48px -46px 0 0 #ff69b4, 55px 38px 0 0 #00bfff,
+                    -48px 45px 0 0 #7cfc00, 25px -65px 0 0 #ff4500, -60px -15px 0 0 #da70d6,
+                    35px 52px 0 0 #ffa500, -28px 58px 0 0 #00ffcc
     }
 }
 
@@ -688,7 +622,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--bb-bg-overlay, linear-gradient(to bottom, rgba(18, 21, 31, 0.8) 40%, rgba(18, 21, 31, 0.9) 100%));
+    background: var(--bb-bg-overlay, linear-gradient(to bottom, rgba(18, 21, 31, 0.2) 0%, rgba(18, 21, 31, 0.85) 100%));
     pointer-events: none
 }
 
@@ -727,13 +661,8 @@ video::-moz-media-controls {
     will-change: transform
 }
 
-.bbx-corner-l {
-    left: -50px
-}
-
-.bbx-corner-r {
-    right: -50px
-}
+.bbx-corner-l { left: -50px  }
+.bbx-corner-r { right: -50px }
 
 body::before {
     content: '';
@@ -803,7 +732,6 @@ main.ant-layout-content {
 /* ===== MOBILE HERO LAYOUT ===== */
 @media (max-width: 768px) {
 
-    /* Video Column: Full width, appears first */
     .bb-col-5 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
@@ -812,20 +740,17 @@ main.ant-layout-content {
         order: 1 !important;
     }
 
-    /* Text Column: Full width, appears second */
     .bb-col-7 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
         order: 2 !important;
     }
 
-    /* Enable flex ordering on parent */
     .bb-row {
         display: flex !important;
         flex-direction: column !important;
     }
 
-    /* Disable sticky bottom wrapper logic */
     .bb-col-5>div {
         height: auto !important;
         position: relative !important;
@@ -833,15 +758,12 @@ main.ant-layout-content {
         justify-content: flex-start !important;
     }
 
-    /* Hide video, show static fallback on mobile */
-    /* Hide video, show static fallback on mobile */
     .bbx-hero-video {
         display: none !important
     }
 
-    /* Static hero image: fadeout on mobile */
     .bbx-hero-image {
-        max-height: 80vh !important;
+        max-height: 60vh !important;
         object-fit: cover !important;
         object-position: top center !important;
         border-radius: 0 !important;
@@ -872,7 +794,6 @@ main.ant-layout-content {
         max-width: 100% !important;
     }
 
-    /* Auto-scale heading on mobile */
     .bb-title {
         padding-top: 0 !important;
         font-size: clamp(2.5em, 12vw, 4.5em) !important;
@@ -884,25 +805,24 @@ main.ant-layout-content {
     }
 }
 
-/* ===== MOBILE LANDSCAPE HERO (More specific) ===== */
+/* ===== MOBILE LANDSCAPE HERO ===== */
 @media (max-width: 768px) and (orientation: landscape) {
 
-    /* Force container to constrain image height */
     .bb-col-5:has(.bbx-hero-image)>div {
-        max-height: 60vh !important;
+        max-height: 35vh !important;
         overflow: hidden !important;
     }
 
     .bb-col-5:has(.bbx-hero-video)>div::after {
         aspect-ratio: 2 / 3 !important;
-        max-height: 60vh !important;
+        max-height: 35vh !important;
         background-position: center 20% !important;
         -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%) !important;
         mask-image: linear-gradient(to bottom, black 50%, transparent 100%) !important;
     }
 
     img.bbx-hero-image {
-        max-height: 60vh !important;
+        max-height: 35vh !important;
         object-fit: cover !important;
         object-position: center 20% !important;
         -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%) !important;
@@ -942,7 +862,6 @@ main.ant-layout-content {
 /* ===== TABLET / IPAD HERO LAYOUT ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    /* Static image hero: 6 cols */
     .bb-col-5:has(.bbx-hero-image) {
         flex: 0 0 50% !important;
         max-width: 50% !important;
@@ -953,7 +872,6 @@ main.ant-layout-content {
         max-width: 50% !important;
     }
 
-    /* Video hero: full width centered */
     .bb-col-5:has(.bbx-hero-video) {
         flex: 0 0 83.333333% !important;
         max-width: 83.333333% !important;
@@ -967,7 +885,7 @@ main.ant-layout-content {
     }
 
     .bbx-hero-video {
-        max-height: 60vh !important;
+        max-height: 50vh !important;
         object-fit: cover !important;
         object-position: top !important;
         -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
@@ -975,7 +893,7 @@ main.ant-layout-content {
     }
 
     .bbx-hero-image {
-        max-height: 80vh !important;
+        max-height: 50vh !important;
         object-fit: cover !important;
         object-position: top !important;
         -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
@@ -992,18 +910,9 @@ main.ant-layout-content {
         max-width: 100% !important;
     }
 
-    .bb-title {
-        font-size: 3.5em !important;
-        padding-top: 0 !important
-    }
-
-    .bb-subtitle {
-        font-size: 1.6em !important
-    }
-
-    .bb-blurb {
-        font-size: 1.2em !important
-    }
+    .bb-title    { font-size: 3.5em !important; padding-top: 0 !important }
+    .bb-subtitle { font-size: 1.6em !important }
+    .bb-blurb    { font-size: 1.2em !important }
 
     .bb-col-5 spacer,
     .bb-col-7 spacer,
@@ -1032,9 +941,7 @@ main.ant-layout-content {
 }
 
 .bb-name-first,
-.bb-name-last {
-    display: block
-}
+.bb-name-last { display: block }
 
 .bb-name-first {
     font-size: 1.15em;
@@ -1049,14 +956,11 @@ main.ant-layout-content {
 }
 
 @keyframes goldShimmer {
-
-    0%,
-    100% {
+    0%, 100% {
         text-shadow:
             0 1px 2px rgba(0, 0, 0, 0.6),
             0 0 20px rgba(211, 188, 142, 0.3)
     }
-
     50% {
         text-shadow:
             0 1px 2px rgba(0, 0, 0, 0.6),
@@ -1080,15 +984,8 @@ main.ant-layout-content {
 }
 
 @keyframes fadeSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
+    from { opacity: 0; transform: translateY(20px) }
+    to   { opacity: 1; transform: translateY(0)    }
 }
 
 .bbx-hero-video {
@@ -1101,15 +998,8 @@ main.ant-layout-content {
 }
 
 @keyframes heroFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.97)
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1)
-    }
+    from { opacity: 0; transform: scale(0.97) }
+    to   { opacity: 1; transform: scale(1)    }
 }
 
 .bb-blurb {
@@ -1136,7 +1026,6 @@ main.ant-layout-content {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3)
 }
 
-/* Inner frame (Genshin ornate panel effect) */
 .bb-section::before {
     content: '';
     position: absolute;
@@ -1180,7 +1069,6 @@ main.ant-layout-content {
     position: relative
 }
 
-/* Fading line divider with gold endpoints */
 .bb-section-title::after {
     content: '';
     position: absolute;
@@ -1212,20 +1100,11 @@ main.ant-layout-content {
     color: #c8c4b8
 }
 
-.bb-section-body p {
-    margin: 0 0 0.8em 0;
-    color: #c8c4b8
-}
-
-.bb-section-body p:last-child {
-    margin-bottom: 0
-}
+.bb-section-body p { margin: 0 0 0.8em 0; color: #c8c4b8 }
+.bb-section-body p:last-child { margin-bottom: 0 }
 
 /* ===== CHANGELOG ===== */
-.bb-changelog-list {
-    padding: 0;
-    margin: 0
-}
+.bb-changelog-list  { padding: 0; margin: 0 }
 
 .bb-changelog-entry {
     padding: 0.4em 0;
@@ -1234,9 +1113,7 @@ main.ant-layout-content {
     opacity: 0.8
 }
 
-.bb-changelog-entry:last-child {
-    border-bottom: none
-}
+.bb-changelog-entry:last-child { border-bottom: none }
 
 .bb-changelog-date {
     font-weight: 600;
@@ -1287,10 +1164,7 @@ main.ant-layout-content {
     background: linear-gradient(to top, rgba(18, 21, 31, 0.6) 0%, rgba(45, 50, 75, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%)
 }
 
-.bb-scenario-card>* {
-    position: relative;
-    z-index: 2
-}
+.bb-scenario-card>* { position: relative; z-index: 2 }
 
 .bb-scenario-number {
     position: absolute;
@@ -1317,11 +1191,7 @@ main.ant-layout-content {
     line-height: 1.5
 }
 
-.bb-scenario-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35em
-}
+.bb-scenario-tags { display: flex; flex-wrap: wrap; gap: 0.35em }
 
 .bb-scenario-tag {
     font-size: 0.7em;
@@ -1336,7 +1206,7 @@ main.ant-layout-content {
     color: var(--bb-accent)
 }
 
-/* ===== QUEST CARDS (Genshin UI Style) ===== */
+/* ===== QUEST CARDS ===== */
 .bb-scenario-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1349,7 +1219,7 @@ main.ant-layout-content {
     border: 1px solid rgba(217, 196, 170, 0.5);
     border-radius: 8px;
     background: linear-gradient(to bottom, rgba(32, 37, 56, 0.9), rgba(20, 23, 34, 0.95));
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1365,7 +1235,6 @@ main.ant-layout-content {
     z-index: 10
 }
 
-/* Image Header */
 .bb-quest-img {
     width: 100%;
     aspect-ratio: 2.35 / 1;
@@ -1384,7 +1253,6 @@ main.ant-layout-content {
     object-position: center 40%
 }
 
-/* 1. Number Badge (Constellation Star) */
 .bb-quest-number {
     position: absolute;
     top: 12px;
@@ -1423,11 +1291,8 @@ main.ant-layout-content {
         inset 0 1px 0 rgba(255,255,255,.12) !important;
 }
 
-.bb-quest-number span {
-    margin-top: 2px
-}
+.bb-quest-number span { margin-top: 2px }
 
-/* Card Body */
 .bb-quest-body {
     padding: 1.25em;
     flex: 1;
@@ -1436,7 +1301,6 @@ main.ant-layout-content {
     position: relative
 }
 
-/* Body Background Decoration (Star chart) */
 .bb-quest-body::before {
     content: '';
     position: absolute;
@@ -1450,12 +1314,8 @@ main.ant-layout-content {
     z-index: 0
 }
 
-.bb-quest-body>* {
-    position: relative;
-    z-index: 1
-}
+.bb-quest-body>* { position: relative; z-index: 1 }
 
-/* 2. Title */
 .bb-quest-body h4 {
     font-family: var(--bb-font-serif);
     font-size: 1.3em;
@@ -1466,7 +1326,6 @@ main.ant-layout-content {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
 }
 
-/* 3. Description */
 .bb-quest-body p {
     font-family: var(--bb-font-hand);
     font-size: 0.95em;
@@ -1476,7 +1335,6 @@ main.ant-layout-content {
     flex: 1
 }
 
-/* 4. Tags Footer */
 .bb-quest-tags {
     display: flex;
     flex-wrap: wrap;
@@ -1512,9 +1370,7 @@ main.ant-layout-content {
         padding: 0
     }
 
-    .bb-quest-img {
-        aspect-ratio: 21 / 9
-    }
+    .bb-quest-img { aspect-ratio: 21 / 9 }
 }
 
 /* ===== PRESETS & PERSONAS ===== */
@@ -1611,10 +1467,9 @@ main.ant-layout-content {
     border-bottom: 6px solid transparent;
     border-right: 6px solid rgba(255,122,26,.42) !important;
 }
+
 /* ===== SUPPORT / DONATE ===== */
-.bb-section--support {
-    text-align: center
-}
+.bb-section--support { text-align: center }
 
 .bb-support-btn {
     display: inline-block;
@@ -1672,9 +1527,7 @@ main.ant-layout-content {
 
 /* ===== HIDE ANT SEARCHBAR ===== */
 .ant-select-selection-overflow,
-.ant-select:has(.ant-select-selection-overflow) {
-    display: none !important
-}
+.ant-select:has(.ant-select-selection-overflow) { display: none !important }
 
 /* ===== MOBILE LANDSCAPE FINAL OVERRIDES ===== */
 @media (max-width: 768px) and (orientation: landscape) {
@@ -1848,179 +1701,169 @@ h2, table, details, p { text-align: center; }
 
 /* ===== MORIAE FORCE OVERRIDES ===== */
 
-/* section panel borders */
-.bb-container .bb-section{
-  border:1px solid rgba(255,122,26,.45)!important;
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.18),
-    0 0 0 1px rgba(255,122,26,.14),
-    inset 0 1px 0 rgba(255,255,255,.10)!important;
+.bb-container .bb-section {
+    border: 1px solid rgba(255,122,26,.45) !important;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18),
+        0 0 0 1px rgba(255,122,26,.14),
+        inset 0 1px 0 rgba(255,255,255,.10) !important;
 }
 
-.bb-container .bb-section::before{
-  border:1px solid rgba(255,122,26,.32)!important;
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0))!important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)!important;
+.bb-container .bb-section::before {
+    border: 1px solid rgba(255,122,26,.32) !important;
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05) !important;
 }
 
-/* section title text + divider ornament */
-.bb-container .bb-section-title{
-  color:#ff7a1a!important;
-  border-bottom:none!important;
+.bb-container .bb-section-title {
+    color: #ff7a1a !important;
+    border-bottom: none !important;
 }
 
-.bb-container .bb-section-title::after{
-  background:linear-gradient(
-    to right,
-    transparent,
-    rgba(255,122,26,.58) 20%,
-    rgba(255,122,26,.58) 80%,
-    transparent
-  )!important;
-  height:1px!important;
-  opacity:1!important;
+.bb-container .bb-section-title::after {
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,122,26,.58) 20%,
+        rgba(255,122,26,.58) 80%,
+        transparent
+    ) !important;
+    height: 1px !important;
+    opacity: 1 !important;
 }
 
-.bb-container .bb-section-title::before{
-  background:#ff9a4a!important;
-  opacity:1!important;
-  box-shadow:0 0 10px rgba(255,122,26,.22)!important;
+.bb-container .bb-section-title::before {
+    background: #ff9a4a !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 10px rgba(255,122,26,.22) !important;
 }
 
-/* lore section heading labels */
 .bb-container .bb-section-body h2,
-.bb-container .bb-section-body td:first-child strong{
-  color:#ff7a1a!important;
+.bb-container .bb-section-body td:first-child strong {
+    color: #ff7a1a !important;
 }
 
-/* quest cards */
-.bb-container .bb-quest-card{
-  background:linear-gradient(180deg,rgba(70,20,105,.14),rgba(20,10,35,.18))!important;
-  border:2px solid rgba(255,122,26,.42)!important;
-  box-shadow:
-    0 8px 24px rgba(0,0,0,.18),
-    0 0 0 1px rgba(255,122,26,.10),
-    inset 0 1px 0 rgba(255,255,255,.08)!important;
-  transition:
-    transform .22s ease,
-    box-shadow .22s ease,
-    border-color .22s ease,
-    background .22s ease!important;
+.bb-container .bb-quest-card {
+    background: linear-gradient(180deg, rgba(70,20,105,.14), rgba(20,10,35,.18)) !important;
+    border: 2px solid rgba(255,122,26,.42) !important;
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.18),
+        0 0 0 1px rgba(255,122,26,.10),
+        inset 0 1px 0 rgba(255,255,255,.08) !important;
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease,
+        background .22s ease !important;
 }
 
 .bb-container .bb-quest-card:hover,
 .bb-container .bb-quest-card:focus-within,
-.bb-container .bb-quest-card:active{
-  transform:translateY(-4px) scale(1.02)!important;
-  border-color:rgba(255,122,26,.7)!important;
-  box-shadow:
-    0 16px 34px rgba(0,0,0,.30),
-    0 0 0 1px rgba(255,122,26,.18),
-    0 0 18px rgba(255,122,26,.14),
-    inset 0 1px 0 rgba(255,255,255,.10)!important;
-  z-index:10!important;
+.bb-container .bb-quest-card:active {
+    transform: translateY(-4px) scale(1.02) !important;
+    border-color: rgba(255,122,26,.7) !important;
+    box-shadow:
+        0 16px 34px rgba(0,0,0,.30),
+        0 0 0 1px rgba(255,122,26,.18),
+        0 0 18px rgba(255,122,26,.14),
+        inset 0 1px 0 rgba(255,255,255,.10) !important;
+    z-index: 10 !important;
 }
 
-.bb-container .bb-quest-img{
-  filter:brightness(.94) saturate(1.06)!important;
-  transition:transform .22s ease,filter .22s ease,box-shadow .22s ease!important;
+.bb-container .bb-quest-img {
+    filter: brightness(.94) saturate(1.06) !important;
+    transition: transform .22s ease, filter .22s ease, box-shadow .22s ease !important;
 }
 
 .bb-container .bb-quest-card:hover .bb-quest-img,
 .bb-container .bb-quest-card:focus-within .bb-quest-img,
-.bb-container .bb-quest-card:active .bb-quest-img{
-  transform:scale(1.03)!important;
-  filter:brightness(1) saturate(1.14)!important;
-  box-shadow:0 8px 24px rgba(255,122,26,.18)!important;
+.bb-container .bb-quest-card:active .bb-quest-img {
+    transform: scale(1.03) !important;
+    filter: brightness(1) saturate(1.14) !important;
+    box-shadow: 0 8px 24px rgba(255,122,26,.18) !important;
 }
 
-/* quest number badge */
-.bb-container .bb-quest-number{
-  background:linear-gradient(180deg,rgba(92,34,145,.6),rgba(48,12,84,.6))!important;
-  border:2px solid rgba(255,122,26,.62)!important;
-  color:#ff7a1a!important;
-  box-shadow:
-    0 6px 16px rgba(0,0,0,.34),
-    inset 0 1px 0 rgba(255,255,255,.10)!important;
-  transition:transform .22s ease,box-shadow .22s ease!important;
+.bb-container .bb-quest-number {
+    background: linear-gradient(180deg, rgba(92,34,145,.6), rgba(48,12,84,.6)) !important;
+    border: 2px solid rgba(255,122,26,.62) !important;
+    color: #ff7a1a !important;
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.34),
+        inset 0 1px 0 rgba(255,255,255,.10) !important;
+    transition: transform .22s ease, box-shadow .22s ease !important;
 }
 
-.bb-container .bb-quest-number span{
-  color:#ff7a1a!important;
-  text-shadow:0 0 10px rgba(255,122,26,.28)!important;
+.bb-container .bb-quest-number span {
+    color: #ff7a1a !important;
+    text-shadow: 0 0 10px rgba(255,122,26,.28) !important;
 }
 
 .bb-container .bb-quest-card:hover .bb-quest-number,
 .bb-container .bb-quest-card:focus-within .bb-quest-number,
-.bb-container .bb-quest-card:active .bb-quest-number{
-  transform:scale(1.08)!important;
-  box-shadow:
-    0 10px 24px rgba(0,0,0,.36),
-    0 0 18px rgba(255,122,26,.16),
-    inset 0 1px 0 rgba(255,255,255,.12)!important;
+.bb-container .bb-quest-card:active .bb-quest-number {
+    transform: scale(1.08) !important;
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.36),
+        0 0 18px rgba(255,122,26,.16),
+        inset 0 1px 0 rgba(255,255,255,.12) !important;
 }
 
-/* quest tags + support buttons */
 .bb-container .bb-quest-tag,
-.bb-container .bb-support-btn{
-  background:rgba(255,122,26,.10)!important;
-  border:2px solid rgba(255,122,26,.36)!important;
-  color:#ffd2a6!important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 4px 12px rgba(0,0,0,.12)!important;
+.bb-container .bb-support-btn {
+    background: rgba(255,122,26,.10) !important;
+    border: 2px solid rgba(255,122,26,.36) !important;
+    color: #ffd2a6 !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 4px 12px rgba(0,0,0,.12) !important;
 }
 
 .bb-container .bb-support-btn:hover,
-.bb-container .bb-quest-tag:hover{
-  background:rgba(255,122,26,.16)!important;
-  border-color:rgba(255,122,26,.60)!important;
-  color:#fff3e6!important;
+.bb-container .bb-quest-tag:hover {
+    background: rgba(255,122,26,.16) !important;
+    border-color: rgba(255,122,26,.60) !important;
+    color: #fff3e6 !important;
 }
 
-/* support bubble / wyvernchat message */
-.bb-container .bb-help-banner{
-  color:inherit!important;
+.bb-container .bb-help-banner { color: inherit !important; }
+
+.bb-container .bb-help-banner span {
+    position: relative !important;
+    background: rgba(28,20,56,.94) !important;
+    color: #ffd2a6 !important;
+    border: 1px solid rgba(255,122,26,.44) !important;
+    border-radius: 8px !important;
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.05) !important;
 }
 
-.bb-container .bb-help-banner span{
-  position:relative!important;
-  background:rgba(28,20,56,.94)!important;
-  color:#ffd2a6!important;
-  border:1px solid rgba(255,122,26,.44)!important;
-  border-radius:8px!important;
-  box-shadow:
-    0 6px 16px rgba(0,0,0,.22),
-    inset 0 1px 0 rgba(255,255,255,.05)!important;
+.bb-container .bb-help-banner:hover span {
+    color: #fff3e6 !important;
+    border-color: rgba(255,122,26,.70) !important;
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.24),
+        0 0 14px rgba(255,122,26,.14),
+        inset 0 1px 0 rgba(255,255,255,.06) !important;
 }
 
-.bb-container .bb-help-banner:hover span{
-  color:#fff3e6!important;
-  border-color:rgba(255,122,26,.70)!important;
-  box-shadow:
-    0 10px 24px rgba(0,0,0,.24),
-    0 0 14px rgba(255,122,26,.14),
-    inset 0 1px 0 rgba(255,255,255,.06)!important;
+.bb-container .bb-help-banner span::before {
+    content: '' !important;
+    position: absolute !important;
+    left: -7px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 7px solid transparent !important;
+    border-bottom: 7px solid transparent !important;
+    border-right: 7px solid rgba(28,20,56,.94) !important;
 }
 
-.bb-container .bb-help-banner span::before{
-  content:''!important;
-  position:absolute!important;
-  left:-7px!important;
-  top:50%!important;
-  transform:translateY(-50%)!important;
-  width:0!important;
-  height:0!important;
-  border-top:7px solid transparent!important;
-  border-bottom:7px solid transparent!important;
-  border-right:7px solid rgba(28,20,56,.94)!important;
-}
-
-/* tiny cleanup for broken color inheritance */
 .bb-container .bb-help-banner,
 .bb-container .bb-help-banner *,
 .bb-container .bb-support-btn,
 .bb-container .bb-quest-tag,
-.bb-container .bb-quest-number{
-  text-decoration:none!important;
+.bb-container .bb-quest-number {
+    text-decoration: none !important;
 }
