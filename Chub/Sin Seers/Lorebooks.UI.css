@@ -26,14 +26,23 @@
     --bb-fav-color: var(--bb-btn-color);
     --bb-fav-border: var(--bb-divider);
     --bb-fav-width: clamp(100px, 14vw, 160px);
-    --bb-accent: #ff7a1a;
     --bb-accent-soft: #f0e6d2;
-    --bb-gold: #ffd700;
+    --bb-gold: #c9922a;
     --bb-wine: rgba(28 6 6 / 9%);
     --bb-rose: rgba(255, 145, 100, 0.4);
-    --bb-text: #f5f5f5;
+    --bb-text: #e4dcc8;
     --bb-btn-solid: #4e008ab7;
     --bb-btn-solid-hover: #ff9164
+    --main-color: #06c;
+    --ss-gold: #c9922a;
+    --ss-gold-dim: rgba(155,115,20,.55);
+    --ss-text: #e4dcc8;
+    --dark-background-color: #151114;
+    --light-background-color: #DBDADA;
+    --message-font-size: 1rem;
+    --message-line-height: 1.5;
+}
+
 }
 
 a {
