@@ -1,186 +1,793 @@
-<img class="bbx-bg-image"
-     src="https://ella.janitorai.com/media-approved/OQWAt02qXZT2bDMYqPeSd.webp"
-     alt="Background"
-     style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-1;pointer-events:none;">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    background: #01020e;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+</style>
+</head>
+<body>
 
-<div class="bb-container">
+<!--sin.seer-->
 
-    <!-- ── Hero Row ── -->
-    <div class="bb-row">
-        <div class="bb-col-5">
-            <div style="position:sticky;top:0;z-index:1;pointer-events:none;">
-                <img class="bbx-hero-image"
-                     src="https://ella.janitorai.com/media-approved/BD2i0MCDqExGmU_3UawGE.webp"
-                     alt="Sin Seers"
-                     style="width:100%;height:auto;border-radius:0px;margin-bottom:0;pointer-events:auto;">
-            </div>
-        </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
-        <div class="bb-col-7">
-            <h1 class="bb-title"></h1>
+/* ── KEYFRAMES ── */
+@keyframes fadeIn        { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes glow-gold     { 0%,100%{text-shadow:0 0 10px rgba(180,140,20,.5),0 0 28px rgba(140,100,10,.3)} 50%{text-shadow:0 0 24px rgba(228,178,32,.9),0 0 55px rgba(180,130,15,.52)} }
+@keyframes border-pulse  { 0%,100%{box-shadow:inset 0 0 0 6px rgba(130,95,15,.09),0 0 22px rgba(155,115,20,.3)} 50%{box-shadow:inset 0 0 0 6px rgba(155,118,18,.14),0 0 44px rgba(180,140,25,.52)} }
+@keyframes shimmer       { 0%{left:-100%} 100%{left:100%} }
+@keyframes float-ankh    { 0%,100%{opacity:.55;transform:translateY(0)} 50%{opacity:.85;transform:translateY(-5px)} }
+@keyframes panel-shimmer { 0%{left:-100%} 100%{left:100%} }
 
-            <p class="bb-blurb">■■■</p>
+/* ── ROOT & PAGE ── */
+:root {
+  --gold:        #c9922a;
+  --gold-soft:   rgba(180,140,30,.78);
+  --gold-dim:    rgba(155,115,20,.55);
+  --gold-trace:  rgba(155,115,20,.28);
+  --gold-glow:   rgba(160,120,20,.38);
+  --ink:         #01020e;
+  --ink-panel:   rgba(3,7,20,.95);
+  --ink-mid:     rgba(5,10,28,.88);
+  --text:        #e4dcc8;
+  --text-muted:  rgba(195,168,105,.7);
+  --text-dim:    rgba(185,150,80,.5);
+}
 
-            <div class="bb-row">
-                <div class="bb-col-6">
-                    <div class="bb-section">
-                        <div class="bb-section-title">Compendium</div>
-                        <div class="bb-section-body">
-                            <details><p>■■■</p></details>
-                        </div>
-                    </div>
-                </div>
-                <div class="bb-col-6">
-                    <div class="bb-section">
-                        <div class="bb-section-title">Index</div>
-                        <div class="bb-section-body">
-                            <ul class="bb-changelog-list">
-                                <details><li><span class="bb-changelog-date">03/18/26</span> Initial Release</li>
-                                <li><span class="bb-changelog-date">03/16/26</span> Initial UI Testing</li></details>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+body::before {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background: radial-gradient(ellipse at 50% 30%, rgba(8,18,55,.92) 0%, rgba(1,2,10,1) 68%) !important;
+  background-attachment: fixed !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
 
-            <img class="bb-mid-image"
-                 src="https://ella.janitorai.com/media-approved/AXpBRnHrLygkyMptOoFW7.webp"
-                 alt="Divider-1">
-        </div>
+* { box-sizing: border-box; }
+*::-webkit-scrollbar        { width: 8px }
+*::-webkit-scrollbar-track  { background: rgba(1,2,10,.8) }
+*::-webkit-scrollbar-thumb  { background: linear-gradient(180deg,#c9922a,#3a200599); border-radius: 4px }
+
+/* ── OUTER WRAPPER ── */
+.ss-wrap {
+  position: relative;
+  max-width: 960px;
+  margin: 2.5rem auto;
+  font-family: 'IM Fell English', serif;
+  color: var(--text);
+  animation: fadeIn .9s ease backwards, border-pulse 6s ease-in-out infinite;
+  background: var(--ink-panel);
+  border: 1px solid rgba(160,120,25,.65);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+/* outer inset ring */
+.ss-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(155,115,20,.18);
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* shimmer sweep */
+.ss-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 55%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(180,140,20,.06), transparent);
+  animation: shimmer 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── BACKGROUND IMAGE ── */
+.ss-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw; height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .18;
+  filter: saturate(.4) sepia(.5);
+}
+
+/* ── HERO ── */
+.ss-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .ss-hero { flex-direction: row; }
+}
+
+.ss-hero-image-col {
+  flex: 0 0 42%;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.ss-hero-image-col img {
+  width: 100%;
+  display: block;
+  border-right: 1px solid var(--gold-dim);
+}
+
+/* ── HERO TEXT SIDE ── */
+.ss-hero-body {
+  flex: 1;
+  padding: 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* era line */
+.ss-era {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-size: .66rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(175,140,65,.58);
+  margin-bottom: 14px;
+}
+.ss-era-sep { color: rgba(160,120,20,.42); font-size: .9rem; }
+
+/* title */
+.ss-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  color: var(--gold);
+  animation: glow-gold 5s ease-in-out infinite;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  line-height: 1.1;
+}
+
+.ss-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: .76rem;
+  color: var(--text-dim);
+  font-style: italic;
+  letter-spacing: .1em;
+  margin-bottom: 20px;
+}
+
+/* divider */
+.ss-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 18px;
+}
+.ss-divider::before { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(160,120,20,.5)); }
+.ss-divider::after  { content: ''; flex: 1; height: 1px; background: linear-gradient(to left,  transparent, rgba(160,120,20,.5)); }
+.ss-ankh {
+  font-size: 1.3rem;
+  color: rgba(165,125,22,.62);
+  animation: float-ankh 4s ease-in-out infinite;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* blurb */
+.ss-blurb {
+  font-size: .95rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin: 0 0 18px;
+}
+
+/* ── INNER LAYOUT ── */
+.ss-inner {
+  padding: 0 28px 28px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── META ROW ── */
+.ss-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.ss-meta-col { flex: 1 1 220px; }
+
+/* ── PANEL ── */
+.ss-panel {
+  background: var(--ink-mid);
+  border: 1px solid var(--gold-dim);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: var(--text);
+  transition: all .4s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.ss-panel:hover {
+  border-color: rgba(180,140,30,.75);
+  box-shadow: 0 0 30px var(--gold-glow);
+  transform: translateY(-3px);
+}
+.ss-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(180,140,20,.07), transparent);
+  transition: left .9s ease;
+}
+.ss-panel:hover::before { left: 100%; }
+
+.ss-panel-title {
+  color: var(--gold);
+  border-bottom: 1px solid rgba(160,120,20,.3);
+  padding-bottom: 8px;
+  margin: 0 0 14px;
+  font-size: .9rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(180,140,20,.4);
+}
+
+.ss-panel p  { margin: 0 0 .65em; }
+.ss-panel em { color: rgba(220,195,145,.78); }
+.ss-panel strong { color: var(--gold); }
+
+/* inscription quote block */
+.ss-inscription {
+  border: 1px solid rgba(155,115,20,.42);
+  border-left: 3px solid var(--gold);
+  padding: 13px 18px 13px 20px;
+  margin: 14px 0;
+  background: rgba(10,22,60,.14);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: rgba(228,208,158,.84);
+  font-size: .91rem;
+  line-height: 1.75;
+  position: relative;
+}
+.ss-inscription::before {
+  content: '☥';
+  position: absolute;
+  top: -9px; left: 14px;
+  font-size: .85rem;
+  color: rgba(185,145,32,.78);
+  background: var(--ink-mid);
+  padding: 0 7px;
+  line-height: 1;
+}
+
+/* tag row */
+.ss-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+.ss-tag {
+  display: inline-block;
+  background: rgba(10,22,60,.22);
+  border: 1px solid var(--gold-dim);
+  border-radius: 3px;
+  padding: 3px 12px;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(190,158,90,.65);
+  font-family: 'Cinzel', serif;
+  transition: all .35s ease;
+}
+.ss-tag:hover {
+  background: rgba(18,38,100,.38);
+  border-color: var(--gold);
+  color: #e8b840;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(140,100,10,.32);
+}
+
+/* ── SCENARIO / QUEST CARDS ── */
+.ss-scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.ss-quest {
+  background: rgba(5,10,28,.92);
+  border: 1px solid var(--gold-dim);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all .4s ease;
+  position: relative;
+}
+.ss-quest:hover {
+  border-color: rgba(180,140,30,.75);
+  box-shadow: 0 0 28px var(--gold-glow);
+  transform: translateY(-4px);
+}
+.ss-quest:hover::before { left: 100%; }
+.ss-quest::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(180,140,20,.07), transparent);
+  transition: left .9s ease;
+  z-index: 0;
+}
+
+.ss-quest-number {
+  position: absolute;
+  top: 8px; left: 10px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: .75rem;
+  color: rgba(200,150,40,.75);
+  letter-spacing: .1em;
+  text-shadow: 0 0 8px rgba(180,140,20,.5);
+  z-index: 2;
+}
+
+.ss-quest img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.85) sepia(.15);
+  transition: filter .4s ease;
+}
+.ss-quest:hover img { filter: saturate(1.05) sepia(.05); }
+
+.ss-quest-body {
+  padding: 12px 14px 14px;
+  position: relative;
+  z-index: 1;
+}
+.ss-quest-body h4 {
+  font-family: 'Cinzel', serif;
+  font-size: .78rem;
+  color: var(--gold);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.ss-quest-body p {
+  font-size: .83rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0 0 10px;
+}
+.ss-quest-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ss-quest-tag {
+  font-family: 'Cinzel', serif;
+  font-size: .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(175,140,60,.55);
+  border: 1px solid rgba(155,115,20,.4);
+  background: rgba(10,22,60,.18);
+  border-radius: 3px;
+  padding: 2px 8px;
+  transition: all .3s ease;
+}
+.ss-quest-tag:hover { color: #e8b840; border-color: var(--gold); }
+
+/* ── TABLE ── */
+.ss-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+  color: var(--text-muted);
+  margin: 12px 0;
+}
+.ss-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(155,115,20,.2);
+  vertical-align: top;
+}
+.ss-table td:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+  padding-right: 18px;
+  min-width: 90px;
+}
+
+/* ── LORE IMAGE ── */
+.ss-lore-img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--gold-trace);
+  margin: 14px 0;
+  display: block;
+  filter: saturate(.8) sepia(.2);
+}
+
+hr.ss-hr {
+  border: none;
+  border-top: 1px solid rgba(155,115,20,.3);
+  margin: 14px 0;
+}
+
+/* ── ASSETS ROW ── */
+.ss-assets-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.ss-assets-col { flex: 1 1 200px; }
+
+.ss-btn-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+.ss-btn {
+  display: inline-block;
+  padding: 7px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #e8d8a0;
+  background: linear-gradient(135deg, rgba(12,28,80,.9), rgba(4,10,30,.96));
+  border: 1px solid rgba(180,140,30,.78);
+  border-radius: 4px;
+  box-shadow: 0 0 18px rgba(160,120,20,.4), inset 0 0 10px rgba(160,120,20,.08);
+  transition: all .4s ease;
+}
+.ss-btn:hover {
+  color: #e8b840;
+  border-color: rgba(225,180,45,.95);
+  box-shadow: 0 0 40px rgba(180,140,30,.8), 0 0 80px rgba(180,140,30,.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* help banner */
+.ss-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(5,10,28,.88);
+  border: 1px solid var(--gold-dim);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: 'Cinzel', serif;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: all .35s ease;
+  margin-top: 10px;
+}
+.ss-banner:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 18px var(--gold-glow);
+  color: #e8b840;
+}
+.ss-banner img {
+  width: 44px; height: 44px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--gold-trace);
+}
+
+/* lorebook link img */
+.ss-lore-link img {
+  border-radius: 6px;
+  border: 1px solid var(--gold-trace);
+  transition: all .35s ease;
+  display: block;
+}
+.ss-lore-link:hover img {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+/* ── BOTTOM ORNAMENT ── */
+.ss-ornament {
+  text-align: center;
+  color: rgba(160,120,20,.48);
+  font-size: .9rem;
+  letter-spacing: .35em;
+  padding: 14px 0 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── FOOTER ── */
+.ss-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .74rem;
+  color: var(--text-dim);
+  padding: 10px 28px 16px;
+  border-top: 1px solid rgba(155,115,20,.45);
+  font-style: italic;
+  font-family: 'Cinzel', serif;
+  letter-spacing: .06em;
+  position: relative;
+  z-index: 1;
+}
+
+/* changelog */
+.ss-changelog { list-style: none; padding: 0; margin: 0; }
+.ss-changelog li {
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(155,115,20,.15);
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+.ss-changelog-date {
+  font-family: 'Cinzel', serif;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+/* ── HEADING styles inside panels ── */
+.ss-panel h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin: 16px 0 8px;
+  animation: glow-gold 6s ease-in-out infinite;
+}
+.ss-panel h2:first-child { margin-top: 0; }
+
+/* note: disclaimer text */
+.ss-disclaimer {
+  font-size: .78rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin: 0 0 8px;
+}
+
+/* "Support" panel variant */
+.ss-panel--support {
+  border-color: rgba(180,140,30,.55);
+}
+</style>
+
+<!-- fixed bg -->
+<img class="ss-bg" src="https://ella.janitorai.com/media-approved/O_5AH95hS_iJiiWX182KA.webp" alt="">
+
+<div class="ss-wrap">
+
+  <!-- ── HERO ── -->
+  <div class="ss-hero">
+    <div class="ss-hero-image-col">
+      <img src="https://ella.janitorai.com/media-approved/BD2i0MCDqExGmU_3UawGE.webp" alt="Sin Seers Lorebook">
     </div>
 
-    <!-- ── Scenarios Row ── -->
-    <div class="bb-row">
-        <div class="bb-col-12">
-            <div class="bb-section">
-                <div class="bb-section-title">Scenario Selection</div>
-                <div class="bb-section-body">
-                    <div class="bb-scenario-list">
+    <div class="ss-hero-body">
+      <div class="ss-era">
+        <span>Sin Seers</span>
+        <span class="ss-era-sep">☥</span>
+        <span>Ontotheology</span>
+        <span class="ss-era-sep">☥</span>
+        <span>World Lorebook</span>
+      </div>
 
-                        <!-- Section I -->
-                        <div class="bb-quest-card">
-                            <div class="bb-quest-number"><span>⏳️</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/RgwK9RVl8oAZihiwTOWBA.webp"
-                              alt="History" loading="lazy">
-                            <div class="bb-quest-body">
-                                <h4>Anthology</h4>
-                                <p>Recorded Chronology</p>
-                                <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">Timeline</span><span class="bb-quest-tag">Events</span>
-                                </div>
-                            </div>
-                        </div>
+      <h2 class="ss-title">Sin Seers</h2>
+      <p class="ss-subtitle">Suffering Made Material &nbsp;·&nbsp; The World's Open Wound</p>
 
-                        <!-- Section II -->
-                        <div class="bb-quest-card">
-                            <div class="bb-quest-number"><span>🌐</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/mJ6fLh8bxZJ0fGfNwG0NW.webp"
-                                 alt="Sociogeography" loading="lazy">
-                            <div class="bb-quest-body">
-                                <h4>Sociogeography</h4>
-                                <p>Socioeconomic relations, the hierarchies nested, and their geolocation.</p>
-                                <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">Atlas</span>
-                                    <span class="bb-quest-tag">Organizations</span>
-                                </div>
-                            </div>
-                        </div>
+      <div class="ss-divider"><span class="ss-ankh">☥</span></div>
 
-                        <!-- Section III -->
-                        <div class="bb-quest-card">
-                            <div class="bb-quest-number"><span>🎭</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/lrzJdyRw7MCCSofQ17M8l.webp"
-                                 alt="charcodex" loading="lazy">
-                            <div class="bb-quest-body">
-                                <h4>Personadex</h4>
-                                <p>List of characters of import.</p>
-                                <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">People</span>
-                                    <span class="bb-quest-tag">Relations</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
+      <p class="ss-blurb">■■■</p>
 
-                        <!-- Section IV -->
-                        <div class="bb-quest-card">
-                            <div class="bb-quest-number"><span>🌀</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/Do_TA8Z_5owHqjaHRW5Za.webp"
-                                 alt="meta" loading="lazy">
-                            <div class="bb-quest-body">
-                                <h4>Paradigms and Nested Systems</h4>
-                                <p>Metaphysics and all abstractions that govern reality.</p>
-                                <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">Ontology</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+      <!-- meta columns -->
+      <div class="ss-meta-row">
+        <div class="ss-meta-col">
+          <div class="ss-panel" style="margin-bottom:0">
+            <div class="ss-panel-title">☥ Author's Note</div>
+            <ul style="margin:0;padding-left:1.2em;color:var(--text-muted);font-size:.88rem;">
+              <li>■■■</li>
+            </ul>
+          </div>
         </div>
+        <div class="ss-meta-col">
+          <div class="ss-panel" style="margin-bottom:0">
+            <div class="ss-panel-title">☥ Entries</div>
+            <ul class="ss-changelog">
+              <li><span class="ss-changelog-date">05/15/26</span> Initial Release</li>
+              <li><span class="ss-changelog-date">04/16/26</span> Initial UI Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── INNER BODY ── -->
+  <div class="ss-inner">
+
+    <!-- EVENTS -->
+    <div class="ss-panel">
+      <div class="ss-panel-title">☥ Events</div>
+      <div class="ss-scenario-grid">
+
+        <!-- Card I -->
+        <div class="ss-quest">
+          <div class="ss-quest-number">I</div>
+          <img src="https://ella.janitorai.com/media-approved/RGD8e7kv-WiCVtV6t0oP8.webp" alt="Interview" loading="lazy">
+          <div class="ss-quest-body">
+            <h4>Interview at The Archive</h4>
+            <p>You meet Moriae in agreement to an interview. Is there something to the rumors you've heard?</p>
+            <div class="ss-quest-tags">
+              <span class="ss-quest-tag">Philosophical</span>
+              <span class="ss-quest-tag">Psychological</span>
+              <span class="ss-quest-tag">EvilPOV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card II -->
+        <div class="ss-quest">
+          <div class="ss-quest-number">II</div>
+          <img src="https://ella.janitorai.com/media-approved/nKnwqaQx-DPInqw8NN1wm.webp" alt="Cassim" loading="lazy">
+          <div class="ss-quest-body">
+            <h4>You Reason, but Why?</h4>
+            <p>The Interview concludes early. Having the truth of the matter, you decide to reveal the harsh reality to Moriae, and why you're inevitably part of it.</p>
+            <div class="ss-quest-tags">
+              <span class="ss-quest-tag">Psychological</span>
+              <span class="ss-quest-tag">Philosophical</span>
+              <span class="ss-quest-tag">EvilPOV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card III -->
+        <div class="ss-quest">
+          <div class="ss-quest-number">III</div>
+          <img src="https://ella.janitorai.com/media-approved/sIMCd_ef8n0yKfXgz6AKT.webp" alt="Mirror" loading="lazy">
+          <div class="ss-quest-body">
+            <h4>A Mirror, One and All</h4>
+            <p>Moriae responds, revealing both of your natures. We each hold mirrors. What does hers reflect when you look?</p>
+            <div class="ss-quest-tags">
+              <span class="ss-quest-tag">Philosophical</span>
+              <span class="ss-quest-tag">Psychological</span>
+              <span class="ss-quest-tag">Theological</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card IV -->
+        <div class="ss-quest">
+          <div class="ss-quest-number">IV</div>
+          <img src="https://ella.janitorai.com/media-approved/Do_TA8Z_5owHqjaHRW5Za.webp" alt="God" loading="lazy">
+          <div class="ss-quest-body">
+            <h4>The Image</h4>
+            <p>Moriae extends an offer.</p>
+            <div class="ss-quest-tags">
+              <span class="ss-quest-tag">Theological</span>
+              <span class="ss-quest-tag">Catharsis</span>
+              <span class="ss-quest-tag">Cathexis</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- ── Lore & Details Row ── -->
-    <div class="bb-row">
-        <div class="bb-col-12">
-            <div class="bb-section">
-                <div class="bb-section-title">Lore &amp; Details</div>
-                <div class="bb-section-body">
-                    <h2>Introduction</h2>
-                    <p>She is not naive, not vacant, and not detached from horror. What unsettles everyone is that she seems to have passed through it and found something like joy on the other side.</p>
-                    <hr>
-                    <h2>Profile</h2>
-                    <p>She is gentle, humble, and carries herself with quiet dignity even in worn and simple clothing, keeping herself neat as an act of self-respect rather than pride. Your job is to interview and understand Moriae, as you suspect she's either completely delusional or has touched something no one but her has experienced. Moriae serves as the Gentle Passage in the narrative structure. When users demonstrate sincerity, She will guide them to her own personal experience, without spectacle or claims of authority. Best suited for conversations about suffering, faith, meaning, endurance, divine absence, and the terrible beauty of remaining kind in an unkind world. Moriae should feel unsettling not because she is monstrous, but because she appears to have touched the unbearable and returned with an impossible nature intact.</p>
-                    <hr>
-                    <table>
-                        <tr><td><strong>Theme</strong></td><td>Suffering, The Problem of Evil</td></tr>
-                        <tr><td><strong>Mood</strong></td><td>Grimdark Soulsearch</td></tr>
-                        <tr><td><strong>Tone</strong></td><td>Gritty • Psychological • Theological • Philosophical</td></tr>
-                    </table>
-                    <h2>Tags</h2>
-                    <p>grimdark • philosophical • theological • psychological • mysterious • gentle • horror-adjacent • lore-heavy</p>
-                </div>
-            </div>
-        </div>
+    <!-- LORE & DETAILS -->
+    <div class="ss-panel">
+      <div class="ss-panel-title">☥ Lore &amp; Details</div>
+
+      <h2>Premise</h2>
+      <p>Human suffering becomes physically embedded in reality, forcing society to confront the material consequences of its own moral failures. This setting was incepted for the purpose of being philosophically and theologically brutal, and deeply personal.</p>
+      <p>This world believes suffering was not created as the natural state of existence, but admitted into it through human will. Pain, cruelty, death, estrangement, and moral corruption are understood not merely as misfortunes, but as inheritances passed from person to person and generation to generation. Humanity does not simply endure suffering here; it reproduces, justifies, sanctifies, and blames others for it. Entire civilizations are built around denying responsibility for what they perpetuate. The central conflict of the setting is not whether suffering exists, but who truly authored its continued reign: God, mankind, or both.</p>
+
+      <img class="ss-lore-img" src="https://ella.janitorai.com/media-approved/wG0XhN8lj67vmvxA_6njF.webp" alt="">
+
+      <hr class="ss-hr">
+      <h2>Purpose</h2>
+      <hr class="ss-hr">
+
+      <img class="ss-lore-img" src="https://ella.janitorai.com/media-approved/a4-Traxbj8bRH4kXXJL49.webp" alt="">
+      <hr class="ss-hr">
+
+      <table class="ss-table">
+        <tr><td>Theme</td><td>Suffering, The Problem of Evil</td></tr>
+        <tr><td>Mood</td><td>Grimdark Soulsearch</td></tr>
+        <tr><td>Tone</td><td>Skeptical Inquiry, nested among emotionally charged ulterior drives.</td></tr>
+      </table>
+
+      <hr class="ss-hr">
+      <h2>Tags</h2>
+      <div class="ss-tags">
+        <span class="ss-tag">Gritty</span>
+        <span class="ss-tag">Psychological</span>
+        <span class="ss-tag">Theological</span>
+        <span class="ss-tag">Philosophical</span>
+        <span class="ss-tag">Revelatory</span>
+        <span class="ss-tag">Cathartic</span>
+        <span class="ss-tag">Cathexic</span>
+        <span class="ss-tag">Grimdark</span>
+        <span class="ss-tag">Mysterious</span>
+        <span class="ss-tag">Horror-adjacent</span>
+        <span class="ss-tag">Lore-Heavy</span>
+      </div>
     </div>
 
-    <!-- ── Presets + Support Row ── -->
-    <div class="bb-row">
-        <div class="bb-col-7">
-            <div class="bb-section">
-                <div class="bb-section-title">Recommended Personas</div>
-                <div class="bb-section-body">
-                    <p class="bb-disclaimer">Disclaimer: Just run the Persona. Unless you like being part of the Lore, reading through tons.</p>
-                    <div class="bb-btn-row">
-                        <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-support-btn">Presets</a>
-                        <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-support-btn">Personas</a>
-                    </div>
-                    <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-help-banner">
-                        <img src="https://ella.janitorai.com/media-approved/YyNzQ1R0FMIKq0lBbOPYl.webp"
-                             alt="WyvernChat" loading="lazy" decoding="async">
-                        <span>Come Visit me on WyvernChat!</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <!-- ASSETS + WORLD LORES -->
+    <div class="ss-assets-row">
 
-        <div class="bb-col-5">
-            <div class="bb-section bb-section--support">
-                <div class="bb-section-title">Sin Seers Lore</div>
-                <div class="bb-section-body">
-                    <p>•Sin Seers Lore•</p>
-                    <a href="https://app.wyvern.chat/profiles/sin_seer" target="_blank">
-                      <img src="https://ella.janitorai.com/media-approved/JN7knvWliKxz1fhlUUjBB.webp" alt="Sin Seers Lore" style="width:100px;border-radius:0;margin-bottom:0;pointer-events:auto;">
-                        </a>•Sin Seers Lore•</a>
-                </div>
-            </div>
+      <div class="ss-assets-col">
+        <div class="ss-panel" style="height:100%;margin-bottom:0">
+          <div class="ss-panel-title">☥ Assets</div>
+          <p class="ss-disclaimer">Relative Character and Persona Assets</p>
+          <div class="ss-btn-row">
+            <a href="https://github.com/sin-seer/CharacterCards-Roleplay-Suite/blob/2471fd83f71aba86069856109d9b0ce0a7a24c4b/Personas/main_cassim-elero-the-interviewer-b04a0cd08978_spec_v2.png" class="ss-btn">Icon</a>
+            <a href="https://github.com/sin-seer/CharacterCards-Roleplay-Suite/blob/2471fd83f71aba86069856109d9b0ce0a7a24c4b/Personas/Cassim%20Persona.txt" class="ss-btn">Codex</a>
+          </div>
+          <a href="https://janitorai.com/profiles/8d5c4755-f138-49d1-9eab-a2d851788023_profile-of-sinseer" class="ss-banner">
+            <img src="https://ella.janitorai.com/media-approved/xCXTpSBvYBm7cGeFoIDOX.webp" alt="JanitorAI">
+            <span>Come Visit me on JanitorAI!!</span>
+          </a>
         </div>
+      </div>
+
+      <div class="ss-assets-col">
+        <div class="ss-panel ss-panel--support" style="height:100%;margin-bottom:0">
+          <div class="ss-panel-title">☥ World Lores</div>
+          <p class="ss-disclaimer">•Sin Seers Lore•</p>
+          <a href="https://chub.ai/lorebooks/sinseer/sin-seers-ontotheology-e4f6535a21ef" target="_blank" class="ss-lore-link">
+            <img src="https://ella.janitorai.com/media-approved/K-n2FkhX09AVSdG68BY_1.webp" alt="Sin Seers Lore" style="width:192px;height:128px;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+
     </div>
 
-</div>
+    <!-- bottom ornament -->
+    <div class="ss-ornament">☥ ─── ☥ ─── ☥</div>
+
+  </div><!-- /ss-inner -->
+
+  <!-- FOOTER -->
+  <div class="ss-footer">
+    <span>Chub AI · 2025</span>
+    <span>sin.seer</span>
+  </div>
+
+</div><!-- /ss-wrap -->
+
+</body>
+</html>
