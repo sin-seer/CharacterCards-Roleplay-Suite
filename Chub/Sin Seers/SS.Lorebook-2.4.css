@@ -8,24 +8,24 @@
 :root {
   /* theme — overridable inline on .srv-wrapper for per-card recoloring
      Aliant: gilt primary (Cassim channel)  ·  Collette: bone secondary (Moriae channel) */
-  --theme-hex: #f5dc9f;
-  --theme-rgb: 245, 220, 159;
-  --theme-light: #f8d887;
+  --theme-hex: #f22a70;
+  --theme-rgb:   242, 42, 75;
+  --theme-light: #f22a70;
   --theme-dark: #0a0908;
-  --secondary-hex: #ffe6bb;
-  --secondary-rgb: 255, 230, 187;
+  --secondary-hex: rgb(255, 232, 187);
+  --secondary-rgb: 255, 232, 187;
 
   /* type colors — body text stays bone-neutral for readability */
-  --name-gold: #a13540; /* gilt — used by <strong> body emphasis (NOT character names) */
-  --name-color: #e9a489; /* gilt-light — actual character name elements (Aliant context) */
-  --name-alt: #fbbccf; /* bone — character name elements in Collette context */
-  --accent-soft: #dead7d; /* path tags, section hdrs, tagline, acts hdr */
+  --name-gold: #f22a70; /* gilt — used by <strong> body emphasis (NOT character names) */
+  --name-color: #f22a70; /* gilt-light — actual character name elements (Aliant context) */
+  --name-alt: #f22a70; /* bone — character name elements in Collette context */
+  --accent-soft: #fea9af; /* path tags, section hdrs, tagline, acts hdr */
   --accent-soft-alt: #ece1c2; /* same for .collette context */
-  --accent-chip: #dda77e; /* tag / theme-chip text */
-  --accent-chip-alt: #e9dec0; /* same for .collette context */
-  --text-main: #f8eed1;
-  --text-muted: #c1ab92;
-  --text-meta: #c1ab92;
+  --accent-chip: #f9e5ba; /* tag / theme-chip text */
+  --accent-chip-alt: #f1d4d0; /* same for .collette context */
+  --text-main: #fcf5e2;
+  --text-muted: #ebdbc9;
+  --text-meta: #ebdbc9;
 
   /* surfaces */
   --bg-color: #0a0908;
@@ -218,7 +218,7 @@ body::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://ella.janitorai.com/media-approved/gXc6dPmg5vQmE29FUPfMS.webp");
+  background-image: url("https://ella.janitorai.com/media-approved/8Hzs9WVNRy6RZCzswJHlb.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -290,7 +290,7 @@ div.text-sm:has(.font-size-message) {
   flex-direction: column !important;
   justify-content: flex-end !important;
   padding: 22px 18px !important;
-  background: url("https://ella.janitorai.com/media-approved/CTU6VvTQbu9eYRipZppdO.webp")
+  background: url("https://ella.janitorai.com/media-approved/GI9y1c0GIUyMMPfeFgDwQ.webp")
     center 38% / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
   border-bottom: 2px solid var(--theme-hex) !important;
@@ -413,7 +413,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   overflow-x: hidden !important;
   padding: 12px 0 60px !important;
   background: var(--bg-color)
-    url("https://ella.janitorai.com/media-approved/O8ZEWJab91JJsaznEqZ_I.webp")
+    url("https://ella.janitorai.com/media-approved/8Hzs9WVNRy6RZCzswJHlb.webp")
     center / cover fixed no-repeat !important;
   box-sizing: border-box !important;
 }
