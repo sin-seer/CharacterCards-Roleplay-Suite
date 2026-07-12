@@ -147,7 +147,7 @@ body::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://ella.janitorai.com/media-approved/nejQsGrBGvL3r4IpNsI9D.webp');
+  background-image: url('https://ella.janitorai.com/media-approved/4mfQnD2mttbhuhQb6ztdN.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,7 +221,7 @@ div.text-sm:has(.font-size-message) {
   flex-direction: column !important;
   justify-content: flex-end !important;
   padding: 22px 18px !important;
-  background: url('https://ella.janitorai.com/media-approved/RSp327RiH-JWMOI0okBbt.webp') center 38% / cover no-repeat !important;
+  background: url('https://ella.janitorai.com/media-approved/oDDVC7zTp0n53hie2ePND.webp') center 38% / cover no-repeat !important;
   border-radius: 0 0 8px 8px !important;
   border-bottom: 2px solid var(--theme-hex) !important;
   position: relative !important;
@@ -340,7 +340,7 @@ div.mt-4.text-right.justify-end button.ant-btn {
   overflow-x: hidden !important;
   padding: 12px 0 60px !important;
   background: var(--bg-color)
-              url('https://ella.janitorai.com/media-approved/nejQsGrBGvL3r4IpNsI9D.webp')
+              url('https://ella.janitorai.com/media-approved/4mfQnD2mttbhuhQb6ztdN.webp')
               center / cover fixed no-repeat !important;
   box-sizing: border-box !important;
 }
