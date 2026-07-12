@@ -1,46 +1,50 @@
-/* =============================================================================Sin Seers============================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
-
-/* =============================================================================
-   1. ROOT VARIABLES
-   ============================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=
 
 :root {
   /* theme — overridable inline on .srv-wrapper for per-card recoloring
      Aliant: gilt primary (Cassim channel)  ·  Collette: bone secondary (Moriae channel) */
-  --theme-hex: #C9A24A;
-  --theme-rgb: 201,162,74;
-  --theme-light: #E4C784;
-  --theme-dark: #0A0908;
-  --secondary-hex: #ECE1C2;
-  --secondary-rgb: 236,225,194;
+  --theme-hex: #f5dc9f;
+  --theme-rgb: 245, 220, 159;
+  --theme-light: #f8d887;
+  --theme-dark: #0a0908;
+  --secondary-hex: #ffe6bb;
+  --secondary-rgb: 255, 230, 187;
 
   /* type colors — body text stays bone-neutral for readability */
-  --name-gold: #D9B565;        /* gilt — used by <strong> body emphasis (NOT character names) */
-  --name-color: #E6C77E;       /* gilt-light — actual character name elements (Aliant context) */
-  --name-alt:   #ECE1C2;       /* bone — character name elements in Collette context */
-  --accent-soft: #D9B565;      /* path tags, section hdrs, tagline, acts hdr */
-  --accent-soft-alt: #ECE1C2;  /* same for .collette context */
-  --accent-chip: #DDBE7E;      /* tag / theme-chip text */
-  --accent-chip-alt: #E9DEC0;  /* same for .collette context */
-  --text-main: #ECE1C2;
-  --text-muted: #8A8172;
-  --text-meta: #6B6357;
+  --name-gold: #a13540; /* gilt — used by <strong> body emphasis (NOT character names) */
+  --name-color: #e9a489; /* gilt-light — actual character name elements (Aliant context) */
+  --name-alt: #fbbccf; /* bone — character name elements in Collette context */
+  --accent-soft: #dead7d; /* path tags, section hdrs, tagline, acts hdr */
+  --accent-soft-alt: #ece1c2; /* same for .collette context */
+  --accent-chip: #dda77e; /* tag / theme-chip text */
+  --accent-chip-alt: #e9dec0; /* same for .collette context */
+  --text-main: #f8eed1;
+  --text-muted: #c1ab92;
+  --text-meta: #c1ab92;
 
   /* surfaces */
-  --bg-color: #0A0908;
-  --card-bg: rgba(14,12,10,.78);
+  --bg-color: #0a0908;
+  --card-bg: rgba(14, 12, 10, 0.78);
 
   /* readability tones (used by override layer) */
-  --readable-main: #F6EED9;
-  --readable-soft: #FBF7EB;
-  --readable-muted: #E9DEC0;
+  --readable-main: #f6eed9;
+  --readable-soft: #fbf7eb;
+  --readable-muted: #e9dec0;
 
   /* type — Cinzel for display/caps, EB Garamond for body */
-  --font-display: 'Cinzel', Georgia, serif;
-  --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-display:
+    "Jim Nightshade", static, "Babylonica", "Grenze", "Cinzel",
+    "Cinzel Decorative", "IM Fell English SC", "IM Fell English",
+    "IM Fell Double Pica", "IM Fell Double Pica SC", "IM Fell DW Pica",
+    "IM Fell DW Pica SC", "IM Fell Great Primer", "IM Fell Great Primer SC",
+    Georgia, "Times New Roman", serif;
+  --font-body:
+    "Jim Nightshade", static, "Babylonica", "Grenze", "Cinzel",
+    "Cinzel Decorative", "IM Fell English SC", "IM Fell English",
+    "IM Fell Double Pica", "IM Fell Double Pica SC", "IM Fell DW Pica",
+    "IM Fell DW Pica SC", "IM Fell Great Primer", "IM Fell Great Primer SC",
+    Georgia, "Times New Roman", serif;
 
   /* layout — final values from LayoutFix layer */
   --page-max: 940px;
