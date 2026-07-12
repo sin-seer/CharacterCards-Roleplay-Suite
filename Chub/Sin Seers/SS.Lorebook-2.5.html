@@ -5,7 +5,7 @@
 <style>
 :root {
   --name-gold-rgb: 242, 42, 112;
-  --blood-rgb: 242, 42, 112;
+  --blood-rgb: 128, 6, 51;
   --hero-height: clamp(560px, 38vw, 760px);
   --hero-mobile-height: 380px;
 }
@@ -23,100 +23,23 @@
   --theme-light: #ff5b76;
   --secondary-hex: #ff8fa1;
   --secondary-rgb: 255, 143, 161;
-  --blood-hex: #f22a70;
-  --blood-rgb: 242, 42, 112;
+  --blood-hex: #800633;
+  --blood-rgb: 128, 6, 51;
   --name-gold-rgb: 242, 42, 112;
 }
 
-.lorebook,
-.lorebook * {
+/* Intentionally scoped.
+   Do not use .lorebook, .lorebook * here because it overrides every text,
+   border, and alignment rule in the imported stylesheet. */
+.lorebook .srv-id-name,
+.lorebook .srv-section-hdr span,
+.lorebook .srv-gal-title,
+.lorebook .srv-path-tag {
   color: #f22a70 !important;
-  text-align: center !important;
-  border-color: #f22a70 !important;
 }
 
-.lorebook :is(.srv-tag, .srv-theme-chip) {
-  color: #f22a70 !important;
-  background: rgba(242, 42, 112, 0.12) !important;
-  border-color: #f22a70 !important;
-}
-
-.lorebook :is(
-  .srv-rule > div,
-  .srv-ornament > div,
-  .srv-section-hdr > div
-) {
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(242, 42, 112, 0.82),
-    transparent
-  ) !important;
-}
-
-.lore-hero {
-  min-height: clamp(640px, 58vw, 820px) !important;
-  padding: clamp(76px, 8vw, 110px) 28px
-    clamp(62px, 7vw, 96px) !important;
-  border-color: rgba(242, 42, 112, 0.86) !important;
-}
-
-.lorebook .lore-card,
-.lorebook .srv-gal-item {
-  flex: 0 0 clamp(270px, 23vw, 340px) !important;
-  min-width: clamp(270px, 23vw, 340px) !important;
-}
-
-.lorebook .srv-gallery {
-  gap: 16px !important;
-  justify-content: flex-start !important;
-}
-
-.blood-mark,
-.lore-seal,
-.srv-id-name {
-  text-shadow:
-    0 0 18px rgba(var(--name-gold-rgb), 0.55),
-    0 0 8px rgba(var(--blood-rgb), 0.34) !important;
-}
-
-@media (max-width: 850px) {
-  .ant-row.ant-row-center > .ant-col-lg-6:first-child {
-    height: 430px !important;
-    min-height: 430px !important;
-  }
-
-  .lore-hero {
-    min-height: 500px !important;
-    padding: 58px 16px 48px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .ant-row.ant-row-center > .ant-col-lg-6:first-child {
-    height: 360px !important;
-    min-height: 360px !important;
-  }
-
-  .srv-wrapper {
-    padding: 8px 0 48px !important;
-  }
-
-  .lore-hero {
-    min-height: 470px !important;
-    padding: 52px 14px 44px !important;
-  }
-
-  .lore-card {
-    min-width: 82vw !important;
-    flex-basis: 82vw !important;
-  }
-
-  .srv-gallery {
-    gap: 10px !important;
-  }
-}
-</style>
+.lorebook .srv-tag,
+.lorebook .srv-theme-chip {
 
 <div
   class="lorebook srv-wrapper"
