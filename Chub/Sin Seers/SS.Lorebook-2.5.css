@@ -1,0 +1,185 @@
+/* =============================================================================
+   4. SAFE HOST-PLATFORM HIDES
+   ============================================================================= */
+
+.galaxy-bg,
+.ant-ribbon-text {
+  display: none !important;
+}
+
+.ant-row.ant-row-center {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+.ant-col-lg-18 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+/* Correct color-channel variables */
+:root {
+  --theme-hex: #f22a70;
+  --theme-rgb: 242, 42, 112;
+
+  --name-gold: #f22a70;
+  --name-gold-rgb: 242, 42, 112;
+
+  --blood-hex: #800633;
+  --blood-rgb: 128, 6, 51;
+}
+
+/* Prevent host-layout selectors from hiding the whole Chub description */
+.ant-col-lg-18 > * {
+  display: revert !important;
+}
+
+.ant-col-lg-18 > .msg-mkdn-container,
+.ant-col-lg-18 > div:has(.srv-wrapper),
+.ant-col-lg-18 .srv-wrapper {
+  display: block !important;
+}
+
+/* Keep only low-risk platform cleanup */
+.galaxy-bg,
+.ant-ribbon-text {
+  display: none !important;
+}
+
+.ant-row.ant-row-center {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+.ant-col-lg-18 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Re-declare animations with valid RGB variables */
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(var(--name-gold-rgb), 0.3);
+  }
+
+  50% {
+    opacity: 0.78;
+    text-shadow: 0 0 14px rgba(var(--name-gold-rgb), 0.65);
+  }
+}
+
+@keyframes accent-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 18px rgba(var(--name-gold-rgb), 0.22);
+  }
+
+  50% {
+    text-shadow: 0 0 30px rgba(var(--name-gold-rgb), 0.55);
+  }
+}
+
+@keyframes light-breath {
+  0%,
+  100% {
+    opacity: 0.55;
+    text-shadow:
+      0 0 14px rgba(var(--name-gold-rgb), 0.28),
+      0 0 2px rgba(var(--blood-rgb), 0.18);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 34px rgba(var(--name-gold-rgb), 0.62),
+      0 0 8px rgba(var(--blood-rgb), 0.34);
+  }
+}
+
+@keyframes gild-flicker {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(var(--name-gold-rgb), 0.45);
+    opacity: 1;
+  }
+
+  8% {
+    box-shadow: 0 0 11px rgba(var(--name-gold-rgb), 0.32);
+    opacity: 0.92;
+  }
+
+  22% {
+    box-shadow: 0 0 24px rgba(var(--blood-rgb), 0.58);
+    opacity: 1;
+  }
+
+  40% {
+    box-shadow: 0 0 14px rgba(var(--blood-rgb), 0.36);
+    opacity: 0.95;
+  }
+
+  63% {
+    box-shadow: 0 0 28px rgba(var(--blood-rgb), 0.62);
+    opacity: 1;
+  }
+
+  81% {
+    box-shadow: 0 0 16px rgba(var(--blood-rgb), 0.4);
+    opacity: 0.93;
+  }
+}
+
+/* Restore readable lorebook colors instead of forcing every descendant pink */
+.lorebook {
+  color: var(--readable-main) !important;
+}
+
+.lorebook p,
+.lorebook .srv-gal-desc,
+.lorebook .srv-overview,
+.lorebook .srv-path p,
+.lorebook .srv-world p {
+  color: var(--readable-main) !important;
+}
+
+.lorebook .srv-id-name,
+.lorebook .srv-section-hdr span,
+.lorebook .srv-gal-title,
+.lorebook .srv-path-tag,
+.lorebook .srv-id-meta {
+  color: var(--theme-hex) !important;
+}
+
+.lorebook .srv-rule > div,
+.lorebook .srv-ornament > div,
+.lorebook .srv-section-hdr > div {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(var(--theme-rgb), 0.82),
+    transparent
+  ) !important;
+}
+
+/* Ensure the lorebook itself stays visible */
+.srv-wrapper,
+.msg-mkdn-container .srv-wrapper,
+.lorebook {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Optional temporary import test.
+   Uncomment this line, refresh Chub, then remove it after confirming:
+   .lorebook { outline: 8px solid lime !important; }
+*/
