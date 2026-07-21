@@ -1,0 +1,1065 @@
+/* ==========================================================================
+   JUNIA OF EPHESUS — CHUB.AI CHARACTER PAGE
+   Roman Asia Minor / manuscript / wax seal theme
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --junia-plum: #6f354f;
+  --junia-plum-light: #a05c78;
+  --junia-plum-dark: #351923;
+
+  --junia-wine: #731f2d;
+  --junia-wine-dark: #3e1119;
+
+  --junia-gold: #c9a466;
+  --junia-gold-light: #ead5a5;
+  --junia-bronze: #8c663e;
+
+  --junia-parchment: #efe0bd;
+  --junia-parchment-light: #fff6db;
+  --junia-parchment-dark: #c9b07b;
+
+  --junia-ink: #211712;
+  --junia-ink-soft: #4b392d;
+  --junia-muted: #af9a7a;
+
+  --junia-night: #100d0c;
+  --junia-panel: rgba(28, 20, 18, 0.91);
+  --junia-panel-soft: rgba(47, 32, 27, 0.78);
+
+  --junia-border: rgba(217, 181, 113, 0.34);
+  --junia-border-bright: rgba(234, 213, 165, 0.72);
+
+  --junia-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.55),
+    0 3px 14px rgba(0, 0, 0, 0.4);
+
+  --junia-display: "Cinzel", Georgia, serif;
+  --junia-serif: "IM Fell English", Georgia, serif;
+  --junia-sans: "Inter", Arial, sans-serif;
+
+  --bb-accent: var(--junia-gold);
+  --bb-accent-soft: var(--junia-parchment);
+  --bb-text: #f4ead2;
+}
+
+/* ==========================================================================
+   GLOBAL CHUB PAGE ADJUSTMENTS
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--bb-text);
+}
+
+a {
+  color: var(--junia-gold-light);
+  text-decoration-color: rgba(234, 213, 165, 0.42);
+  text-underline-offset: 3px;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+a:hover {
+  color: #fff3cf;
+  text-decoration-color: currentColor;
+}
+
+div.mt-4 {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+div.mt-2 > .font-size-message {
+  display: none !important;
+}
+
+spacer {
+  display: none !important;
+}
+
+/* ==========================================================================
+   FIXED BACKGROUND
+   ========================================================================== */
+
+img.bbx-bg-image {
+  filter:
+    brightness(0.32)
+    saturate(0.76)
+    sepia(0.1);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 76% 12%,
+      rgba(119, 53, 78, 0.24),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 15% 78%,
+      rgba(201, 164, 102, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 7, 6, 0.23),
+      rgba(8, 6, 5, 0.78)
+    );
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.17;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 5px,
+      rgba(255, 238, 194, 0.05) 6px
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* ==========================================================================
+   PAGE CONTAINER
+   ========================================================================== */
+
+.bb-container {
+  position: relative;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  padding: clamp(14px, 2.5vw, 34px);
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+.bb-container::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid rgba(201, 164, 102, 0.19);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(57, 34, 29, 0.42),
+      rgba(17, 13, 12, 0.74)
+    );
+  box-shadow: var(--junia-shadow);
+}
+
+.bb-container::after {
+  content: "✦  ΠΙΣΤΙΣ · ΕΛΠΙΣ · ΑΓΑΠΗ  ✦";
+  display: block;
+  margin: 26px auto 90px;
+  color: rgba(234, 213, 165, 0.58);
+  font-family: var(--junia-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-align: center;
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+.bb-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 24px);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: clamp(16px, 2.2vw, 28px);
+}
+
+.bb-col-12 {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.bb-col-7 {
+  flex: 1.4 1 540px;
+  min-width: 0;
+}
+
+.bb-col-6 {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.bb-col-5 {
+  flex: 1 1 390px;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.bbx-hero-wrap {
+  position: sticky;
+  top: 12px;
+  min-height: min(88vh, 900px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border: 1px solid var(--junia-border);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(40, 24, 25, 0.1),
+      rgba(20, 14, 13, 0.88)
+    ),
+    var(--bb-hero-fallback) center / cover no-repeat;
+  box-shadow: var(--junia-shadow);
+}
+
+.bbx-hero-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(20, 12, 12, 0.12) 52%,
+      rgba(13, 9, 8, 0.94) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(111, 53, 79, 0.17),
+      transparent 55%
+    );
+}
+
+.bbx-hero-wrap::after {
+  content: "SCRIBE · COURIER · CATECHIST";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(234, 213, 165, 0.43);
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-display);
+  font-size: clamp(0.62rem, 1.1vw, 0.78rem);
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-shadow: 0 2px 10px #000;
+}
+
+img.bbx-hero-image {
+  display: block;
+  width: 100%;
+  min-height: min(88vh, 900px);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0;
+  filter:
+    saturate(0.88)
+    contrast(1.04)
+    sepia(0.05);
+}
+
+/* ==========================================================================
+   HERO TEXT
+   ========================================================================== */
+
+.bb-hero-copy {
+  position: relative;
+  padding: clamp(18px, 3vw, 40px);
+  overflow: hidden;
+  border: 1px solid var(--junia-border);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(44, 29, 26, 0.93),
+      rgba(20, 15, 14, 0.93)
+    );
+  box-shadow: var(--junia-shadow);
+}
+
+.bb-hero-copy::before {
+  content: "";
+  position: absolute;
+  top: -76px;
+  right: -68px;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(201, 164, 102, 0.19);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 17px rgba(201, 164, 102, 0.026),
+    0 0 0 38px rgba(201, 164, 102, 0.018);
+}
+
+.bb-kicker {
+  margin: 0 0 9px;
+  color: var(--junia-gold);
+  font-family: var(--junia-display);
+  font-size: clamp(0.65rem, 1.2vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.bb-title {
+  position: relative;
+  margin: 0;
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-display);
+  font-size: clamp(2.45rem, 7vw, 5.9rem);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  line-height: 0.94;
+  text-wrap: balance;
+  text-shadow:
+    0 3px 20px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(111, 53, 79, 0.25);
+}
+
+.bb-subtitle {
+  margin: 13px 0 24px;
+  color: var(--junia-plum-light);
+  font-family: var(--junia-serif);
+  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.bb-quote {
+  position: relative;
+  margin: 24px 0;
+  padding: 20px 23px 20px 30px;
+  border-left: 3px solid var(--junia-wine);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(115, 31, 45, 0.16),
+      rgba(115, 31, 45, 0.02)
+    );
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-serif);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.bb-quote::before {
+  content: "“";
+  position: absolute;
+  top: -14px;
+  left: 7px;
+  color: rgba(201, 164, 102, 0.31);
+  font-family: Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.bb-blurb {
+  margin: 0 0 15px;
+  color: #eee0c3;
+  font-family: var(--junia-serif);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.74;
+}
+
+.bb-blurb:first-letter {
+  color: var(--junia-gold-light);
+}
+
+.bb-role-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.bb-role-pill {
+  padding: 7px 11px;
+  border: 1px solid rgba(201, 164, 102, 0.31);
+  background: rgba(201, 164, 102, 0.07);
+  color: var(--junia-gold-light);
+  font-family: var(--junia-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+.bb-section {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--junia-border);
+  background:
+    linear-gradient(
+      150deg,
+      rgba(48, 32, 27, 0.94),
+      rgba(19, 14, 13, 0.95)
+    );
+  box-shadow:
+    0 10px 34px rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 rgba(255, 247, 220, 0.025);
+}
+
+.bb-section::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+  border: 1px solid rgba(201, 164, 102, 0.08);
+}
+
+.bb-section-title {
+  position: relative;
+  z-index: 1;
+  padding: 15px 20px 13px;
+  border-bottom: 1px solid var(--junia-border);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(111, 53, 79, 0.31),
+      rgba(111, 53, 79, 0.03)
+    );
+  color: var(--junia-gold-light);
+  font-family: var(--junia-display);
+  font-size: clamp(0.78rem, 1.6vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bb-section-title::before {
+  content: "✦";
+  margin-right: 10px;
+  color: var(--junia-plum-light);
+}
+
+.bb-section-body {
+  position: relative;
+  z-index: 1;
+  padding: clamp(18px, 2.8vw, 30px);
+  color: #e9dbc0;
+  font-family: var(--junia-serif);
+  font-size: 1.02rem;
+  line-height: 1.67;
+}
+
+.bb-section-body p:first-child {
+  margin-top: 0;
+}
+
+.bb-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.bb-section-body h2,
+.bb-section-body h3 {
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.bb-section-body h2 {
+  margin: 1.3em 0 0.55em;
+  font-size: clamp(1.25rem, 2.7vw, 1.75rem);
+}
+
+.bb-section-body h3 {
+  margin: 1.2em 0 0.45em;
+  font-size: 1.08rem;
+}
+
+.bb-section-body hr {
+  height: 1px;
+  margin: 28px 0;
+  border: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(201, 164, 102, 0.52),
+      transparent
+    );
+}
+
+.bb-section-body strong {
+  color: var(--junia-gold-light);
+}
+
+.bb-section-body em {
+  color: #f6e9ce;
+}
+
+.bb-section-body ul {
+  padding-left: 1.15rem;
+}
+
+.bb-section-body li {
+  margin: 0.45rem 0;
+}
+
+.bb-section-body li::marker {
+  color: var(--junia-plum-light);
+}
+
+/* ==========================================================================
+   MANUSCRIPT DETAILS
+   ========================================================================== */
+
+.bb-manuscript {
+  position: relative;
+  padding: clamp(22px, 3vw, 36px);
+  border: 1px solid rgba(95, 56, 33, 0.72);
+  background:
+    linear-gradient(
+      rgba(239, 224, 189, 0.96),
+      rgba(215, 194, 148, 0.96)
+    );
+  color: var(--junia-ink);
+  box-shadow:
+    inset 0 0 45px rgba(82, 49, 25, 0.23),
+    0 11px 32px rgba(0, 0, 0, 0.36);
+}
+
+.bb-manuscript::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  pointer-events: none;
+  border: 1px solid rgba(91, 52, 27, 0.25);
+}
+
+.bb-manuscript::after {
+  content: "ΙΧΘΥΣ";
+  position: absolute;
+  right: 21px;
+  bottom: 12px;
+  color: rgba(85, 42, 32, 0.2);
+  font-family: var(--junia-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.16em;
+}
+
+.bb-manuscript h2,
+.bb-manuscript h3,
+.bb-manuscript strong {
+  color: var(--junia-wine-dark);
+}
+
+.bb-manuscript p {
+  font-family: var(--junia-serif);
+}
+
+.bb-dropcap::first-letter {
+  float: left;
+  margin: 5px 8px 0 0;
+  color: var(--junia-wine);
+  font-family: var(--junia-display);
+  font-size: 3.45rem;
+  line-height: 0.74;
+}
+
+/* ==========================================================================
+   JOURNEY / STORY CARDS
+   ========================================================================== */
+
+.bb-scenario-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(13px, 2vw, 20px);
+}
+
+.bb-quest-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 112px minmax(0, 1fr);
+  min-height: 156px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 164, 102, 0.25);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(63, 39, 34, 0.82),
+      rgba(21, 15, 14, 0.95)
+    );
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.bb-quest-card:hover {
+  z-index: 2;
+  transform: translateY(-3px);
+  border-color: rgba(234, 213, 165, 0.68);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.44),
+    0 0 20px rgba(111, 53, 79, 0.13);
+}
+
+.bb-quest-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(201, 164, 102, 0.22);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(115, 31, 45, 0.75),
+      rgba(53, 25, 35, 0.72)
+    );
+}
+
+.bb-quest-number span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--junia-gold-light);
+  font-family: var(--junia-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+}
+
+.bb-quest-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 156px;
+  object-fit: cover;
+  filter:
+    sepia(0.14)
+    saturate(0.82)
+    contrast(1.05);
+}
+
+.bb-quest-body {
+  padding: 17px 17px 15px;
+}
+
+.bb-quest-body h4 {
+  margin: 0 0 8px;
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-display);
+  font-size: 0.97rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+}
+
+.bb-quest-body p {
+  margin: 0;
+  color: #d9caae;
+  font-family: var(--junia-serif);
+  font-size: 0.94rem;
+  line-height: 1.48;
+}
+
+.bb-quest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.bb-quest-tag {
+  padding: 4px 7px;
+  border: 1px solid rgba(160, 92, 120, 0.38);
+  background: rgba(111, 53, 79, 0.15);
+  color: #e4afc2;
+  font-family: var(--junia-sans);
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   FACT GRID
+   ========================================================================== */
+
+.bb-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(201, 164, 102, 0.19);
+  border-left: 1px solid rgba(201, 164, 102, 0.19);
+}
+
+.bb-fact {
+  min-width: 0;
+  padding: 16px;
+  border-right: 1px solid rgba(201, 164, 102, 0.19);
+  border-bottom: 1px solid rgba(201, 164, 102, 0.19);
+}
+
+.bb-fact-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--junia-plum-light);
+  font-family: var(--junia-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.bb-fact-value {
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-serif);
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   WARNING DREAM PANEL
+   ========================================================================== */
+
+.bb-omen {
+  position: relative;
+  padding: clamp(20px, 3vw, 34px);
+  overflow: hidden;
+  border: 1px solid rgba(160, 92, 120, 0.44);
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(111, 53, 79, 0.3),
+      transparent 36%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(35, 20, 28, 0.97),
+      rgba(14, 12, 14, 0.98)
+    );
+}
+
+.bb-omen::before {
+  content: "☾";
+  position: absolute;
+  right: 18px;
+  top: -22px;
+  color: rgba(234, 213, 165, 0.08);
+  font-family: Georgia, serif;
+  font-size: 9rem;
+  line-height: 1;
+}
+
+.bb-omen-title {
+  margin: 0 0 10px;
+  color: #e2b0c2;
+  font-family: var(--junia-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bb-omen p {
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   RELATIONSHIP PANEL
+   ========================================================================== */
+
+.bb-companion {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.62fr) minmax(0, 1.38fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--junia-border);
+  background: rgba(19, 14, 13, 0.94);
+}
+
+.bb-companion-image {
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  object-fit: cover;
+  filter:
+    sepia(0.12)
+    saturate(0.84);
+}
+
+.bb-companion-copy {
+  padding: clamp(22px, 3.5vw, 40px);
+  align-self: center;
+}
+
+.bb-companion-copy h3 {
+  margin-top: 0;
+  color: var(--junia-parchment-light);
+  font-family: var(--junia-display);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.bb-companion-copy p {
+  color: #dfd1b7;
+  font-family: var(--junia-serif);
+  font-size: 1.03rem;
+  line-height: 1.67;
+}
+
+/* ==========================================================================
+   CHANGELOG / NOTES
+   ========================================================================== */
+
+.bb-changelog-list {
+  margin: 0;
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+.bb-changelog-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(201, 164, 102, 0.13);
+}
+
+.bb-changelog-list li:last-child {
+  border-bottom: 0;
+}
+
+.bb-changelog-date {
+  color: var(--junia-plum-light);
+  font-family: var(--junia-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.bb-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.bb-support-btn {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 17px;
+  border: 1px solid rgba(201, 164, 102, 0.44);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(115, 31, 45, 0.74),
+      rgba(53, 25, 35, 0.91)
+    );
+  color: var(--junia-parchment-light) !important;
+  font-family: var(--junia-display);
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.26);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    filter 160ms ease;
+}
+
+.bb-support-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--junia-gold-light);
+  filter: brightness(1.12);
+  opacity: 1;
+}
+
+/* Chub interface buttons */
+
+button.ant-btn:not(:has(.anticon-question-circle)) {
+  border: 1px solid rgba(201, 164, 102, 0.34) !important;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(53, 25, 35, 0.97),
+      rgba(26, 18, 17, 0.97)
+    ) !important;
+  color: var(--junia-parchment) !important;
+  font-family: var(--junia-sans) !important;
+}
+
+button.ant-btn:not(:has(.anticon-question-circle)):hover {
+  border-color: var(--junia-gold) !important;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(115, 31, 45, 0.94),
+      rgba(53, 25, 35, 0.98)
+    ) !important;
+  color: #fff8e6 !important;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+.bb-container :focus-visible {
+  outline: 2px solid var(--junia-gold-light);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 980px) {
+  .bb-col-5,
+  .bb-col-7 {
+    flex-basis: 100%;
+  }
+
+  .bbx-hero-wrap {
+    position: relative;
+    top: auto;
+    min-height: 68vh;
+  }
+
+  img.bbx-hero-image {
+    min-height: 68vh;
+    max-height: 760px;
+  }
+
+  .bb-scenario-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 680px) {
+  .bb-container {
+    padding: 8px;
+  }
+
+  .bb-container::before {
+    inset: 2px;
+  }
+
+  .bb-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bb-hero-copy,
+  .bb-section-body {
+    padding: 20px 17px;
+  }
+
+  .bbx-hero-wrap,
+  img.bbx-hero-image {
+    min-height: 58vh;
+    max-height: 620px;
+  }
+
+  img.bbx-hero-image {
+    object-position: top center;
+  }
+
+  .bb-title {
+    font-size: clamp(2.25rem, 15vw, 4rem);
+  }
+
+  .bb-quest-card {
+    grid-template-columns: 38px 88px minmax(0, 1fr);
+  }
+
+  .bb-quest-body {
+    padding: 13px 12px;
+  }
+
+  .bb-quest-body h4 {
+    font-size: 0.84rem;
+  }
+
+  .bb-quest-body p {
+    font-size: 0.85rem;
+  }
+
+  .bb-fact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-companion {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-companion-image {
+    min-height: 260px;
+    max-height: 390px;
+  }
+
+  .bb-role-pill {
+    font-size: 0.6rem;
+  }
+}
+
+/* ==========================================================================
+   VERY SMALL SCREENS
+   ========================================================================== */
+
+@media (max-width: 440px) {
+  .bb-quest-card {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .bb-quest-img {
+    grid-column: 2;
+    width: 100%;
+    height: 138px;
+    min-height: 138px;
+  }
+
+  .bb-quest-body {
+    grid-column: 2;
+  }
+
+  .bb-quest-number {
+    grid-row: 1 / span 2;
+  }
+}
