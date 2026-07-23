@@ -1,0 +1,178 @@
+<!-- CHARACTER UI TEMPLATE
+Replace every [[PLACEHOLDER]] value. Keep class names and nesting unchanged.
+HTML comments are safe; never place CSS comments inside Chub style blocks. -->
+
+<img class="bbx-bg-image" src="[[BACKGROUND_IMAGE_URL]]" alt="Background" style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-1;pointer-events:none;">
+
+<div class="bb-container">
+    <div class="bb-row">
+        <div class="bb-col-5">
+            <div style="position:sticky;top:0;z-index:1;pointer-events:none;">
+                <img class="bbx-hero-image" src="[[HERO_IMAGE_URL]]" alt="[[CHARACTER_NAME]]" style="width:100%;height:auto;border-radius:0px;margin-bottom:0;pointer-events:auto;">
+            </div>
+        </div>
+
+        <div class="bb-col-7">
+            <h1 class="bb-title"></h1>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_1]]</p>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_2]]</p>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_3]]</p>
+
+            <div class="bb-row">
+                <div class="bb-col-6">
+                    <div class="bb-section">
+                        <div class="bb-section-title">Author's Note</div>
+                        <div class="bb-section-body">
+                           <li><span class="Notes"><p>[[AUTHOR_NOTE]]</p></span></li> 
+                        </div>
+                    </div>
+                </div>
+                <div class="bb-col-6">
+                    <div class="bb-section">
+                        <div class="bb-section-title">Changelog</div>
+                        <div class="bb-section-body">
+                            <ul class="bb-changelog-list">
+                                <li><span class="bb-changelog-date">[[RELEASE_DATE]]</span> Initial Release</li>
+                                <li><span class="bb-changelog-date">[[UI_TEST_DATE]]</span> Initial UI Testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="bb-mid-image" src="https://ella.janitorai.com/media-approved/AXpBRnHrLygkyMptOoFW7.webp" alt="Divider-1">
+        </div>
+    </div>
+
+    <!-- Scenarios Row (full width) -->
+    <div class="bb-row">
+        <div class="bb-col-12">
+            <div class="bb-section">
+                <div class="bb-section-title">Sequence of Events</div>
+                <div class="bb-section-body">
+                    <div class="bb-scenario-list">
+                        <!-- Card I -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>I</span></div>
+                            <img class="bb-quest-img" src="[[SCENARIO_1_IMAGE_URL]]" alt="Interview" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>[[SCENARIO_1_TITLE]]</h4>
+                                <p>[[SCENARIO_1_DESCRIPTION]]</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_3]]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card II -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>II</span></div>
+                            <img class="bb-quest-img" src="[[SCENARIO_2_IMAGE_URL]]" alt="Cassim" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>[[SCENARIO_2_TITLE]]</h4>
+                                <p>[[SCENARIO_2_DESCRIPTION]]</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_3]]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card III -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>III</span></div>
+                            <img class="bb-quest-img" src="[[SCENARIO_3_IMAGE_URL]]" alt="Mirror" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>[[SCENARIO_3_TITLE]]</h4>
+                                <p>[[SCENARIO_3_DESCRIPTION]]</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_3]]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card IV -->
+                        <div class="bb-quest-card">
+                            <div class="bb-quest-number"><span>IV</span></div>
+                            <img class="bb-quest-img" src="[[SCENARIO_4_IMAGE_URL]]" alt="God" loading="lazy">
+                            <div class="bb-quest-body">
+                                <h4>[[SCENARIO_4_TITLE]]</h4>
+                                <p>[[SCENARIO_4_DESCRIPTION]]</p>
+                                <div class="bb-quest-tags">
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_3]]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lore & Details Row (full width) -->
+    <div class="bb-row">
+        <div class="bb-col-12">
+            <div class="bb-section">
+                <div class="bb-section-title">Lore &amp; Details</div>
+                <div class="bb-section-body">
+                    <h2>User Introduction</h2>
+                    <img src="[[USER_INTRO_IMAGE_URL]]">
+                    <p>[[USER_INTRO_PARAGRAPH_1]]</p><p>[[USER_INTRO_PARAGRAPH_2]]</p><p>[[USER_INTRO_PARAGRAPH_3]]</p><p>[[USER_INTRO_PARAGRAPH_4]]</p><p>[[USER_INTRO_PARAGRAPH_5]]</p><p>[[USER_INTRO_PARAGRAPH_6]]</p>
+                    <hr>
+                    <h2>Purpose and Disposition</h2>
+                    <p>[[PURPOSE_PARAGRAPH_1]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_2]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_3]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_4]]</p>
+                    <hr><img src="[[LORE_DIVIDER_IMAGE_URL]]"><hr>
+                    <table>
+                        <tr><td><strong>Theme</strong></td><td>[[THEME]]</td></tr>
+                        <tr><td><strong>Mood</strong></td><td>[[MOOD]]</td></tr>
+                        <tr><td><strong>Tone</strong></td><td>[[TONE]]</td></tr>
+                    </table><hr>
+                    <h2>Tags</h2>
+                    <p>[[TAGS]]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Presets + Support Row -->
+    <div class="bb-row">
+        <div class="bb-col-7">
+            <div class="bb-section">
+                <div class="bb-section-title">Persona Assets | [[PERSONA_NAME]]</div>
+                <div class="bb-section-body">
+                    <p class="bb-disclaimer">[[PERSONA_DISCLAIMER]]</p>
+                    <div class="bb-btn-row">
+                        <a href="[[PERSONA_ICON_URL]]" class="bb-support-btn">Icon</a>
+                        <a href="[[PERSONA_TEXT_URL]]" class="bb-support-btn">Persona</a>
+                    </div>
+                    <a href="[[PROFILE_URL]]" class="bb-help-banner">
+                        <img src="[[PROFILE_BANNER_IMAGE_URL]]" alt="JanitorAI" loading="lazy" decoding="async">
+                        <span>[[PROFILE_BANNER_TEXT]]</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bb-col-5">
+            <div class="bb-section bb-section--support">
+                <div class="bb-section-title">World Lores</div>
+                <div class="bb-section-body">
+                    <p>•[[LOREBOOK_NAME]]•</p>
+                    <a href="[[LOREBOOK_URL]]" target="_blank">
+  <img src="[[LOREBOOK_IMAGE_URL]]" alt="[[LOREBOOK_NAME]]" style="width:192px;height:128px;border-radius:0;pointer-events:auto;">
+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
