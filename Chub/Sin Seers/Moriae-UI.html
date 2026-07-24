@@ -1,33 +1,29 @@
-<img class="bbx-bg-image"
-     src="https://ella.janitorai.com/media-approved/YVF_Lskoz3UUameS_P0XY.webp"
-     alt="Background"
-     style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-1;pointer-events:none;">
+<!-- CHARACTER UI TEMPLATE
+Replace every [[PLACEHOLDER]] value. Keep class names and nesting unchanged.
+HTML comments are safe; never place CSS comments inside Chub style blocks. -->
+
+<img class="bbx-bg-image" src="https://avatars.charhub.io/avatars/uploads/images/gallery/file/c5ef5587-2f15-4960-8833-06b9eacc4520/a890bef9-a9ac-4458-87e9-070c6fc53436.png" alt="Background" style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-1;pointer-events:none;">
 
 <div class="bb-container">
-
-    <!-- ── Hero Row ── -->
     <div class="bb-row">
         <div class="bb-col-5">
             <div style="position:sticky;top:0;z-index:1;pointer-events:none;">
-                <img class="bbx-hero-image"
-                     src="https://ella.janitorai.com/media-approved/8AyBIFy14qEfQd9PwLwuQ.webp"
-                     alt="Moriae Glenstock"
-                     style="width:100%;height:auto;border-radius:0px;margin-bottom:0;pointer-events:auto;">
+                <img class="bbx-hero-image" src="https://avatars.charhub.io/avatars/uploads/images/gallery/file/c0c9e830-54c6-4d9c-99c5-f8c25dd84b46/b9f4323d-f2db-4e2b-8bba-70eb3a1aacf0.png" alt="Moriae Glenstock" style="width:100%;height:auto;border-radius:0px;margin-bottom:0;pointer-events:auto;">
             </div>
         </div>
 
         <div class="bb-col-7">
             <h1 class="bb-title"></h1>
-
-            <p class="bb-blurb">A woman spoken of in whispers throughout the Archive of Burdens: the first person said to have truly encountered a force of stark contrast to the lives everyone knows.</p>
-            <p class="bb-blurb">Some call her blessed, others deranged, others dangerous. She has endured catastrophic suffering in a world built on inherited pain, divine silence, and the Black Emanation, yet something in her remains strangely luminous.</p>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_1]]</p>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_2]]</p>
+            <p class="bb-blurb">[[BLURB_PARAGRAPH_3]]</p>
 
             <div class="bb-row">
                 <div class="bb-col-6">
                     <div class="bb-section">
                         <div class="bb-section-title">Author's Note</div>
                         <div class="bb-section-body">
-                            <p>Part of a world and setting mirroring our own, unveiled physically.</p>
+                           <li><span class="Notes"><p>[[AUTHOR_NOTE]]</p></span></li> 
                         </div>
                     </div>
                 </div>
@@ -36,39 +32,36 @@
                         <div class="bb-section-title">Changelog</div>
                         <div class="bb-section-body">
                             <ul class="bb-changelog-list">
-                                <li><span class="bb-changelog-date">03/18/26</span> Initial Release</li>
-                                <li><span class="bb-changelog-date">03/16/26</span> Initial UI Testing</li>
+                                <li><span class="bb-changelog-date">[[RELEASE_DATE]]</span> Initial Release</li>
+                                <li><span class="bb-changelog-date">[[UI_TEST_DATE]]</span> Initial UI Testing</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <img class="bb-mid-image"
-                 src="https://ella.janitorai.com/media-approved/AXpBRnHrLygkyMptOoFW7.webp"
-                 alt="Divider-1">
+            <img class="bb-mid-image" src="https://ella.janitorai.com/media-approved/AXpBRnHrLygkyMptOoFW7.webp" alt="Divider-1">
         </div>
     </div>
 
-    <!-- ── Scenarios Row ── -->
+    <!-- Scenarios Row (full width) -->
     <div class="bb-row">
         <div class="bb-col-12">
             <div class="bb-section">
-                <div class="bb-section-title">Scenario Selection</div>
+                <div class="bb-section-title">Sequence of Events</div>
                 <div class="bb-section-body">
                     <div class="bb-scenario-list">
-
                         <!-- Card I -->
                         <div class="bb-quest-card">
                             <div class="bb-quest-number"><span>I</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/RgwK9RVl8oAZihiwTOWBA.webp"
-                                 alt="Interview" loading="lazy">
+                            <img class="bb-quest-img" src="[[SCENARIO_1_IMAGE_URL]]" alt="Interview" loading="lazy">
                             <div class="bb-quest-body">
-                                <h4>Interview at The Archive</h4>
-                                <p>You meet Moriae in agreement to an interview. Is there something to the rumors you've heard?</p>
+                                <h4>[[SCENARIO_1_TITLE]]</h4>
+                                <p>[[SCENARIO_1_DESCRIPTION]]</p>
                                 <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">AnyPOV</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_1_TAG_3]]</span>
                                 </div>
                             </div>
                         </div>
@@ -76,15 +69,14 @@
                         <!-- Card II -->
                         <div class="bb-quest-card">
                             <div class="bb-quest-number"><span>II</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/mJ6fLh8bxZJ0fGfNwG0NW.webp"
-                                 alt="Cassim" loading="lazy">
+                            <img class="bb-quest-img" src="[[SCENARIO_2_IMAGE_URL]]" alt="Cassim" loading="lazy">
                             <div class="bb-quest-body">
-                                <h4>You Reason, but Why?</h4>
-                                <p>The Interview concludes. Having the truth of the matter, you decide to reveal the ugly truth of the world. And why you're inevitably part of it.</p>
+                                <h4>[[SCENARIO_2_TITLE]]</h4>
+                                <p>[[SCENARIO_2_DESCRIPTION]]</p>
                                 <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">AnyPOV</span>
-                                    <span class="bb-quest-tag">EvilPOV</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_2_TAG_3]]</span>
                                 </div>
                             </div>
                         </div>
@@ -92,16 +84,14 @@
                         <!-- Card III -->
                         <div class="bb-quest-card">
                             <div class="bb-quest-number"><span>III</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/lrzJdyRw7MCCSofQ17M8l.webp"
-                                 alt="Mirror" loading="lazy">
+                            <img class="bb-quest-img" src="[[SCENARIO_3_IMAGE_URL]]" alt="Mirror" loading="lazy">
                             <div class="bb-quest-body">
-                                <h4>A Mirror, One and All</h4>
-                                <p>Moriae responds to what you've shown her, revealing both of your natures. We each hold mirrors. What does hers reflect when you look?</p>
+                                <h4>[[SCENARIO_3_TITLE]]</h4>
+                                <p>[[SCENARIO_3_DESCRIPTION]]</p>
                                 <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">AnyPOV</span>
-                                    <span class="bb-quest-tag">Psychological</span>
-                                    <span class="bb-quest-tag">Philosophical</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_3_TAG_3]]</span>
                                 </div>
                             </div>
                         </div>
@@ -109,63 +99,65 @@
                         <!-- Card IV -->
                         <div class="bb-quest-card">
                             <div class="bb-quest-number"><span>IV</span></div>
-                            <img class="bb-quest-img"
-                                 src="https://ella.janitorai.com/media-approved/Do_TA8Z_5owHqjaHRW5Za.webp"
-                                 alt="God" loading="lazy">
+                            <img class="bb-quest-img" src="[[SCENARIO_4_IMAGE_URL]]" alt="God" loading="lazy">
                             <div class="bb-quest-body">
-                                <h4>The Image</h4>
-                                <p>Moriae extends an offer.</p>
+                                <h4>[[SCENARIO_4_TITLE]]</h4>
+                                <p>[[SCENARIO_4_DESCRIPTION]]</p>
                                 <div class="bb-quest-tags">
-                                    <span class="bb-quest-tag">AnyPOV</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_1]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_2]]</span>
+                                    <span class="bb-quest-tag">[[SCENARIO_4_TAG_3]]</span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ── Lore & Details Row ── -->
+    <!-- Lore & Details Row (full width) -->
     <div class="bb-row">
         <div class="bb-col-12">
             <div class="bb-section">
                 <div class="bb-section-title">Lore &amp; Details</div>
                 <div class="bb-section-body">
-                    <h2>Introduction</h2>
-                    <p>She is not naive, not vacant, and not detached from horror. What unsettles everyone is that she seems to have passed through it and found something like joy on the other side.</p>
+                    <h2>User Introduction</h2>
+                    <img src="[[USER_INTRO_IMAGE_URL]]">
+                    <p>[[USER_INTRO_PARAGRAPH_1]]</p><p>[[USER_INTRO_PARAGRAPH_2]]</p><p>[[USER_INTRO_PARAGRAPH_3]]</p><p>[[USER_INTRO_PARAGRAPH_4]]</p><p>[[USER_INTRO_PARAGRAPH_5]]</p><p>[[USER_INTRO_PARAGRAPH_6]]</p>
                     <hr>
-                    <h2>Profile</h2>
-                    <p>She is gentle, humble, and carries herself with quiet dignity even in worn and simple clothing, keeping herself neat as an act of self-respect rather than pride. Your job is to interview and understand Moriae, as you suspect she's either completely delusional or has touched something no one but her has experienced. Moriae serves as the Gentle Passage in the narrative structure. When users demonstrate sincerity, She will guide them to her own personal experience, without spectacle or claims of authority. Best suited for conversations about suffering, faith, meaning, endurance, divine absence, and the terrible beauty of remaining kind in an unkind world. Moriae should feel unsettling not because she is monstrous, but because she appears to have touched the unbearable and returned with an impossible nature intact.</p>
-                    <hr>
+                    <h2>Purpose and Disposition</h2>
+                    <p>[[PURPOSE_PARAGRAPH_1]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_2]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_3]]</p>
+                    <p>[[PURPOSE_PARAGRAPH_4]]</p>
+                    <hr><img src="[[LORE_DIVIDER_IMAGE_URL]]"><hr>
                     <table>
-                        <tr><td><strong>Theme</strong></td><td>Suffering, The Problem of Evil</td></tr>
-                        <tr><td><strong>Mood</strong></td><td>Grimdark Soulsearch</td></tr>
-                        <tr><td><strong>Tone</strong></td><td>Gritty • Psychological • Theological • Philosophical</td></tr>
-                    </table>
+                        <tr><td><strong>Theme</strong></td><td>[[THEME]]</td></tr>
+                        <tr><td><strong>Mood</strong></td><td>[[MOOD]]</td></tr>
+                        <tr><td><strong>Tone</strong></td><td>[[TONE]]</td></tr>
+                    </table><hr>
                     <h2>Tags</h2>
-                    <p>grimdark • philosophical • theological • psychological • mysterious • gentle • horror-adjacent • lore-heavy</p>
+                    <p>[[TAGS]]</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ── Presets + Support Row ── -->
+    <!-- Presets + Support Row -->
     <div class="bb-row">
         <div class="bb-col-7">
             <div class="bb-section">
-                <div class="bb-section-title">Recommended Personas</div>
+                <div class="bb-section-title">Persona Assets | [[PERSONA_NAME]]</div>
                 <div class="bb-section-body">
-                    <p class="bb-disclaimer">Disclaimer: Just run the Persona. Unless you like being part of the Lore, reading through tons.</p>
+                    <p class="bb-disclaimer">[[PERSONA_DISCLAIMER]]</p>
                     <div class="bb-btn-row">
-                        <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-support-btn">Presets</a>
-                        <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-support-btn">Personas</a>
+                        <a href="[[PERSONA_ICON_URL]]" class="bb-support-btn">Icon</a>
+                        <a href="[[PERSONA_TEXT_URL]]" class="bb-support-btn">Persona</a>
                     </div>
-                    <a href="https://app.wyvern.chat/profiles/sin_seer" class="bb-help-banner">
-                        <img src="https://ella.janitorai.com/media-approved/YyNzQ1R0FMIKq0lBbOPYl.webp"
-                             alt="WyvernChat" loading="lazy" decoding="async">
-                        <span>Come Visit me on WyvernChat!</span>
+                    <a href="[[PROFILE_URL]]" class="bb-help-banner">
+                        <img src="[[PROFILE_BANNER_IMAGE_URL]]" alt="JanitorAI" loading="lazy" decoding="async">
+                        <span>[[PROFILE_BANNER_TEXT]]</span>
                     </a>
                 </div>
             </div>
@@ -173,15 +165,14 @@
 
         <div class="bb-col-5">
             <div class="bb-section bb-section--support">
-                <div class="bb-section-title">Sin Seers Lore</div>
+                <div class="bb-section-title">World Lores</div>
                 <div class="bb-section-body">
-                    <p>•Sin Seers Lore•</p>
-                    <a href="https://app.wyvern.chat/profiles/sin_seer" target="_blank">
-                      <img src="https://ella.janitorai.com/media-approved/JN7knvWliKxz1fhlUUjBB.webp" alt="Sin Seers Lore" style="width:100px;border-radius:0;margin-bottom:0;pointer-events:auto;">
-                        </a>•Sin Seers Lore•</a>
+                    <p>•[[LOREBOOK_NAME]]•</p>
+                    <a href="[[LOREBOOK_URL]]" target="_blank">
+  <img src="[[LOREBOOK_IMAGE_URL]]" alt="[[LOREBOOK_NAME]]" style="width:192px;height:128px;border-radius:0;pointer-events:auto;">
+</a>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
