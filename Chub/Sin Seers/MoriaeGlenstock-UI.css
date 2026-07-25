@@ -1837,4 +1837,42 @@ p{ text-align: center; }
         object-fit: cover !important;
         object-position: center !important
     }
+    .bb-collapsible > summary{
+    cursor: pointer;
+    list-style: none;
+    user-select: none
+}
+
+.bb-collapsible > summary::-webkit-details-marker{
+    display: none
+}
+
+.bb-collapsible > summary::before{
+    content: "◇";
+    display: inline-block;
+    margin-right: 0.7em;
+    color: #cf8795;
+    transition: transform 0.25s ease
+}
+
+.bb-collapsible[open] > summary::before{
+    transform: rotate(45deg)
+}
+
+.bb-collapsible > .bb-section-body{
+    padding-top: 0.2em;
+    animation: bb-reveal 0.3s ease
+}
+
+@keyframes bb-reveal{
+    from{
+        opacity: 0;
+        transform: translateY(-5px)
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
 }
