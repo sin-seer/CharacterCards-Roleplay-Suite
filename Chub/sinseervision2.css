@@ -1,0 +1,114 @@
+/* ================================================================
+   CHUB PROFILE: 3/4 ABOUT PANEL + 1/4 CONTENT RAIL
+   Scopes itself to the profile layout by looking for the 7-tab
+   Characters / Lorebooks / Presets / Stages / Followers / Following / Logs nav.
+   ================================================================ */
+
+@media (min-width: 992px) {
+  /* Turn the main profile row into a true 3:1 split. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child) {
+    display: grid !important;
+    grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr) !important;
+    align-items: start !important;
+    column-gap: 24px !important;
+  }
+
+  /* Left page-long profile/about panel = 75%. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child) > .ant-col:first-child {
+    width: 100% !important;
+    max-width: none !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+
+  /* Right content rail = 25%. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child) > .ant-col:nth-child(2) {
+    width: 100% !important;
+    max-width: none !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+
+  /* Let the custom profile panel actually use the new 75% width. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child) > .ant-col:first-child > * {
+    max-width: none !important;
+  }
+
+  /* Tabs become a vertical rail. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-nav-wrap {
+    overflow: visible !important;
+  }
+
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-nav-list {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    transform: none !important;
+    gap: 8px !important;
+  }
+
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tab {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    justify-content: flex-start !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Hide Presets, Stages, Followers, Following and Logs. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(n + 3) {
+    display: none !important;
+  }
+
+  /* The normal horizontal ink-bar no longer makes sense in a vertical menu. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-nav::before,
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-ink-bar {
+    display: none !important;
+  }
+
+  /* Give the selected tab a readable state without introducing a new color. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tab-active {
+    border-left: 2px solid var(--link-color) !important;
+  }
+
+  /* The 25% rail is narrow, so toolbar controls stack instead of crushing together. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tabpane-active form.ant-form-inline {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tabpane-active form.ant-form-inline > .ant-form-item {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Character/card results become one card wide in the new right rail. */
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tabpane-active .ant-row:has(> .ant-col .char-card-class) > .ant-col,
+  .ant-row:has(> .ant-col:nth-child(2) .ant-tabs-nav-list > .ant-tabs-tab:nth-child(7):last-child)
+  > .ant-col:nth-child(2) .ant-tabs-tabpane-active .ant-row:has(> .ant-col > .ant-card) > .ant-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* On tablet/mobile, let Chub keep its natural stacked layout. */
+@media (max-width: 991px) {
+  .ant-tabs-nav-list > .ant-tabs-tab:nth-child(n + 3) {
+    display: none !important;
+  }
+}
