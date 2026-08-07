@@ -3250,3 +3250,260 @@ button.ant-btn:not(:has(.anticon-question-circle)):hover {
     transition: none !important;
   }
 }
+
+/* ============================================================
+   GLENSTOCK ARCHIVE V5
+   CHUB-SAFE LAYOUT OVERRIDES
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   HERO — NORMAL DOCUMENT FLOW
+   No sticky positioning, no 78vh invisible staging area.
+   ------------------------------------------------------------ */
+
+.ga-hero-row {
+  align-items: flex-start !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 0 !important;
+}
+
+.ga-hero-media {
+  position: relative !important;
+  top: auto !important;
+
+  min-height: 0 !important;
+  height: auto !important;
+
+  display: block !important;
+
+  align-items: initial !important;
+
+  pointer-events: auto !important;
+}
+
+.ga-hero-frame {
+  position: relative !important;
+
+  width: 100% !important;
+  height: auto !important;
+}
+
+.ga-hero-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  aspect-ratio: 4 / 5;
+
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* ------------------------------------------------------------
+   HERO COPY
+   ------------------------------------------------------------ */
+
+.ga-hero-copy {
+  padding-top: 1rem !important;
+}
+
+
+/* ------------------------------------------------------------
+   EXPLICIT FILE LABEL
+   Replaces data-file + ::before.
+   ------------------------------------------------------------ */
+
+.ga-card::before {
+  content: none !important;
+  display: none !important;
+}
+
+.ga-card-file {
+  position: absolute;
+
+  top: .7rem;
+  right: .75rem;
+
+  z-index: 5;
+
+  color: rgba(255,255,255,.58);
+
+  font-family: var(--bb-font-mono);
+
+  font-size: .56rem;
+
+  letter-spacing: .12em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 1px 3px #000;
+
+  pointer-events: none;
+}
+
+
+/* ------------------------------------------------------------
+   QUOTE SOURCE
+   Replaces semantic CITE element.
+   ------------------------------------------------------------ */
+
+.ga-quote-cite {
+  display: block;
+
+  margin-top: 1rem;
+
+  color: var(--ga-muted);
+
+  font-family: var(--bb-font-mono);
+
+  font-size: .66rem;
+
+  font-style: normal;
+
+  letter-spacing: .14em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+/* ------------------------------------------------------------
+   REVISION LOG
+   Plain DIV structure instead of UL / LI.
+   ------------------------------------------------------------ */
+
+.ga-log {
+  display: grid;
+  gap: .25rem;
+}
+
+.ga-log-entry {
+  padding: .28rem 0;
+
+  border-bottom:
+    1px solid rgba(198,164,94,.10);
+
+  color: var(--ga-bone);
+
+  line-height: 1.4;
+}
+
+.ga-log-entry:last-child {
+  border-bottom: none;
+}
+
+.ga-log-date {
+  margin-right: .6em;
+
+  color: var(--ga-gold-soft);
+
+  font-family: var(--bb-font-mono);
+
+  font-size: .72em;
+
+  font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER LINKS
+   ------------------------------------------------------------ */
+
+.ga-button {
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------
+   REMOVE SEMANTIC-ELEMENT ASSUMPTIONS
+   ------------------------------------------------------------ */
+
+.ga-card,
+.ga-dossier {
+  display: block;
+}
+
+.ga-dossier {
+  display: grid;
+}
+
+
+/* ------------------------------------------------------------
+   MOBILE
+   ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+  .ga-hero-media {
+    position: relative !important;
+    min-height: 0 !important;
+  }
+
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .ga-hero-row {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+
+  .ga-hero-copy {
+    padding-top: .75rem !important;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+
+}
+
+
+/* ------------------------------------------------------------
+   IMPORTANT:
+   Do not recursively hide ancestors/siblings of .ga-shell.
+   ------------------------------------------------------------ */
+
+.ga-shell {
+  display: block !important;
+  visibility: visible !important;
+}
+
+
+/* Keep the Chub internal header gone. */
+header.ant-layout-header {
+  display: none !important;
+
+  height: 0 !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+}
