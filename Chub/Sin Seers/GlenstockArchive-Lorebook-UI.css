@@ -3507,3 +3507,150 @@ header.ant-layout-header {
 
   overflow: hidden !important;
 }
+/* ============================================================
+   GLENSTOCK ARCHIVE - CHUB SAFE STRUCTURE PATCH
+   ============================================================ */
+
+/* Hero should behave like normal content rather than reserving
+   a huge sticky viewport before the rest of the archive. */
+
+.ga-hero-row {
+  align-items: flex-start !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 0 !important;
+}
+
+.ga-hero-media {
+  position: relative !important;
+  top: auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
+.ga-hero-frame {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.ga-hero-image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* We no longer use data-file attributes because Chub exposed
+   them as visible text. */
+
+.ga-card::before {
+  content: none !important;
+  display: none !important;
+}
+
+.ga-card-file {
+  position: absolute;
+  top: .7rem;
+  right: .75rem;
+  z-index: 5;
+  color: rgba(255,255,255,.58);
+  font-family: var(--bb-font-mono);
+  font-size: .56rem;
+  line-height: 1.2;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px #000;
+  pointer-events: none;
+}
+
+
+/* Replaces the CITE element. */
+
+.ga-quote-cite {
+  display: block;
+  margin-top: 1rem;
+  color: var(--ga-muted);
+  font-family: var(--bb-font-mono);
+  font-size: .66rem;
+  font-style: normal;
+  letter-spacing: .14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* Replaces UL / LI revision markup. */
+
+.ga-log {
+  display: grid;
+  gap: .2rem;
+}
+
+.ga-log-entry {
+  padding: .3rem 0;
+  border-bottom: 1px solid rgba(198,164,94,.10);
+  color: var(--ga-bone);
+  line-height: 1.4;
+}
+
+.ga-log-entry:last-child {
+  border-bottom: none;
+}
+
+.ga-log-date {
+  margin-right: .6em;
+  color: var(--ga-gold-soft);
+  font-family: var(--bb-font-mono);
+  font-size: .72em;
+  font-weight: 600;
+}
+
+
+/* Chub-safe DIV cards and dossier entries. */
+
+.ga-card {
+  position: relative;
+}
+
+.ga-dossier {
+  position: relative;
+}
+
+
+/* Mobile hero normalization. */
+
+@media (max-width: 900px) {
+  .ga-hero-media {
+    position: relative !important;
+    min-height: 0 !important;
+  }
+
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .ga-hero-row {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 480px) {
+  .ga-hero-image {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+}
