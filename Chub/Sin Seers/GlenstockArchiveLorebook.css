@@ -70,18 +70,58 @@ header.ant-layout-header,
 
 
 /* ============================================================
-   REMOVE NATIVE LOREBOOK SUMMARY
-   Preserve only the DOM branch leading to .ga-shell.
+   HIDE ONLY CHUB'S NATIVE LOREBOOK HEADER / SUMMARY
+   Do NOT prune the container holding .ga-shell.
    ============================================================ */
 
-.ant-col.ant-col-xs-24.ant-col-lg-18:has(.ga-shell)
-> *:not(.ga-shell):not(:has(.ga-shell)) {
+/* Chub's internal top navbar:
+   sin.seer / search / help / avatar */
+header.ant-layout-header {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+
+/* Native lorebook title row, usually contains the lock icon */
+main.ant-layout-content:has(.ga-shell)
+.ant-row:has(svg.lucide-lock):not(:has(.ga-shell)) {
   display: none !important;
 }
 
-.ant-col.ant-col-xs-24.ant-col-lg-18:has(.ga-shell)
-*:has(.ga-shell)
-> *:not(.ga-shell):not(:has(.ga-shell)) {
+
+/* Native lorebook cover/image row.
+   Safe because our archive uses CSS backgrounds, not IMG tags. */
+main.ant-layout-content:has(.ga-shell)
+.ant-row:has(img):not(:has(.ga-shell)) {
+  display: none !important;
+}
+
+
+/* Native Export row */
+main.ant-layout-content:has(.ga-shell)
+.ant-row:has(svg.lucide-download):not(:has(.ga-shell)),
+main.ant-layout-content:has(.ga-shell)
+.ant-row:has(svg.lucide-download-cloud):not(:has(.ga-shell)),
+main.ant-layout-content:has(.ga-shell)
+.ant-row:has(svg.lucide-file-down):not(:has(.ga-shell)) {
+  display: none !important;
+}
+
+
+/* Native title/tagline typography above creator notes */
+main.ant-layout-content:has(.ga-shell)
+:is(h1, h2, h3, h4, h5).ant-typography:not(.ga-shell *) {
+  display: none !important;
+}
+
+
+/* Remove empty spacing left by those hidden rows */
+main.ant-layout-content:has(.ga-shell)
+.ant-row:empty {
   display: none !important;
 }
 
