@@ -1,0 +1,333 @@
+<!-- THE GLENSTOCK ARCHIVE · Chub creator notes paste -->
+
+<div><style>@import url('https://cdn.jsdelivr.net/gh/sin-seer/CharacterCards-Roleplay-Suite@main/Chub/Sin%20Seers/Glenstock-Archive-Lorebook-v3.css');</style></div>
+<div><style>:root{--bb-hero-fallback:url('https://ella.janitorai.com/media-approved/8AyBIFy14qEfQd9PwLwuQ.webp')}</style></div>
+
+
+<div class="bb-container ga-shell">
+
+  <!-- HERO -->
+  <div class="bb-row ga-hero-row">
+    <div class="bb-col-5">
+      <div class="ga-hero-media">
+        <div class="ga-hero-frame">
+          <div class="ga-hero-image ga-img-hero"></div>
+          <div class="ga-hero-stamp">
+            <div class="ga-record-id">SUBJECT FILE 003777<br>RAI: NULL · STATUS: DETAINED</div>
+            <div class="ga-seal-small">☩</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bb-col-7">
+      <div class="ga-hero-copy">
+        <div class="ga-archive-rule">Restricted archival copy</div>
+        <div class="ga-seal">☩</div>
+        <p class="ga-kicker">Archive of Ethical Contamination · Central Refinement District</p>
+        <h1 class="ga-title">The Glenstock Archive</h1>
+        <p class="ga-subtitle">Witnessing Threshold · Records of Moriae Glenstock</p>
+
+        <p class="ga-deck"><strong>Human sin does not vanish into abstraction.</strong> It films the skin, gathers in rooms, crystallizes in wounds, and can be harvested, refined, traded, weaponized, or mistaken for proof that mercy has abandoned creation.</p>
+        <p class="ga-deck"><strong>Sin Seers names the condition of this world, not a faction, profession, or order.</strong> This lorebook contains the machinery beneath Moriae’s story: the metaphysics of residue, the institutions built around it, the places that formed her testimony, and the theological boundaries the roleplay must not quietly wander through a wall and pretend was a door.</p>
+
+        <div class="ga-meta-grid">
+          <div class="ga-meta">
+            <span class="ga-meta-label">Primary Subject</span>
+            <span class="ga-meta-value">Moriae Glenstock · Residual Adherence Index: Null</span>
+          </div>
+          <div class="ga-meta">
+            <span class="ga-meta-label">Record Function</span>
+            <span class="ga-meta-value">World logic · Behavioral anchors · Ontological continuity</span>
+          </div>
+          <div class="ga-meta">
+            <span class="ga-meta-label">Classification</span>
+            <span class="ga-meta-value">Devotional heresy · Philosophical testimony · Unresolved miracle</span>
+          </div>
+          <div class="ga-meta">
+            <span class="ga-meta-label">Content Advisory</span>
+            <span class="ga-meta-value">Theological horror · Class violence · Institutional cruelty · Human hope</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPENING FRAGMENT -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="bb-section">
+        <div class="bb-section-title">Recovered Interview Fragment</div>
+        <div class="bb-section-body">
+          <blockquote class="ga-quote">
+            <p>By what image do you call a thing unjust? You borrow the visage even as you curse the painter.</p>
+            <cite>Moriae Glenstock · Interview Record 01</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHOR NOTE -->
+  <div class="bb-row">
+    <div class="bb-col-7">
+      <div class="bb-section">
+        <div class="bb-section-title">Archive Directive</div>
+        <div class="bb-section-body">
+          <p>This is not a public encyclopedia and it is not a replacement for discovery in play. Entries are written to keep the world coherent when relevant terms, choices, institutions, or moral pressures appear. The setting should emerge through consequence, observation, testimony, and argument rather than cheerful little exposition avalanches tumbling down the mountain.</p>
+          <div class="ga-notice">
+            <div class="ga-notice-mark">☩</div>
+            <div>
+              <strong>Central Distinction</strong>
+              <p>Residue is the bodily aftermath of sin. It is not sin itself, not a soul meter, and not reliable proof of inward guilt. The world’s institutions benefit from confusing those categories.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bb-col-5">
+      <div class="bb-section">
+        <div class="bb-section-title">Revision Log</div>
+        <div class="bb-section-body">
+          <ul class="bb-changelog-list">
+            <li><span class="bb-changelog-date">08/06/26</span> New archive interface and lore index</li>
+            <li><span class="bb-changelog-date">07/24/26</span> Removed fixed scene sequence</li>
+            <li><span class="bb-changelog-date">07/12/26</span> Initial lorebook release</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- I · PRINCIPAL RECORDS -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="bb-section">
+        <div class="bb-section-title">I · Principal Records</div>
+        <div class="bb-section-body">
+          <div class="ga-card-grid">
+
+            <article class="ga-card" data-file="SUBJECT 003777" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-moriae"></div>
+              <div class="ga-card-body">
+                <h4>Moriae Glenstock</h4>
+                <p>Detained for unauthorized cleansing activity, contamination interference, and the persistent failure of residue to adhere in her presence. She does not deny helping people. She disputes the Archive’s right to define healing as damage.</p>
+                <div class="ga-tags"><span class="ga-tag blood">RAI: Null</span><span class="ga-tag">Detained Subject</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="ARCHIVIST 01" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-cassim"></div>
+              <div class="ga-card-body">
+                <h4>Cassim Elero</h4>
+                <p>Senior archivist, interviewer, and eventual witness. Trained to classify testimony, Cassim discovers that observation is never morally neutral once every question begins exposing the assumptions of its maker.</p>
+                <div class="ga-tags"><span class="ga-tag">Interviewer</span><span class="ga-tag blood">Compromised Witness</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="UNRESOLVED" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-presence"></div>
+              <div class="ga-card-body">
+                <h4>The Veiled Presence</h4>
+                <p>A holy contradiction perceived only in fragments. Its nearness exposes the difference between contamination and corruption, punishment and healing, spectacle and revelation.</p>
+                <div class="ga-tags"><span class="ga-tag blood">Unclassified</span><span class="ga-tag">Sacred Witness</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- II · INSTITUTIONS -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="bb-section">
+        <div class="bb-section-title">II · Institutions of Extraction</div>
+        <div class="bb-section-body">
+          <div class="ga-card-grid ga-four">
+
+            <article class="ga-card" data-file="CIVIC BODY" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-archive"></div>
+              <div class="ga-card-body">
+                <h4>The Archive</h4>
+                <p>A bureaucracy of testimony, containment, and polished moral distance. It records suffering with immaculate handwriting and calls that cleanliness innocence.</p>
+                <div class="ga-tags"><span class="ga-tag">Containment</span><span class="ga-tag">Classification</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="MARKET BODY" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-exchange"></div>
+              <div class="ga-card-body">
+                <h4>The Sin Exchange</h4>
+                <p>Residue becomes commodity. Purity becomes purchasing power. The poor sell contamination taken from their bodies while the wealthy purchase distance from consequence.</p>
+                <div class="ga-tags"><span class="ga-tag">Commerce</span><span class="ga-tag blood">Purity Economy</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="ZONE RECORD" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-harvest"></div>
+              <div class="ga-card-body">
+                <h4>Harvest Zones</h4>
+                <p>Districts where residue is collected at industrial scale. Official maps call them necessary. Residents use shorter names, most unsuitable for polite ledgers.</p>
+                <div class="ga-tags"><span class="ga-tag">Industrial Extraction</span><span class="ga-tag">Lower Districts</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="REFINERY MARK" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-refinery"></div>
+              <div class="ga-card-body">
+                <h4>Residue Refineries</h4>
+                <p>Facilities where moral aftermath is separated, graded, and made useful. Every refinement mark is both a seal of quality and a confession nobody reads aloud.</p>
+                <div class="ga-tags"><span class="ga-tag">Refinement</span><span class="ga-tag blood">Weaponization</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- III · SITES OF WITNESS -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="bb-section">
+        <div class="bb-section-title">III · Sites of Witness</div>
+        <div class="bb-section-body">
+          <div class="ga-card-grid ga-four">
+
+            <article class="ga-card" data-file="ROOM A-17" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-interview"></div>
+              <div class="ga-card-body">
+                <h4>The Interview Chamber</h4>
+                <p>Where Cassim first attempts to reduce Moriae to a record and discovers that every question exposes its questioner.</p>
+                <div class="ga-tags"><span class="ga-tag">Archive Interior</span><span class="ga-tag">First Witness</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="HOLDING 03" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-cell"></div>
+              <div class="ga-card-body">
+                <h4>Moriae’s Cell</h4>
+                <p>Sparse, watched, and strangely clean. The absence of residue disturbs the guards more than contamination ever did.</p>
+                <div class="ga-tags"><span class="ga-tag">Containment</span><span class="ga-tag blood">Impossible Cleanliness</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="LOWER SHRINE" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-sump"></div>
+              <div class="ga-card-body">
+                <h4>Sump Churches</h4>
+                <p>Worship beneath runoff pipes and refinery shadows. Here the contaminated gather without pretending cleanliness is the same thing as holiness.</p>
+                <div class="ga-tags"><span class="ga-tag">Lower Worship</span><span class="ga-tag">Communal Mercy</span></div>
+              </div>
+            </article>
+
+            <article class="ga-card" data-file="CONDITIONAL" tabindex="0">
+              <div class="ga-card-image-wrap ga-img-hidden"></div>
+              <div class="ga-card-body">
+                <h4>The Hidden Community</h4>
+                <p>A later rumor: residue diminished through worship, confession, sacrament, and mutual care. Evidence suggests Cassim founded it. The Archive prefers that sentence remain conditional.</p>
+                <div class="ga-tags"><span class="ga-tag">Far-Future Record</span><span class="ga-tag blood">Healing Tradition</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IV · LOREBOOK INDEX -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="bb-section">
+        <div class="bb-section-title">IV · Lorebook Index</div>
+        <div class="bb-section-body">
+          <div class="ga-dossier-list">
+
+            <article class="ga-dossier" tabindex="0">
+              <div class="ga-dossier-code">01</div>
+              <div>
+                <h4>Residue and Adherence</h4>
+                <p>Physical aftermath, adhesion, crystallization, contamination spread, cleansing limits, and the difference between visible stain and inward corruption.</p>
+              </div>
+              <div class="ga-dossier-status"><strong>Core</strong>World Mechanic</div>
+            </article>
+
+            <article class="ga-dossier" tabindex="0">
+              <div class="ga-dossier-code">02</div>
+              <div>
+                <h4>Institutional Logic</h4>
+                <p>The Archive, Confessorate, Sin Exchange, refineries, Harvest Zones, social classification, and the managed manufacture of innocence.</p>
+              </div>
+              <div class="ga-dossier-status"><strong>Active</strong>System Pressure</div>
+            </article>
+
+            <article class="ga-dossier" tabindex="0">
+              <div class="ga-dossier-code">03</div>
+              <div>
+                <h4>Moriae’s Threshold</h4>
+                <p>Her absence of residue, small acts of service, unauthorized cleansing, manner of attention, resistance to hierarchy, and refusal to convert mercy into performance.</p>
+              </div>
+              <div class="ga-dossier-status"><strong>Linked</strong>Character Logic</div>
+            </article>
+
+            <article class="ga-dossier" tabindex="0">
+              <div class="ga-dossier-code">04</div>
+              <div>
+                <h4>Theological Boundaries</h4>
+                <p>Creation remains damaged but not metaphysically abandoned. Evil deforms; it does not create an independent nature. Healing restores participation rather than declaring the wound unreal.</p>
+              </div>
+              <div class="ga-dossier-status"><strong>Guardrail</strong>Ontology</div>
+            </article>
+
+            <article class="ga-dossier" tabindex="0">
+              <div class="ga-dossier-code">05</div>
+              <div>
+                <h4>Behavioral Triggers</h4>
+                <p>Justification, necessity, inevitability, purity, contamination, confession, sacrifice, mercy, shame, hierarchy, and the language by which harm seeks authorization.</p>
+              </div>
+              <div class="ga-dossier-status"><strong>Reactive</strong>Conversation Keys</div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="bb-row">
+    <div class="bb-col-12">
+      <div class="ga-footer-grid">
+
+        <div class="bb-section">
+          <div class="bb-section-title">Related Records</div>
+          <div class="bb-section-body">
+            <p>The Glenstock Archive is built to accompany Moriae’s character card and the broader Sin Seers ontological lorebook. It supplies pressure and continuity without forcing every conversation to wear a tiny professor hat.</p>
+            <div class="ga-button-row">
+              <a class="ga-button" href="https://sin-seer.crd.co" target="_blank">Creator Archive</a>
+              <a class="ga-button" href="https://app.wyvern.chat/profiles/sin_seer" target="_blank">More Characters</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bb-section ga-colophon">
+          <div class="bb-section-title">Archive Colophon</div>
+          <div class="bb-section-body">
+            <div class="ga-colophon-mark">☩</div>
+            <p>Compiled by <strong>⟬SIN·SEER⟭</strong></p>
+            <p>THE GLENSTOCK ARCHIVE · OPEN RECORD</p>
+            <p>Where transgression leaves a body, somebody will learn to sell it.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
