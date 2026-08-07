@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Kalam:wght@300;400;700&family=Cinzel:wght@400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --bb-bg: var(--background, #0a0a0c);
-    --bb-font-mono: 'Space Mono', monospace;
-    --bb-font-display: 'Ms Madi', cursive;
-    --bb-font-serif: 'Cinzel', serif;
-    --bb-font-hand: 'Kalam', cursive;
+    --bb-font-mono: 'Almendra', monospace;
+    --bb-font-display: 'Almendra', cursive;
+    --bb-font-serif: 'Almendra', serif;
+    --bb-font-hand: 'Almendra', cursive;
     --bb-height: clamp(42px, 5vw, 56px);
     --bb-inset: 16px;
     --bb-radius: 12px;
