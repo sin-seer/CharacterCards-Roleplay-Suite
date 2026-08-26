@@ -741,16 +741,17 @@ body{
 }
 
 
-.mt-2:has(> .msg-mkdn-container) > .msg-mkdn-container{
+div[length][color]:has(.msg-mkdn-container){
   max-height:none!important;
   height:auto!important;
   overflow:visible!important;
-  -webkit-mask-image:none!important;
-  mask-image:none!important;
+  padding-top:0!important;
+  margin-top:0!important;
+  background:transparent!important;
+  background-color:transparent!important;
 }
-.mt-2:has(> .msg-mkdn-container) > .msg-mkdn-container + div{
-  display:none!important;
-}
-.mt-2:has(> .msg-mkdn-container) > div:has(> button){
-  display:none!important;
-}
+div[length][color]:has(.msg-mkdn-container)::before,
+div[length][color]:has(.msg-mkdn-container)::after{display:none!important;}
+div[length][color]:has(.msg-mkdn-container)~*,
+div[length][color]:has(.msg-mkdn-container)~spacer,
+div[length][color]:has(.msg-mkdn-container)+div:has(> spacer){display:none!important;}
