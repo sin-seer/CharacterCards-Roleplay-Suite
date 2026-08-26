@@ -1356,3 +1356,30 @@ body{
 .ga-img-mellivory{--ga-card-image:url('https://ella.janitorai.com/media-approved/ylWBywj9i2GJeYoa04ynQ.webp');}
 .ga-img-exchange{--ga-card-image:url('https://ella.janitorai.com/media-approved/O-AG7tgK4ORWlHz40T2ue.webp');}
 .ga-img-oldways{--ga-card-image:url('https://ella.janitorai.com/media-approved/OplVN7-ttX3pOuabrcNSN.webp');}
+
+.ant-col.text-left.ant-col-xs-24.ant-col-lg-6{
+  display:none!important;
+  flex:0 0 0!important;
+  max-width:0!important;
+  min-width:0!important;
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+}
+
+.ant-col.text-left.mb-2.ant-col-xs-24.ant-col-lg-18{
+  flex:0 0 100%!important;
+  max-width:100%!important;
+  width:100%!important;
+  padding-left:8px!important;
+}
+
+div.ant-row:has(>h3.ant-typography),
+div.ant-row:has(>h5.ant-typography){
+  display:none!important;
+}
+
+.ant-col.text-left.mb-2.ant-col-xs-24.ant-col-lg-18>.ant-row{
+  margin-top:0!important;
+  padding-top:0!important;
+}
