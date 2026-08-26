@@ -741,17 +741,16 @@ body{
 }
 
 
-div[length][color]:has(.msg-mkdn-container){
+.mt-2 > div[length][color]{
   max-height:none!important;
   height:auto!important;
   overflow:visible!important;
-  padding-top:0!important;
-  margin-top:0!important;
-  background:transparent!important;
-  background-color:transparent!important;
 }
-div[length][color]:has(.msg-mkdn-container)::before,
-div[length][color]:has(.msg-mkdn-container)::after{display:none!important;}
-div[length][color]:has(.msg-mkdn-container)~*,
-div[length][color]:has(.msg-mkdn-container)~spacer,
-div[length][color]:has(.msg-mkdn-container)+div:has(> spacer){display:none!important;}
+.mt-2 > div[length][color]::before,
+.mt-2 > div[length][color]::after{
+  display:none!important;
+}
+.mt-2 > .sc-blmEgr.cOpFSN.mb-3{
+  display:none!important;
+}
+
