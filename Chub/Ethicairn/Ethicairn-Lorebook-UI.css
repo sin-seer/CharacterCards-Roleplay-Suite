@@ -1,4 +1,3 @@
-<div><style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root{
@@ -108,9 +107,7 @@ body{
 .ml-shell,.ml-shell *{
   box-sizing:border-box;
 }
-</style></div>
 
-<div><style>
 .ml-shell a{
   color:inherit;
   text-decoration:none;
@@ -191,7 +188,6 @@ body{
 }
 
 .ml-intro .violet{color:#c8c8ff!important;}
-
 .ml-intro .mint{color:#c8ffcb!important;}
 
 .ml-stack{
@@ -252,9 +248,7 @@ body{
 .ml-section:nth-child(2) .ml-section-index{
   color:var(--ml-mint);
 }
-</style></div>
 
-<div><style>
 .ml-drawer-list{
   position:relative;
   z-index:1;
@@ -263,13 +257,22 @@ body{
 
 .ml-drawer{
   position:relative;
-  overflow:visible;
+  overflow:hidden;
   scroll-margin-top:14px;
-  border-bottom:1px solid var(--ml-line-soft);
+  margin:6px 0;
+  border:1px solid rgba(168,168,255,.105);
+  border-radius:7px;
+  background:linear-gradient(100deg,rgba(106,106,202,.065),rgba(241,191,115,.02) 54%,rgba(121,238,126,.025));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.018);
+}
+
+.ml-drawer:nth-child(even){
+  border-color:rgba(121,238,126,.105);
+  background:linear-gradient(100deg,rgba(121,238,126,.045),rgba(241,191,115,.022) 52%,rgba(106,106,202,.045));
 }
 
 .ml-drawer:last-child{
-  border-bottom:0;
+  margin-bottom:0;
 }
 
 .ml-drawer-trigger{
@@ -283,11 +286,15 @@ body{
   min-height:62px;
   padding:13px clamp(12px,2vw,20px)!important;
   color:var(--ml-cream)!important;
-  background:linear-gradient(90deg,rgba(255,255,255,.012),transparent 52%)!important;
+  background:linear-gradient(90deg,rgba(106,106,202,.075),rgba(241,191,115,.02) 58%,transparent)!important;
   cursor:pointer;
   user-select:none;
   text-decoration:none!important;
   transition:background .32s ease,padding .32s ease,box-shadow .32s ease;
+}
+
+.ml-drawer:nth-child(even)>.ml-drawer-trigger{
+  background:linear-gradient(90deg,rgba(121,238,126,.055),rgba(241,191,115,.022) 58%,transparent)!important;
 }
 
 .ml-drawer-trigger::before{
@@ -373,34 +380,29 @@ body{
   transition:transform .38s cubic-bezier(.2,.75,.2,1),border-color .28s ease,color .28s ease,box-shadow .28s ease!important;
 }
 
-.ml-drawer:target>.ml-drawer-trigger,
-.ml-drawer:focus-within>.ml-drawer-trigger{
+.ml-drawer:target>.ml-drawer-trigger{
   background:linear-gradient(90deg,rgba(106,106,202,.18),rgba(241,191,115,.045) 50%,rgba(121,238,126,.045) 76%,transparent)!important;
   box-shadow:inset 3px 0 0 rgba(168,168,255,.58)!important;
 }
 
-.ml-drawer:target>.ml-drawer-trigger::before,
-.ml-drawer:focus-within>.ml-drawer-trigger::before{
+.ml-drawer:target>.ml-drawer-trigger::before{
   transform:translateX(125%);
 }
 
-.ml-drawer:target>.ml-drawer-trigger::after,
-.ml-drawer:focus-within>.ml-drawer-trigger::after{
+.ml-drawer:target>.ml-drawer-trigger::after{
   transform:scaleX(1);
   opacity:.92;
 }
 
-.ml-drawer:target .ml-drawer-meta::after,
-.ml-drawer:focus-within .ml-drawer-meta::after{
+.ml-drawer:target .ml-drawer-meta::after{
   transform:rotate(90deg)!important;
   color:var(--ml-mint)!important;
   border-color:var(--ml-line-mint)!important;
   box-shadow:0 0 18px rgba(121,238,126,.12);
 }
-</style></div>
 
-<div><style>
 .ml-carousel-shell{
+  display:none!important;
   max-height:0!important;
   overflow:hidden!important;
   visibility:hidden;
@@ -413,8 +415,8 @@ body{
   transition:max-height .68s cubic-bezier(.2,.75,.2,1),opacity .28s ease,transform .48s ease,padding .48s ease,visibility 0s linear .68s;
 }
 
-.ml-drawer:target>.ml-carousel-shell,
-.ml-drawer:focus-within>.ml-carousel-shell{
+.ml-drawer:target>.ml-carousel-shell{
+  display:block!important;
   max-height:650px!important;
   visibility:visible;
   opacity:1;
@@ -478,9 +480,7 @@ body{
 }
 
 .ml-carousel::-webkit-scrollbar{height:7px;}
-
 .ml-carousel::-webkit-scrollbar-track{background:rgba(241,191,115,.07);}
-
 .ml-carousel::-webkit-scrollbar-thumb{
   background:linear-gradient(90deg,var(--ml-violet),var(--ml-gold),var(--ml-mint));
   border-radius:999px;
@@ -495,8 +495,8 @@ body{
   flex-direction:column;
   border:1px solid rgba(241,191,115,.2);
   border-radius:4px;
-  background:rgba(8,7,10,.95);
-  box-shadow:0 12px 24px rgba(0,0,0,.32);
+  background:linear-gradient(180deg,rgba(106,106,202,.05),rgba(8,7,10,.965) 44%,rgba(121,238,126,.018));
+  box-shadow:0 12px 24px rgba(0,0,0,.32),inset 0 1px 0 rgba(241,191,115,.025);
   cursor:default;
 }
 
@@ -541,9 +541,7 @@ body{
   letter-spacing:.1em;
   text-transform:uppercase;
 }
-</style></div>
 
-<div><style>
 .ml-card h4{
   margin:0 0 7px!important;
   color:#fff7df!important;
@@ -659,49 +657,28 @@ body{
 }
 
 .ml-img-aliant{--ml-card-image:url('https://ella.janitorai.com/media-approved/T1hMtIAeoWbHWmcsbxrL_.webp');}
-
 .ml-img-collette{--ml-card-image:url('https://ella.janitorai.com/media-approved/yW4H_i0Sg57xW7qF5132p.webp');}
-
 .ml-img-eleo{--ml-card-image:url('https://ella.janitorai.com/media-approved/LyjzVV41QHpH8CyE8TUIm.webp');}
-
 .ml-img-minello{--ml-card-image:url('https://ella.janitorai.com/media-approved/S1DeQEvY6gIUYTZ39DnzU.webp');}
-
 .ml-img-branch{--ml-card-image:url('https://ella.janitorai.com/media-approved/xEh0GEVv06Msw9CSeikC1.webp');}
-
 .ml-img-brinfatal{--ml-card-image:url('https://ella.janitorai.com/media-approved/uoOOHtTAA39IZ27CAsLto.webp');}
-
 .ml-img-geomycene{--ml-card-image:url('https://ella.janitorai.com/media-approved/nejQsGrBGvL3r4IpNsI9D.webp');}
-
 .ml-img-mycology{--ml-card-image:url('https://ella.janitorai.com/media-approved/ih4d0DtxuTcrHhnNk1Qhk.webp');}
-
 .ml-img-rivel{--ml-card-image:url('https://ella.janitorai.com/media-approved/6sz_45j4qYjJNHtuOU9yH.webp');}
-
 .ml-img-cerabee{--ml-card-image:url('https://ella.janitorai.com/media-approved/PJ3R16cIxbidtGgoOUq07.webp');}
-</style></div>
-
-<div><style>
 .ml-img-cea{--ml-card-image:url('https://ella.janitorai.com/media-approved/hXyWSZAAwICZiS-Vsw2oy.webp');}
-
 .ml-img-atf{--ml-card-image:url('https://ella.janitorai.com/media-approved/nxFXaXR4Hr7UJY4kuKRqR.webp');}
-
 .ml-img-lexic{--ml-card-image:url('https://ella.janitorai.com/media-approved/dFsBEVQWSZujAA16HKL7n.webp');}
-
 .ml-img-sporopomp{--ml-card-image:url('https://ella.janitorai.com/media-approved/wklFWLY9tVKb7xBHgKYkl.webp');}
-
 .ml-img-law{--ml-card-image:url('https://ella.janitorai.com/media-approved/ylWBywj9i2GJeYoa04ynQ.webp');}
-
 .ml-img-spheres{--ml-card-image:url('https://ella.janitorai.com/media-approved/O-AG7tgK4ORWlHz40T2ue.webp');}
-
 .ml-img-oldways{--ml-card-image:url('https://ella.janitorai.com/media-approved/OplVN7-ttX3pOuabrcNSN.webp');}
 
 .ml-drawer:target .ml-card{
   animation:ml-record-rise .44s both;
 }
-
 .ml-drawer:target .ml-card:nth-child(2){animation-delay:.05s;}
-
 .ml-drawer:target .ml-card:nth-child(3){animation-delay:.1s;}
-
 .ml-drawer:target .ml-card:nth-child(4){animation-delay:.15s;}
 
 @keyframes ml-record-rise{
@@ -721,20 +698,6 @@ body{
     color:var(--ml-mint)!important;
     border-color:var(--ml-line-mint)!important;
   }
-  .ml-drawer:hover>.ml-carousel-shell{
-    max-height:650px!important;
-    visibility:visible;
-    opacity:1;
-    pointer-events:auto;
-    padding-top:8px!important;
-    padding-bottom:16px!important;
-    transform:none;
-    transition-delay:0s;
-  }
-  .ml-drawer:hover .ml-card{animation:ml-record-rise .44s both;}
-  .ml-drawer:hover .ml-card:nth-child(2){animation-delay:.05s;}
-  .ml-drawer:hover .ml-card:nth-child(3){animation-delay:.1s;}
-  .ml-drawer:hover .ml-card:nth-child(4){animation-delay:.15s;}
   .ml-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;}
   .ml-card:hover{
     transform:translateY(-3px);
@@ -754,9 +717,7 @@ body{
   .ml-card{min-height:320px;}
   .ml-drawer-meta span{display:none;}
 }
-</style></div>
 
-<div><style>
 @media (max-width:520px){
   .ml-masthead{min-height:0!important;}
   .ml-intro{width:calc(100% - 6px);padding:16px 14px;text-align:left;}
@@ -766,7 +727,7 @@ body{
   .ml-drawer-trigger{min-height:56px;padding:11px 9px!important;}
   .ml-drawer-name{gap:9px;font-size:.94rem!important;}
   .ml-carousel-shell{padding-inline:2px!important;}
-  .ml-drawer:target>.ml-carousel-shell,.ml-drawer:focus-within>.ml-carousel-shell{max-height:620px!important;}
+  .ml-drawer:target>.ml-carousel-shell{max-height:620px!important;}
   .ml-carousel{grid-auto-columns:88%;padding-inline:5px;}
   .ml-card-image{height:148px;flex-basis:148px;}
   .ml-share-links{display:grid;grid-template-columns:1fr;}
@@ -778,82 +739,18 @@ body{
   .ml-drawer-trigger::before,.ml-drawer-trigger::after{transition:none!important;}
   .ml-drawer:target .ml-card{animation:none!important;}
 }
-</style></div>
 
-<div class="ml-shell">
-<div class="ml-anchor" id="ml-index"></div>
-<div class="ml-masthead"><img class="ml-cover" src="https://avatars.charhub.io/avatars/lorebooks/sinseer/project-honeyfungus-an-ecopunk-synthesis-4818e9a413c9/avatar.webp" alt="Mellenody — Anthophile"></div>
 
-<p class="ml-intro"><strong>Mellenody</strong> unfolds on Anthophile, a world whose climate is maintained through a living entanglement of fungi, wax, spores, honey, symbols, song, and human authority. The Sphere regions depend on one another to keep ecological homeostasis intact while the Geomycene beneath them keeps changing faster than civilization's rules can comfortably admit. <span class="violet"><strong>One path trusts structure.</strong></span> <span class="mint"><strong>The other listens for what structure has buried.</strong></span></p>
-
-<div class="ml-stack">
-<section class="ml-section">
-<div class="ml-section-head"><h2 class="ml-section-title">People &amp; Places</h2><span class="ml-section-index">I · Living Routes</span></div>
-<div class="ml-drawer-list">
-
-<div class="ml-drawer" id="ml-characters">
-<a class="ml-drawer-trigger" href="#ml-characters"><span class="ml-drawer-name">Characters</span><span class="ml-drawer-meta"><span>2 records</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><p class="ml-carousel-hint">Swipe sideways through Anthophile.</p>
-<div class="ml-carousel">
-<article class="ml-card ml-img-aliant"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">ATF Captain</span><h4>Altanavf Aliant Quumwei</h4><p>Geogenesis pilot, painter, courier captain, and charming pressure valve inside a sanctioned system trying desperately to keep Anthophile functional. He believes in the route because he remembers what it cost to earn a place within it.</p><div class="ml-tags"><span class="ml-tag violet">Windbound</span><span class="ml-tag gold">Sanctioned Route</span></div></div></article>
-<article class="ml-card ml-img-collette"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Spore Collector</span><h4>Collette Ev Clima</h4><p>Patient, withdrawn, and fiercely protective of the Old Ways. Collette moves through abandoned Hyperjunctions, hidden fungal seams, and unsanctioned practices with the calm of someone who has stopped asking institutions for permission to survive.</p><div class="ml-tags"><span class="ml-tag mint">Old Ways</span><span class="ml-tag gold">Sporopomp</span></div></div></article>
-</div></div></div>
-
-<div class="ml-drawer" id="ml-locations">
-<a class="ml-drawer-trigger" href="#ml-locations"><span class="ml-drawer-name">Locations</span><span class="ml-drawer-meta"><span>4 sites</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><p class="ml-carousel-hint">Swipe sideways through the routes.</p>
-<div class="ml-carousel">
-<article class="ml-card ml-img-eleo"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Terrace Route</span><h4>Eleo</h4><p>Terrace fields, irrigation blooms, and the ordinary beauty of maintenance before departure. A place where the world still appears stable because thousands of small labors keep it that way.</p><div class="ml-tags"><span class="ml-tag violet">Cultivation</span><span class="ml-tag gold">Departure</span></div></div></article>
-<article class="ml-card ml-img-minello"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Sky-Tavern</span><h4>Minello</h4><p>A high-route social stop where murals dry on walls, music carries over cloud decks, and the work of keeping the Spheres alive briefly remembers that living is more than logistics.</p><div class="ml-tags"><span class="ml-tag gold">Transit Culture</span><span class="ml-tag violet">Anemos Route</span></div></div></article>
-<article class="ml-card ml-img-brinfatal"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Erratic Exclave</span><h4>Brinfatal</h4><p>An unstable region beyond the comfortable reach of governed weather. Pressure behaves incorrectly here, fungal seams answer strangely, and the distinction between failed infrastructure and living response becomes difficult to maintain.</p><div class="ml-tags"><span class="ml-tag mint">Hyperjunction</span><span class="ml-tag gold">Unstable Climate</span></div></div></article>
-<article class="ml-card ml-img-oldways"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Hidden Ecology</span><h4>Marcescenza</h4><p>A deeper counter-model to the sealed kingdoms: adaptive, communal, and suspicious of weather treated as property. Here survival is less about restoring the old world than learning how to grow beside what is reclaiming it.</p><div class="ml-tags"><span class="ml-tag mint">Symbiosis</span><span class="ml-tag gold">Old Ways</span></div></div></article>
-</div></div></div>
-</div>
-</section>
-
-<section class="ml-section">
-<div class="ml-section-head"><h2 class="ml-section-title">Systems &amp; Society</h2><span class="ml-section-index">II · Living Systems</span></div>
-<div class="ml-drawer-list">
-
-<div class="ml-drawer" id="ml-organizations">
-<a class="ml-drawer-trigger" href="#ml-organizations"><span class="ml-drawer-name">Organizations &amp; Roles</span><span class="ml-drawer-meta"><span>4 bodies</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><div class="ml-carousel">
-<article class="ml-card ml-img-cea"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Climate Authority</span><h4>CEA</h4><p>The Climate Exchange Authority bureaucratizes meteorological exchange, terraforming, and interdependence between regions. It turns survival into schedules, quotas, sealed permission, and the promise that managed compromise is better than collapse.</p><div class="ml-tags"><span class="ml-tag violet">Climate Exchange</span><span class="ml-tag gold">Governance</span></div></div></article>
-<article class="ml-card ml-img-atf"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Transport Federation</span><h4>ATF</h4><p>The Anemos Transport Federation moves couriers, supplies, wax, biological material, and personnel through volatile skies. Every route is infrastructure, diplomacy, and ecological triage disguised as transport work.</p><div class="ml-tags"><span class="ml-tag violet">Logistics</span><span class="ml-tag gold">Air Routes</span></div></div></article>
-<article class="ml-card ml-img-lexic"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Sealed Authority</span><h4>Lexics</h4><p>Rulers who hold privileged climate knowledge and guard the authority encoded into seals. Their kingdoms depend on continuity, which makes any alternative to sealed command look suspiciously like sedition with mushrooms.</p><div class="ml-tags"><span class="ml-tag violet">Hierarchy</span><span class="ml-tag gold">Privy Seals</span></div></div></article>
-<article class="ml-card ml-img-sporopomp"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Fungal Vocation</span><h4>Sporopomps</h4><p>Interpreters, cultivators, and carriers of fungal knowledge. Some serve the ruling order; others preserve older relationships with the Geomycene that do not fit comfortably inside official doctrine.</p><div class="ml-tags"><span class="ml-tag mint">Fungal Knowledge</span><span class="ml-tag gold">Old Practice</span></div></div></article>
-</div></div></div>
-
-<div class="ml-drawer" id="ml-ecology">
-<a class="ml-drawer-trigger" href="#ml-ecology"><span class="ml-drawer-name">Ecology &amp; Meteoregia</span><span class="ml-drawer-meta"><span>4 systems</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><div class="ml-carousel">
-<article class="ml-card ml-img-geomycene"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Planetary Network</span><h4>Geomycene</h4><p>A vast fungal ecology beneath Anthophile, responsive to humidity, pressure, electromagnetic conditions, biological activity, and patterns of human intervention. Civilization calls it infrastructure because admitting it can remember would complicate several budgets.</p><div class="ml-tags"><span class="ml-tag mint">Mycelial Network</span><span class="ml-tag gold">Living Climate</span></div></div></article>
-<article class="ml-card ml-img-mycology"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Weather Practice</span><h4>Mycojunction</h4><p>The sanctioned practice by which fungal strains, wax, seals, and engineered patterns produce or maintain local meteorological effects. It is both Anthophile's magic system and a maintenance profession with very little patience for the word magic.</p><div class="ml-tags"><span class="ml-tag violet">Meteoregia</span><span class="ml-tag gold">Terraforming</span></div></div></article>
-<article class="ml-card ml-img-rivel"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Resonant Practice</span><h4>Rivel</h4><p>A dynamic alternative based on voice, overtone, responsive pattern, and listening rather than static command. Rivel does not simply tell the living system what to do. It risks asking what the system is already saying.</p><div class="ml-tags"><span class="ml-tag mint">Resonance</span><span class="ml-tag gold">Biosemiosis</span></div></div></article>
-<article class="ml-card ml-img-cerabee"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Pollinator Lineage</span><h4>Cerabees</h4><p>Honeybee descendants whose wax and byproducts are materially entangled with the weather economy. Their segregation from Geomycene is treated as ordinary civic safety even when the deeper ecology suggests the separation itself is historically loaded.</p><div class="ml-tags"><span class="ml-tag gold">Wax &amp; Honey</span><span class="ml-tag mint">Ecological Partner</span></div></div></article>
-</div></div></div>
-
-<div class="ml-drawer" id="ml-law">
-<a class="ml-drawer-trigger" href="#ml-law"><span class="ml-drawer-name">Economy, Law &amp; Exchange</span><span class="ml-drawer-meta"><span>3 pressures</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><div class="ml-carousel">
-<article class="ml-card ml-img-spheres"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Mutual Dependence</span><h4>Sphere Exchange</h4><p>Each governed region controls a different meteorological domain and depends on the others to maintain ecological homeostasis. Climate is therefore not merely weather. It is trade, diplomacy, leverage, and the reason nobody gets to storm off dramatically without checking the pressure charts.</p><div class="ml-tags"><span class="ml-tag violet">Interdependence</span><span class="ml-tag gold">Political Economy</span></div></div></article>
-<article class="ml-card ml-img-law"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Prohibited Practice</span><h4>Mellivory</h4><p>The illegal consumption or use of restricted honey and wax products. Even trivial possession can become a serious offense because bee byproducts sit at the intersection of biological power, ritual practice, and controlled access to weather-making systems.</p><div class="ml-tags"><span class="ml-tag gold">Contraband</span><span class="ml-tag mint">Forbidden Ecology</span></div></div></article>
-<article class="ml-card ml-img-branch"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Route Pressure</span><h4>Sanctioned vs. Unsanctioned Survival</h4><p>Aliant's world preserves life through regulated routes; Collette's survives through hidden ecosystems, theft, old knowledge, and practices the kingdoms criminalize. The moral problem is inconveniently rude enough to refuse a clean villain.</p><div class="ml-tags"><span class="ml-tag violet">Structure</span><span class="ml-tag mint">Autonomy</span></div></div></article>
-</div></div></div>
-
-<div class="ml-drawer" id="ml-history">
-<a class="ml-drawer-trigger" href="#ml-history"><span class="ml-drawer-name">History &amp; Old Ways</span><span class="ml-drawer-meta"><span>3 records</span></span></a>
-<div class="ml-carousel-shell"><a class="ml-drawer-close" href="#ml-index">× Close record</a><div class="ml-carousel">
-<article class="ml-card ml-img-oldways"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Buried Continuity</span><h4>The Old Ways</h4><p>Practices that predate or resist sealed climate authority: cultivation, listening, Rivel, fungal stewardship, and the treatment of weather as relationship rather than possession. The kingdoms call many of them obsolete right up until something old starts working.</p><div class="ml-tags"><span class="ml-tag mint">Living Tradition</span><span class="ml-tag gold">Suppressed Knowledge</span></div></div></article>
-<article class="ml-card ml-img-branch"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Instability Record</span><h4>Erratic Hyperjunctions</h4><p>Areas between governed climates where meteorological behavior becomes unstable and no single authority can confidently claim control. They are danger zones, ecological laboratories, smuggling corridors, and very persuasive arguments against tidy maps.</p><div class="ml-tags"><span class="ml-tag mint">Unruled Weather</span><span class="ml-tag gold">Exclaves</span></div></div></article>
-<article class="ml-card ml-img-geomycene"><div class="ml-card-image"></div><div class="ml-card-body"><span class="ml-card-code">Present Crisis</span><h4>Anthophile's Destabilization</h4><p>The planetary systems are weakening. Climate manipulation loses reliability, older patterns re-emerge, and civilization is forced toward the question beneath every route and ritual: preserve the existing order, or learn another way to participate in a living world.</p><div class="ml-tags"><span class="ml-tag violet">Collapse</span><span class="ml-tag mint">Adaptation</span></div></div></article>
-</div></div></div>
-</div>
-</section>
-
-<section class="ml-section">
-<div class="ml-section-head"><h2 class="ml-section-title">Creator Record</h2><span class="ml-section-index">III · External Links</span></div>
-<div class="ml-share"><p>More character cards, lorebooks, setting material, interface experiments, requests, and whatever else escaped the beekeeping ledger can be found through the links below.</p><div class="ml-share-links"><a class="ml-share-link" href="https://sin-seer.crd.co" target="_blank">Creator Archive</a><a class="ml-share-link" href="https://app.wyvern.chat/profiles/sin_seer" target="_blank">More Characters</a></div><span class="ml-signature">°༤ུར྄รเɳ°รεε૨ཉྱ༻</span></div>
-</section>
-</div>
-</div>
+.mt-2:has(> .msg-mkdn-container) > .msg-mkdn-container{
+  max-height:none!important;
+  height:auto!important;
+  overflow:visible!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+}
+.mt-2:has(> .msg-mkdn-container) > .msg-mkdn-container + div{
+  display:none!important;
+}
+.mt-2:has(> .msg-mkdn-container) > div:has(> button){
+  display:none!important;
+}
