@@ -739,17 +739,3 @@ body{
   .ml-drawer-trigger::before,.ml-drawer-trigger::after{transition:none!important;}
   .ml-drawer:target .ml-card{animation:none!important;}
 }
-
-
-.mt-2 > div[length][color]{
-  max-height:none!important;
-  height:auto!important;
-  overflow:visible!important;
-}
-.mt-2 > div[length][color]::before,
-.mt-2 > div[length][color]::after{
-  display:none!important;
-}
-.mt-2 > .sc-blmEgr.cOpFSN.mb-3{
-  display:none!important;
-}
