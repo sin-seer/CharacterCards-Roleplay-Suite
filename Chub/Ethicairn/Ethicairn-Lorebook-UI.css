@@ -122,7 +122,7 @@ body{
   background:
     linear-gradient(to bottom,rgba(7,6,7,.12),rgba(7,6,7,.48) 45%,rgba(7,6,7,.98) 100%),
     linear-gradient(90deg,rgba(7,6,7,.82),rgba(7,6,7,.08) 38%,rgba(7,6,7,.44)),
-    url('https://avatars.charhub.io/avatars/uploads/images/gallery/file/505785bc-b7fd-4210-ac77-5d2672e1234e/ad3d57fe-1f23-468e-8d5a-f8106991d106.png') center 25%/cover no-repeat;
+    url('https://avatars.charhub.io/avatars/uploads/images/gallery/file/04cc0305-0054-421f-bc3c-8429fbd9dc1b/12f1937f-6471-4c2f-b20c-e5782aaa5e73.png') center 25%/cover no-repeat;
   box-shadow:var(--ga-shadow),inset 0 0 0 9px rgba(234,216,179,.04);
 }
 
@@ -674,7 +674,7 @@ body{
   border:0!important;
   border-radius:0!important;
   background-color:transparent!important;
-  background-image:url('https://avatars.charhub.io/avatars/uploads/images/gallery/file/505785bc-b7fd-4210-ac77-5d2672e1234e/ad3d57fe-1f23-468e-8d5a-f8106991d106.png')!important;
+  background-image:url('https://avatars.charhub.io/avatars/uploads/images/gallery/file/df0ddce7-744a-41f8-bbff-239db4546d18/3deaa6de-4577-4052-9ef8-c3b861d980d0.png')!important;
   background-size:contain!important;
   background-position:center!important;
   background-repeat:no-repeat!important;
@@ -982,7 +982,7 @@ body{
   padding:0!important;
   border:0!important;
   border-radius:1px!important;
-  object-fit:contain!important;
+  object-fit:cover!important;
 }
 .ga-masthead::before{
   content:''!important;
